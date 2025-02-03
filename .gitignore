@@ -1,3 +1,4 @@
-Algorithm/myenv/
-Algorithm/.venv/
+Algorithm/myenv
+Algorithm/myenv/*
+Algorithm/.venv/*
 .vscode

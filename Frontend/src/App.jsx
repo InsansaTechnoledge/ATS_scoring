@@ -1,10 +1,10 @@
 import React from 'react'
-import ATSChecker from './Pages/Landing' 
+import PageLinks from './PageLinks'
 
 const App = () => {
   return (
     <div>
-     <ATSChecker/>
+      <PageLinks/>
     </div>
   )
 }

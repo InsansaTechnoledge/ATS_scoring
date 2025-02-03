@@ -1,15 +1,14 @@
 import React from 'react'
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-import Landing from './src/Pages/Landing';
-import History from './src/Pages/History';
-import Navbar from './src/Components/Navbar';
-import ScrollbarAnimation from './src/Components/ScrollbarAnimation';
+import Landing from './Pages/Landing';
+import History from './Pages/History';
+import Navbar from './Components/Navbar';
+import ScrollbarAnimation from './Components/ScrollbarAnimation';
 
-const pageLinks = () => {
+const PageLinks = () => {
   return (
     <>
         <Router>
-            <ScrollbarAnimation/>
             <Navbar/>
             <Routes>
                 <Route path='/' element={<Landing/>} /> 
@@ -20,4 +19,4 @@ const pageLinks = () => {
   )
 }
 
-export default pageLinks
+export default PageLinks

@@ -18,7 +18,7 @@ const ScrollbarAnimation = () => {
 
   return (
       <div
-          className="fixed top-0 left-0 h-1 bg-emerald-500 transition-all duration-300 z-50"
+          className="fixed bottom-0 left-0 h-1 bg-emerald-500 transition-all duration-300 z-200"
           style={{ width: `${scrollProgress}%` }}
       />
   )

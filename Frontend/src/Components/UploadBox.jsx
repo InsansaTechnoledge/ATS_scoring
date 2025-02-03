@@ -2,112 +2,132 @@ import React, { useState } from "react";
 import { Upload, FileText, ChevronRight, Check, X, Loader } from "lucide-react";
 
 const UploadBox = ({ file, setFile, setIsAnalyzing, setActiveStep }) => {
-    const [isDragging, setIsDragging] = useState(false);
-    const [uploading, setUploading] = useState(false);
-    const [jobDescription, setJobDescription] = useState("");
+  const [isDragging, setIsDragging] = useState(false);
+  const [uploading, setUploading] = useState(false);
+  const [jobDescription, setJobDescription] = useState("");
 
-    const handleFile = (uploadedFile) => {
-        if (!uploadedFile) return;
-        if (uploadedFile.size > 5 * 1024 * 1024) {
-            alert("File size should be less than 5MB");
-            return;
-        }
-        setFile(uploadedFile);
-    };
+  const handleFile = (uploadedFile) => {
+    if (!uploadedFile) return;
+    if (uploadedFile.size > 5 * 1024 * 1024) {
+      alert("File size should be less than 5MB");
+      return;
+    }
+    setFile(uploadedFile);
+  };
 
-    const handleDrop = (e) => {
-        e.preventDefault();
-        setIsDragging(false);
-        const droppedFile = e.dataTransfer.files[0];
-        handleFile(droppedFile);
-    };
+  const handleDrop = (e) => {
+    e.preventDefault();
+    setIsDragging(false);
+    const droppedFile = e.dataTransfer.files[0];
+    handleFile(droppedFile);
+  };
 
-    const handleAnalyze = () => {
-        if (!file) {
-            alert("Please upload a resume first");
-            return;
-        }
-        setUploading(true);
-        setTimeout(() => {
-            setUploading(false);
-            setIsAnalyzing(true);
-            setActiveStep("analyzing");
-        }, 1000);
-    };
+  const handleAnalyze = () => {
+    if (!file) {
+      alert("Please upload a resume first");
+      return;
+    }
+    setUploading(true);
+    setTimeout(() => {
+      setUploading(false);
+      setIsAnalyzing(true);
+      setActiveStep("analyzing");
+    }, 1000);
+  };
 
-    return (
-        <div className="max-w-xl mx-auto space-y-6">
-            <div
-                className={`p-8 bg-white rounded-3xl shadow-lg border border-gray-200 text-center transition-all ${isDragging ? "border-emerald-500 bg-gray-50" : ""
-                    }`}
-                onDragOver={(e) => {
-                    e.preventDefault();
-                    setIsDragging(true);
-                }}
-                onDragLeave={() => setIsDragging(false)}
-                onDrop={handleDrop}
-            >
-                {!file ? (
-                    <>
-                        <Upload className="mx-auto h-16 w-16 text-emerald-400 animate-bounce" />
-                        <label className="inline-block mt-6 cursor-pointer">
-                            <span className="px-8 py-3 text-lg font-medium rounded-xl text-white bg-gradient-to-r from-emerald-500 to-blue-500 hover:from-emerald-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center">
-                                Select Resume <ChevronRight className="ml-2 h-5 w-5" />
-                            </span>
-                            <input
-                                type="file"
-                                className="hidden"
-                                onChange={(e) => handleFile(e.target.files[0])}
-                                accept=".pdf,.doc,.docx,.txt"
-                            />
-                        </label>
-                        <p className="text-sm text-gray-500 mt-3">or drag and drop your file here</p>
-                    </>
-                ) : (
-                    <>
-                        <Check className="mx-auto h-16 w-16 text-emerald-500" />
-                        <div className="text-lg font-medium text-gray-800 mt-4">{file.name}</div>
-                        <div className="space-x-4 mt-6 flex justify-center">
-                            <button
-                                onClick={() => setFile(null)}
-                                className="px-6 py-3 text-sm font-medium text-gray-700 hover:text-gray-900 flex items-center"
-                            >
-                                <X className="h-5 w-5 mr-1" /> Remove
-                            </button>
-                            <button
-                                onClick={handleAnalyze}
-                                disabled={!jobDescription.trim() && !file}
-                                className={`px-8 py-3 text-lg font-medium rounded-xl text-white bg-gradient-to-r from-emerald-500 to-blue-500 hover:from-emerald-600 hover:to-blue-600 transition-all duration-300 flex items-center ${!jobDescription.trim() && !file ? "opacity-50 cursor-not-allowed" : ""
-                                    }`}
-                            >
-                                {uploading ? (
-                                    <>
-                                        <Loader className="h-5 w-5 mr-2 animate-spin" /> Uploading...
-                                    </>
-                                ) : (
-                                    <>
-                                        Analyze Resume <ChevronRight className="ml-2 h-5 w-5" />
-                                    </>
-                                )}
-                            </button>
-                        </div>
-                    </>
-                )}
+  return (
+    <div className="max-w-2xl mx-auto space-y-8">
+      <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+        <div
+          className={`relative p-8 transition-all duration-300 ${
+            isDragging
+              ? "bg-emerald-50 border-2 border-dashed border-emerald-400"
+              : "border border-gray-100"
+          }`}
+          onDragOver={(e) => {
+            e.preventDefault();
+            setIsDragging(true);
+          }}
+          onDragLeave={() => setIsDragging(false)}
+          onDrop={handleDrop}
+        >
+          {!file ? (
+            <div className="flex flex-col items-center">
+              <div className="w-20 h-20 bg-emerald-50 rounded-full flex items-center justify-center mb-6">
+                <Upload className="h-10 w-10 text-emerald-500 animate-bounce" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                Upload your resume
+              </h3>
+              <p className="text-gray-500 mb-6 text-center max-w-md">
+                Drop your file here or click the button below. Supported formats: PDF, DOC, DOCX, TXT
+              </p>
+              <label className="inline-block cursor-pointer">
+                <span className="px-6 py-3 text-sm font-medium rounded-xl text-white bg-emerald-500 hover:bg-emerald-600 transition-all duration-200 flex items-center gap-2 shadow-lg shadow-emerald-100">
+                  Choose File
+                  <ChevronRight className="h-4 w-4" />
+                </span>
+                <input
+                  type="file"
+                  className="hidden"
+                  onChange={(e) => handleFile(e.target.files[0])}
+                  accept=".pdf,.doc,.docx,.txt"
+                />
+              </label>
             </div>
-
-            <div className="bg-white rounded-3xl shadow-lg border border-gray-200 p-6">
-                <label className="block text-lg font-medium text-gray-700 mb-2">
-                    Job Description (Optional)
-                </label>
-                <textarea
-                    value={jobDescription}
-                    onChange={(e) => setJobDescription(e.target.value)}
-                    placeholder="Paste the job description here to compare with the resume..."
-                    className="w-full h-32 p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 resize-none"
-                ></textarea>
+          ) : (
+            <div className="flex flex-col items-center">
+              <div className="w-16 h-16 bg-emerald-50 rounded-full flex items-center justify-center mb-4">
+                <Check className="h-8 w-8 text-emerald-500" />
+              </div>
+              <h3 className="text-lg font-medium text-gray-800 mb-6">{file.name}</h3>
+              <div className="flex items-center gap-4">
+                <button
+                  onClick={() => setFile(null)}
+                  className="px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-800 flex items-center gap-2 transition-colors"
+                >
+                  <X className="h-4 w-4" />
+                  Remove
+                </button>
+                <button
+                  onClick={handleAnalyze}
+                  disabled={uploading}
+                  className="px-6 py-2 text-sm font-medium rounded-xl text-white bg-emerald-500 hover:bg-emerald-600 transition-all duration-200 flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-emerald-100"
+                >
+                  {uploading ? (
+                    <>
+                      <Loader className="h-4 w-4 animate-spin" />
+                      Processing...
+                    </>
+                  ) : (
+                    <>
+                      Analyze Resume
+                      <ChevronRight className="h-4 w-4" />
+                    </>
+                  )}
+                </button>
+              </div>
             </div>
+          )}
         </div>
-    );
+      </div>
+
+      <div className="bg-white rounded-2xl shadow-xl p-6">
+        <div className="space-y-4">
+          <h3 className="text-lg font-semibold text-gray-800">
+            Job Description
+            <span className="text-sm font-normal text-gray-500 ml-2">(Optional)</span>
+          </h3>
+          <textarea
+            value={jobDescription}
+            onChange={(e) => setJobDescription(e.target.value)}
+            placeholder="Paste the job description here to compare with the resume..."
+            className="w-full h-32 p-4 text-gray-700 placeholder-gray-400 border border-gray-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 resize-none transition-all duration-200"
+          />
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default UploadBox;

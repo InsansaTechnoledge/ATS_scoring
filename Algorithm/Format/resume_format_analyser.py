@@ -57,7 +57,7 @@ class ResumeFormatAnalyzer:
             level=logging.INFO,
             format='%(asctime)s - %(levelname)s - [%(filename)s:%(lineno)d] - %(message)s',
             handlers=[
-                logging.FileHandler('resume_format_analyzer.log'),
+                logging.FileHandler('Logs/resume_format_analyzer.log'),
                 logging.StreamHandler()
             ]
         )

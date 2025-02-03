@@ -9,15 +9,11 @@ import hashlib
 from datetime import datetime
 import json
 import logging
-from resume_format_checker import ResumeFormatChecker
-from config_gui import ConfigGUI
-from linkedin_checker import LinkedInProfileAnalyzer
-from grammar_checker import GrammarChecker
-from duplicate_content_checker import DuplicateContentChecker
-
-
-
-
+from Format.resume_format_checker import ResumeFormatChecker
+from Config.config_gui import ConfigGUI
+from LinkedIn.linkedin_checker import LinkedInProfileAnalyzer
+from Grammar.grammar_checker import GrammarChecker
+from Duplicate.duplicate_content_checker import DuplicateContentChecker
 
 
 class ATSFormatChecker:
@@ -54,7 +50,7 @@ class ATSFormatChecker:
     def setup_logging(self):
         """Setup logging configuration"""
         logging.basicConfig(
-            filename='ats_checker.log',
+            filename='Logs/ats_checker.log',
             level=logging.INFO,
             format='%(asctime)s - %(levelname)s - %(message)s'
         )
@@ -72,8 +68,11 @@ class ATSFormatChecker:
         }
         
         try:
-            if os.path.exists('config.json'):
-                with open('config.json', 'r') as f:
+            current_dir = os.path.dirname(os.path.abspath(__file__))
+            config_path = os.path.join(current_dir, 'Config', 'config.json')
+            
+            if os.path.exists(config_path):
+                with open(config_path, 'r') as f:
                     return {**default_config, **json.load(f)}
         except Exception as e:
             logging.error(f"Error loading config: {e}")
@@ -170,6 +169,7 @@ class ATSFormatChecker:
         except Exception as e:
             logging.error(f"Error determining file type: {e}")
             return None
+
 
     def extract_text_from_docx(self, file_path):
         """Extract text from DOCX file"""

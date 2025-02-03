@@ -58,7 +58,7 @@ class LinkedInProfileAnalyzer:
             level=logging.INFO,
             format='%(asctime)s - %(levelname)s - [%(filename)s:%(lineno)d] - %(message)s',
             handlers=[
-                logging.FileHandler('linkedin_analyzer.log'),
+                logging.FileHandler('Logs/linkedin_analyzer.log'),
                 logging.StreamHandler()
             ]
         )

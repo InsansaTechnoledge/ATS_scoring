@@ -53,7 +53,7 @@ class DuplicateContentChecker:
             level=logging.INFO,
             format='%(asctime)s - %(levelname)s - [%(filename)s:%(lineno)d] - %(message)s',
             handlers=[
-                logging.FileHandler('duplicate_checker.log'),
+                logging.FileHandler('Logs/duplicate_checker.log'),
                 logging.StreamHandler()
             ]
         )

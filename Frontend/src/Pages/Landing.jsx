@@ -10,7 +10,7 @@ import Result from './result';
 // Importing sampleData from result.js
 import { sampleData } from './result';
 
-const ATSChecker = () => {
+const Landing = () => {
     const [file, setFile] = useState(null);
     const [activeStep, setActiveStep] = useState('upload'); // 'upload' | 'analyzing' | 'results'
     const [isAnalyzing, setIsAnalyzing] = useState(false);
@@ -36,9 +36,7 @@ const ATSChecker = () => {
     }, [isAnalyzing]);
 
     return (
-        <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
-            <ScrollbarAnimation />
-            <Navbar />
+        <div className="bg-gradient-to-b from-gray-50 to-white">
             <main className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
                 <Hero />
                 <Metrics />
@@ -61,4 +59,4 @@ const ATSChecker = () => {
     );
 };
 
-export default ATSChecker;
+export default Landing;

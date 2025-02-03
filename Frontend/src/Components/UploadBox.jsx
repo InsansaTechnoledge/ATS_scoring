@@ -8,7 +8,7 @@ const UploadBox = ({ file, setFile, setIsAnalyzing, setActiveStep }) => {
             alert('File size should be less than 5MB');
             return;
         }
-        setFile({ name: uploadedFile.name, content: uploadedFile });
+        setFile(uploadedFile);
     };
 
     return (

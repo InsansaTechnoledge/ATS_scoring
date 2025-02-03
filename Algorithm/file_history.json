@@ -1075,5 +1075,59 @@
                 "Limit bullet points to a maximum of 15 for better readability."
             ]
         }
+    },
+    "5ef7deec59296266d86ca5c9d9897fce": {
+        "filename": "Jay Amrish Fanse_Resume_April2024.pdf",
+        "last_checked": "2025-02-03T15:28:09.660313",
+        "result": {
+            "score": 60,
+            "messages": [
+                "Not enough industry-specific keywords detected.",
+                "Found 3 sentences using passive voice.",
+                "Stylistic Improvements Suggested:",
+                "LinkedIn Optimization Suggestions:",
+                "Grammar Issues Found: 52",
+                " - {'error': 'JAY FANSE   [CodeChef] | [Codeforces] | [LeetCode...', 'suggestions': ['FANS', 'FALSE', 'MANSE', 'FAPSE', 'FAN SE', 'FANS E'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (4, 9)}",
+                " - {'error': 'JAY FANSE   [CodeChef] | [Codeforces] | [LeetCode] ...', 'suggestions': [' '], 'category': 'TYPOGRAPHY', 'rule_id': 'WHITESPACE_RULE', 'message': 'Possible typo: you repeated a whitespace', 'position': (9, 11)}",
+                " - {'error': 'JAY FANSE   [CodeChef] | [Codeforces] | [LeetCode]           ...', 'suggestions': ['Code Chef'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (13, 21)}",
+                " - {'error': 'JAY FANSE   [CodeChef] | [Codeforces] | [LeetCode]                  +91 9726...', 'suggestions': ['Code forces'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (26, 36)}",
+                " - {'error': '...AY FANSE   [CodeChef] | [Codeforces] | [LeetCode]                  +91 9726535193       ...', 'suggestions': ['Electrode', 'Encode', 'Postcode', 'Decode', 'Leeched', 'Bestrode', 'Lestrade', 'Geocode', 'Re-encode', 'Uuencode'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (41, 49)}",
+                "Readability Scores:",
+                " - Flesch Reading Ease: 43.22",
+                " - Gunning Fog Index: 12.16",
+                " - SMOG Index: 13.40",
+                " - Automated Readability Index: 18.40",
+                " - Coleman Liau Index: 16.48",
+                " - Dale Chall Readability: 12.70",
+                " - Difficult Words: 92.00",
+                " - Syllable Count: 535.00",
+                "Word count acceptable (367 words)",
+                "Missing sections: experience",
+                "Missing LinkedIn best-practice sections: Summary, Experience, Accomplishments",
+                "Inconsistent font usage detected.",
+                "Most used font: Roboto",
+                "Excessive bullet points detected (18)."
+            ],
+            "file_type": "application/pdf",
+            "word_count": 0,
+            "sections_present": [],
+            "sections_missing": [
+                "experience"
+            ],
+            "formatting_issues": [],
+            "recommendations": [
+                "Add more relevant keywords related to your industry.",
+                "Use active voice for stronger impact.",
+                "Consider reducing use of passive voice",
+                "Add more detail to your Skills section",
+                "Include more relevant keywords in your Skills section",
+                "Include more relevant keywords in your Education section",
+                "Fix grammar mistakes for better ATS compliance.",
+                "Add missing required sections",
+                "Add missing sections for LinkedIn compatibility.",
+                "Use a single font type throughout the document.",
+                "Limit bullet points to a maximum of 15 for better readability."
+            ]
+        }
     }
 }

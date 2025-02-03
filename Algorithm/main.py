@@ -15,8 +15,10 @@ from LinkedIn.linkedin_checker import LinkedInProfileAnalyzer
 from Grammar.grammar_checker import GrammarChecker
 from Duplicate.duplicate_content_checker import DuplicateContentChecker
 
-
 class ATSFormatChecker:
+
+    file_path = ''
+
     def __init__(self):
         self.format_scores = {
             'application/pdf': 100,
@@ -90,11 +92,11 @@ class ATSFormatChecker:
             logging.error(f"Error loading history: {e}")
             self.history = {}
 
-    def save_to_history(self, file_path, result):
+    def save_to_history(self, result):
         """Save file processing result to history"""
-        file_hash = self.get_file_hash(file_path)
+        file_hash = self.get_file_hash()
         self.history[file_hash] = {
-            'filename': os.path.basename(file_path),
+            'filename': os.path.basename(self.file_path),
             'last_checked': datetime.now().isoformat(),
             'result': result
         }
@@ -105,19 +107,19 @@ class ATSFormatChecker:
         except Exception as e:
             logging.error(f"Error saving history: {e}")
 
-    def get_file_hash(self, file_path):
+    def get_file_hash(self):
         """Generate hash for file"""
         hasher = hashlib.md5()
-        with open(file_path, 'rb') as f:
+        with open(self.file_path, 'rb') as f:
             buf = f.read(65536)
             while len(buf) > 0:
                 hasher.update(buf)
                 buf = f.read(65536)
         return hasher.hexdigest()
 
-    def check_file_size(self, file_path):
+    def check_file_size(self):
         """Check if file size is within acceptable range"""
-        file_size = os.path.getsize(file_path)
+        file_size = os.path.getsize(self.file_path)
         min_size = self.config['min_file_size_kb'] * 1024
         max_size = self.config['max_file_size_mb'] * 1024 * 1024
         
@@ -161,29 +163,29 @@ class ATSFormatChecker:
         return not found_chars, found_chars
 
 
-    def get_file_type(self, file_path):
+    def get_file_type(self):
         """Determine the file type using magic library"""
         try:
             mime = magic.Magic(mime=True)
-            return mime.from_file(file_path)
+            return mime.from_file(self.file_path)
         except Exception as e:
             logging.error(f"Error determining file type: {e}")
             return None
 
 
-    def extract_text_from_docx(self, file_path):
+    def extract_text_from_docx(self):
         """Extract text from DOCX file"""
         try:
-            doc = docx.Document(file_path)
+            doc = docx.Document(self.file_path)
             return '\n'.join([paragraph.text for paragraph in doc.paragraphs])
         except Exception as e:
             logging.error(f"Error extracting text from DOCX: {e}")
             return None
 
-    def is_ats_compliant_pdf(self, file_path):
+    def is_ats_compliant_pdf(self):
         """Check if the PDF contains selectable text and analyze its structure"""
         try:
-            doc = fitz.open(file_path)
+            doc = fitz.open(self.file_path)
             text_content = ""
             total_image_area = 0
             total_page_area = 0
@@ -221,7 +223,7 @@ class ATSFormatChecker:
             logging.error(f"Error analyzing PDF: {e}")
             return None, str(e)
 
-    def calculate_format_score(self, file_path):
+    def calculate_format_score(self):
         """Calculate comprehensive format compatibility score"""
         result = {
             'score': 0,
@@ -235,18 +237,18 @@ class ATSFormatChecker:
         }
 
         # Check if file exists
-        if not Path(file_path).exists():
+        if not Path(self.file_path).exists():
             result['messages'].append("File not found.")
             return result
 
         # Check file size
-        size_ok, size_message = self.check_file_size(file_path)
+        size_ok, size_message = self.check_file_size()
         if not size_ok:
             result['messages'].append(size_message)
             return result
 
         # Get file type
-        file_type = self.get_file_type(file_path)
+        file_type = self.get_file_type()
         result['file_type'] = file_type
 
         if file_type not in self.format_scores:
@@ -257,16 +259,16 @@ class ATSFormatChecker:
         # Extract text based on file type
         text_content = None
         if file_type == 'application/pdf':
-            is_ats_friendly, message = self.is_ats_compliant_pdf(file_path)
+            is_ats_friendly, message = self.is_ats_compliant_pdf()
             if not is_ats_friendly:
                 result['messages'].append(message)
                 result['recommendations'].append("Convert PDF to searchable text format")
                 return result
-            text_content = fitz.open(file_path).get_page_text(0)
+            text_content = fitz.open(self.file_path).get_page_text(0)
         elif file_type.endswith('wordprocessingml.document'):
-            text_content = self.extract_text_from_docx(file_path)
+            text_content = self.extract_text_from_docx()
         elif file_type == 'text/plain':
-            with open(file_path, 'r', encoding='utf-8') as f:
+            with open(self.file_path, 'r', encoding='utf-8') as f:
                 text_content = f.read()
                 
         # ✅ Resume Keyword Analysis
@@ -372,7 +374,7 @@ class ATSFormatChecker:
 
 
         # ✅ NEW: Analyze formatting using the ResumeFormatChecker module
-        format_analysis = self.format_checker.analyze_format(file_path, file_type)
+        format_analysis = self.format_checker.analyze_format(self.file_path,file_type)
         
         if format_analysis:
             # Font consistency check
@@ -447,32 +449,32 @@ class ATSFormatChecker:
         result['score'] = max(0, base_score - deductions)
 
         # Save to history
-        self.save_to_history(file_path, result)
+        self.save_to_history(result)
 
         return result
 
     
     def check_file(self):
         """Open file dialog and check format compatibility"""
-        file_path = filedialog.askopenfilename(
-            title="Select Resume File",
-            filetypes=[
-                ("All Supported Formats", "*.pdf;*.docx;*.doc;*.txt;*.rtf"),
-                ("PDF Files", "*.pdf"),
-                ("Word Files", "*.docx;*.doc"),
-                ("Text Files", "*.txt"),
-                ("RTF Files", "*.rtf")
-            ]
-        )
+        # self.file_path = filedialog.askopenfilename(
+        #     title="Select Resume File",
+        #     filetypes=[
+        #         ("All Supported Formats", "*.pdf;*.docx;*.doc;*.txt;*.rtf"),
+        #         ("PDF Files", "*.pdf"),
+        #         ("Word Files", "*.docx;*.doc"),
+        #         ("Text Files", "*.txt"),
+        #         ("RTF Files", "*.rtf")
+        #     ]
+        # )
 
-        if not file_path:
+        if not self.file_path:
             return {
                 'score': 0,
                 'messages': ["No file selected."],
                 'file_type': None
             }
 
-        return self.calculate_format_score(file_path)
+        return self.calculate_format_score()
 
     def generate_report(self, result):
         """Generate a detailed report of the analysis"""
@@ -509,6 +511,19 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+def analyseResume(file_path):
+    checker = ATSFormatChecker()
+    checker.file_path = file_path
+    result = checker.check_file()
+    report = checker.generate_report(result)
+    
+    print(report)
+    
+    # Show message box with results
+    messagebox.showinfo("ATS Check Results", 
+                       f"Score: {result['score']}/100\n\n" +
+                       "See console for full report.")
 
 # def main():
 #     checker = ATSFormatChecker()

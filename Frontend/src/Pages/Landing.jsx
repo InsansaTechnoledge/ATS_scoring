@@ -6,6 +6,7 @@ import Metrics from '../Components/Metrics';
 import UploadBox from '../Components/UploadBox';
 import ProgressModal from '../Components/ProgressModal';
 import Result from './result';
+import axios from 'axios'
 
 // Importing sampleData from result.js
 import { sampleData } from './result';
@@ -18,22 +19,41 @@ const Landing = () => {
     const [analysisData, setAnalysisData] = useState(null);
 
     useEffect(() => {
-        if (isAnalyzing) {
-            let interval = setInterval(() => {
-                setProgress((prev) => {
-                    if (prev >= 100) {
-                        clearInterval(interval);
-                        setIsAnalyzing(false);
-                        setActiveStep('results');
-                        setAnalysisData(sampleData); // Set sample data instead of generating mock data
-                        return 100;
-                    }
-                    return prev + 2;
-                });
-            }, 50);
-            return () => clearInterval(interval);
+        // if (isAnalyzing) {
+        //     let interval = setInterval(() => {
+        //         setProgress((prev) => {
+        //             if (prev >= 100) {
+        //                 clearInterval(interval);
+        //                 setIsAnalyzing(false);
+        //                 setActiveStep('results');
+        //                 setAnalysisData(sampleData); // Set sample data instead of generating mock data
+        //                 return 100;
+        //             }
+        //             return prev + 2;
+        //         });
+        //     }, 50);
+        //     return () => clearInterval(interval);
+        // }
+
+        const analyseResume = async () => {
+
+            const formData = new FormData();
+            formData.append('file', file);
+
+            console.log(file)
+            const response = await axios.post('http://localhost:5000/analyse', formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data',  // Important for file uploads
+                },
+            });
+
+            console.log(response.data);
         }
-    }, [isAnalyzing]);
+        
+        if(file){
+            analyseResume();
+        }
+    }, [file]);
 
     return (
         <div className="bg-gradient-to-b from-gray-50 to-white">

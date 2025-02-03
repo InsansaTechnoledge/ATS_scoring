@@ -7,9 +7,8 @@ import UploadBox from '../Components/UploadBox';
 import ProgressModal from '../Components/ProgressModal';
 import Result from './result';
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom';
 
-// Importing sampleData from result.js
-import { sampleData } from './result';
 
 const Landing = () => {
     const [file, setFile] = useState(null);
@@ -18,6 +17,7 @@ const Landing = () => {
     const [progress, setProgress] = useState(0);
     const [analysisData, setAnalysisData] = useState(null);
     const [jobDescription, setJobDescription] = useState();
+    const navigate = useNavigate();
 
     useEffect(() => {
         // if (isAnalyzing) {
@@ -42,7 +42,6 @@ const Landing = () => {
             formData.append('file', file);
             formData.append('job_description', jobDescription)
 
-            console.log(file)
             const response = await axios.post('http://localhost:5000/analyse', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',  // Important for file uploads
@@ -53,6 +52,7 @@ const Landing = () => {
                 setIsAnalyzing(false);
                 setActiveStep('results');
                 setAnalysisData(response.data.result); 
+                navigate('/result',{state:{"result":response.data.result}});
             }
             console.log(response.data);
         }
@@ -65,7 +65,7 @@ const Landing = () => {
 
     return (
         <div className="bg-gradient-to-b from-blue-50 to-white">
-            <main className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <main className="">
                 {activeStep !== 'results' && (
                     <>
                         <Hero />
@@ -78,6 +78,8 @@ const Landing = () => {
                         setFile={setFile}
                         setIsAnalyzing={setIsAnalyzing}
                         setActiveStep={setActiveStep}
+                        setJobDescription={setJobDescription}
+                        jobDescription={jobDescription}
                     />
                 )}
                 {isAnalyzing && (

@@ -659,7 +659,7 @@
     },
     "7151d686dfde494bfb4d5763f8f39e47": {
         "filename": "Jay Amrish Fanse_Resume_December2024.pdf",
-        "last_checked": "2025-02-03T12:41:00.425431",
+        "last_checked": "2025-02-03T16:41:49.132883",
         "result": {
             "score": 80,
             "messages": [
@@ -1078,7 +1078,7 @@
     },
     "5ef7deec59296266d86ca5c9d9897fce": {
         "filename": "Jay Amrish Fanse_Resume_April2024.pdf",
-        "last_checked": "2025-02-03T16:09:18.546241",
+        "last_checked": "2025-02-03T16:38:29.508000",
         "result": {
             "score": 60,
             "messages": [
@@ -1104,6 +1104,7 @@
                 "Word count acceptable (367 words)",
                 "Missing sections: experience",
                 "Missing LinkedIn best-practice sections: Summary, Experience, Accomplishments",
+                "Job Match Score: 0.0%",
                 "Inconsistent font usage detected.",
                 "Most used font: Roboto",
                 "Excessive bullet points detected (18)."
@@ -1125,6 +1126,7 @@
                 "Fix grammar mistakes for better ATS compliance.",
                 "Add missing required sections",
                 "Add missing sections for LinkedIn compatibility.",
+                "Improve resume alignment with job description.",
                 "Use a single font type throughout the document.",
                 "Limit bullet points to a maximum of 15 for better readability."
             ]

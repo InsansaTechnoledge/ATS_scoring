@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { Upload, FileText, ChevronRight, Check, X, Loader } from "lucide-react";
 
-const UploadBox = ({ file, setFile, setIsAnalyzing, setActiveStep }) => {
+const UploadBox = ({ file, setFile, setIsAnalyzing, setActiveStep, setJobDescription, jobDescription }) => {
   const [isDragging, setIsDragging] = useState(false);
   const [uploading, setUploading] = useState(false);
-  const [jobDescription, setJobDescription] = useState("");
 
   const handleFile = (uploadedFile) => {
     if (!uploadedFile) return;
@@ -14,6 +13,10 @@ const UploadBox = ({ file, setFile, setIsAnalyzing, setActiveStep }) => {
     }
     setFile(uploadedFile);
   };
+
+  const handleJobDescriptionChange = (val) => {
+    setJobDescription(val)
+  }
 
   const handleDrop = (e) => {
     e.preventDefault();
@@ -120,7 +123,7 @@ const UploadBox = ({ file, setFile, setIsAnalyzing, setActiveStep }) => {
           </h3>
           <textarea
             value={jobDescription}
-            onChange={(e) => setJobDescription(e.target.value)}
+            onChange={(e) => handleJobDescriptionChange(e.target.value)}
             placeholder="Paste the job description here to compare with the resume..."
             className="w-full h-32 p-4 text-gray-700 placeholder-gray-400 border border-gray-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 resize-none transition-all duration-200"
           />

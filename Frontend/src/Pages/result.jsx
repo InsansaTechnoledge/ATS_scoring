@@ -3,56 +3,7 @@ import {
     BarChart2, AlertCircle, BookOpen, FileText,
     AlertTriangle, Check, X, Type, List, MessageSquare
 } from 'lucide-react';
-
-export const sampleData = {
-    filename: "Naukri_SatyajitRaskar[12y_0m].pdf",
-    last_checked: "2025-01-31T14:46:31.564982",
-    result: {
-        score: 45,
-        messages: [
-            "Not enough industry-specific keywords detected.",
-            "Stylistic Improvements Suggested:",
-            "LinkedIn Optimization Suggestions:",
-            "Grammar Issues Found: 26",
-            " - Flesch Reading Ease: 28.20",
-            " - Gunning Fog Index: 19.03",
-            " - SMOG Index: 17.40",
-            " - Automated Readability Index: 24.20",
-            " - Coleman Liau Index: 15.62",
-            " - Dale Chall Readability: 14.23",
-            " - Difficult Words: 87.00",
-            " - Syllable Count: 524.00",
-            "Word count acceptable (341 words)",
-            "Missing sections: education",
-            "Missing LinkedIn best-practice sections: education",
-            "Inconsistent font usage detected.",
-            "Most used font: Verdana",
-            "Excessive bullet points detected (114).",
-            "Few section headers found: "
-        ],
-        file_type: "application/pdf",
-        word_count: 341,
-        sections_present: [],
-        sections_missing: [
-            "education"
-        ],
-        formatting_issues: [],
-        recommendations: [
-            "Add more relevant keywords related to your industry.",
-            "Consider simplifying language for better readability",
-            "Add more detail to your experience section",
-            "Include more relevant keywords in your experience section",
-            "Include more relevant keywords in your skills section",
-            "Fix grammar mistakes for better ATS compliance.",
-            "Add missing required sections",
-            "Add missing sections for LinkedIn compatibility.",
-            "Use a single font type throughout the document.",
-            "Limit bullet points to a maximum of 15 for better readability.",
-            "Consider breaking long paragraphs into concise bullet points for readability.",
-            "Ensure major sections like Experience, Education, and Skills are included."
-        ]
-    }
-};
+import { useLocation } from 'react-router-dom';
 
 const MetricCard = ({ icon: Icon, label, value, color = "emerald" }) => (
     <div className={`bg-${color}-50 p-6 rounded-xl border border-${color}-100`}>
@@ -64,8 +15,12 @@ const MetricCard = ({ icon: Icon, label, value, color = "emerald" }) => (
     </div>
 );
 
-const Result = ({ resultData = sampleData }) => {
+const Result = () => {
     // Extract readability scores from messages
+    const location = useLocation();
+
+    const resultData = location.state?.result
+
     const readabilityScores = useMemo(() => {
         const scores = {};
         if (resultData?.result?.messages) {

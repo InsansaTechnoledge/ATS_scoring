@@ -64,7 +64,7 @@ const MetricCard = ({ icon: Icon, label, value, color = "emerald" }) => (
     </div>
 );
 
-const Result = ({ resultData = samplgeData }) => {
+const Result = ({ resultData = sampleData }) => {
     // Extract readability scores from messages
     const readabilityScores = useMemo(() => {
         const scores = {};

@@ -350,7 +350,8 @@ class ATSFormatChecker:
 
         if text_content:
             # ✅ LinkedIn Compatibility & Job Matching
-            job_description = input("Paste Job Description (or press Enter to skip): ").strip()
+            # job_description = input("Paste Job Description (or press Enter to skip): ").strip()
+            job_description = self.job_description
             linkedin_results = self.linkedin_checker.analyze_profile(text_content, job_description if job_description else None)
 
             # ✅ LinkedIn Best Practices Check
@@ -512,18 +513,27 @@ def main():
 if __name__ == "__main__":
     main()
 
-def analyseResume(file_path):
+def analyseResume(file_path, job_description):
     checker = ATSFormatChecker()
     checker.file_path = file_path
+    checker.job_description = job_description
     result = checker.check_file()
     report = checker.generate_report(result)
     
-    print(report)
+    
+    response = {
+        'filename': os.path.basename(file_path),
+        'last_checked': datetime.now().isoformat(),
+        'result': result
+    }
+
     
     # Show message box with results
-    messagebox.showinfo("ATS Check Results", 
-                       f"Score: {result['score']}/100\n\n" +
-                       "See console for full report.")
+    # messagebox.showinfo("ATS Check Results", 
+    #                    f"Score: {result['score']}/100\n\n" +
+    #                    "See console for full report.")
+
+    return response
 
 # def main():
 #     checker = ATSFormatChecker()

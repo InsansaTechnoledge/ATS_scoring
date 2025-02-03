@@ -1078,7 +1078,7 @@
     },
     "5ef7deec59296266d86ca5c9d9897fce": {
         "filename": "Jay Amrish Fanse_Resume_April2024.pdf",
-        "last_checked": "2025-02-03T15:28:09.660313",
+        "last_checked": "2025-02-03T16:09:18.546241",
         "result": {
             "score": 60,
             "messages": [
@@ -1125,6 +1125,55 @@
                 "Fix grammar mistakes for better ATS compliance.",
                 "Add missing required sections",
                 "Add missing sections for LinkedIn compatibility.",
+                "Use a single font type throughout the document.",
+                "Limit bullet points to a maximum of 15 for better readability."
+            ]
+        }
+    },
+    "602ce72e87a14a5d997e79493c61763f": {
+        "filename": "Jay Amrish Fanse_MSU.pdf",
+        "last_checked": "2025-02-03T16:17:12.064717",
+        "result": {
+            "score": 80,
+            "messages": [
+                "Found 2 sentences using passive voice.",
+                "LinkedIn Optimization Suggestions:",
+                "Grammar Issues Found: 51",
+                " - {'error': 'JAY FANSE  LinkedIn | CodeChef | LeetCode | Githu...', 'suggestions': ['FANS', 'FALSE', 'MANSE', 'FAPSE', 'FAN SE', 'FANS E'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (4, 9)}",
+                " - {'error': 'JAY FANSE  LinkedIn | CodeChef | LeetCode | Github  +91 9726535193 |  ...', 'suggestions': ['Code Chef'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (22, 30)}",
+                " - {'error': 'JAY FANSE  LinkedIn | CodeChef | LeetCode | Github  +91 9726535193 |  jayf2911200...', 'suggestions': ['Electrode', 'Encode', 'Postcode', 'Decode', 'Leeched', 'Bestrode', 'Lestrade', 'Geocode', 'Re-encode', 'Uuencode'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (33, 41)}",
+                " - {'error': '...FANSE  LinkedIn | CodeChef | LeetCode | Github  +91 9726535193 |  jayf29112003@gmail.c...', 'suggestions': ['GitHub'], 'category': 'CASING', 'rule_id': 'GITHUB', 'message': 'The official name of this software platform is spelled with a capital \u201cH\u201d.', 'position': (44, 50)}",
+                " - {'error': '...ef | LeetCode | Github  +91 9726535193 |  jayf29112003@gmail.com                  ...', 'suggestions': [' '], 'category': 'TYPOGRAPHY', 'rule_id': 'WHITESPACE_RULE', 'message': 'Possible typo: you repeated a whitespace', 'position': (68, 70)}",
+                "Readability Scores:",
+                " - Flesch Reading Ease: 49.11",
+                " - Gunning Fog Index: 11.17",
+                " - SMOG Index: 12.00",
+                " - Automated Readability Index: 15.80",
+                " - Coleman Liau Index: 16.64",
+                " - Dale Chall Readability: 13.09",
+                " - Difficult Words: 95.00",
+                " - Syllable Count: 503.00",
+                "Word count acceptable (357 words)",
+                "Missing LinkedIn best-practice sections: Summary, Accomplishments",
+                "Job Match Score: 0.0%",
+                "Inconsistent font usage detected.",
+                "Most used font: Roboto,Bold",
+                "Excessive bullet points detected (45)."
+            ],
+            "file_type": "application/pdf",
+            "word_count": 0,
+            "sections_present": [],
+            "sections_missing": [],
+            "formatting_issues": [],
+            "recommendations": [
+                "Use active voice for stronger impact.",
+                "Include more relevant keywords in your Education section",
+                "Add more detail to your Experience section",
+                "Include more relevant keywords in your Experience section",
+                "Include more relevant keywords in your Skills section",
+                "Fix grammar mistakes for better ATS compliance.",
+                "Add missing sections for LinkedIn compatibility.",
+                "Improve resume alignment with job description.",
                 "Use a single font type throughout the document.",
                 "Limit bullet points to a maximum of 15 for better readability."
             ]

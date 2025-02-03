@@ -17,6 +17,7 @@ const Landing = () => {
     const [isAnalyzing, setIsAnalyzing] = useState(false);
     const [progress, setProgress] = useState(0);
     const [analysisData, setAnalysisData] = useState(null);
+    const [jobDescription, setJobDescription] = useState();
 
     useEffect(() => {
         // if (isAnalyzing) {
@@ -39,6 +40,7 @@ const Landing = () => {
 
             const formData = new FormData();
             formData.append('file', file);
+            formData.append('job_description', jobDescription)
 
             console.log(file)
             const response = await axios.post('http://localhost:5000/analyse', formData, {
@@ -47,13 +49,19 @@ const Landing = () => {
                 },
             });
 
+            if(response.status===200){
+                setIsAnalyzing(false);
+                setActiveStep('results');
+                setAnalysisData(response.data.result); 
+            }
             console.log(response.data);
         }
         
-        if(file){
+        if(isAnalyzing){
             analyseResume();
+            
         }
-    }, [file]);
+    }, [isAnalyzing]);
 
     return (
         <div className="bg-gradient-to-b from-blue-50 to-white">

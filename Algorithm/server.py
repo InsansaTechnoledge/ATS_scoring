@@ -19,16 +19,17 @@ def post_example():
     if 'file' not in request.files:
         return jsonify({"error": "No file part"}), 400
 
+    job_description = request.form.get('job_description')
+
     file = request.files['file']
     if file:
         file_path = os.path.join('Uploads', file.filename)
         file.save(file_path)
 
-    analyseResume(file_path)
 
     if file.filename == '':
         return jsonify({"error": "No selected file"}), 400
-
-    return jsonify({"message": "File received successfully!"})
+    response = analyseResume(file_path, job_description)
+    return jsonify({"message": "File analysed successfully!", "result":response}), 200
 if __name__ == '__main__':
     app.run(debug=True)

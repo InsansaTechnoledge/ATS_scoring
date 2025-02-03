@@ -56,10 +56,14 @@ const Landing = () => {
     }, [file]);
 
     return (
-        <div className="bg-gradient-to-b from-gray-50 to-white">
+        <div className="bg-gradient-to-b from-blue-50 to-white">
             <main className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-                <Hero />
-                <Metrics />
+                {activeStep !== 'results' && (
+                    <>
+                        <Hero />
+                        <Metrics />
+                    </>
+                )}
                 {activeStep === 'upload' && (
                     <UploadBox
                         file={file}

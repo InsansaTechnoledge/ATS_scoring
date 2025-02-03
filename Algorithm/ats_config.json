@@ -1,0 +1,22 @@
+{
+    "required_sections": [
+        "contact",
+        "summary",
+        "experience",
+        "education",
+        "skills",
+        "certifications"
+    ],
+    "section_weights": {
+        "contact": 0.15,
+        "summary": 0.20,
+        "experience": 0.30,
+        "education": 0.15,
+        "skills": 0.20
+    },
+    "minimum_requirements": {
+        "min_experience_years": 2,
+        "min_projects": 3,
+        "required_certifications": 1
+    }
+}

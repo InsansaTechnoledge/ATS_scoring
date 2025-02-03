@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Upload, FileText, Check, ChevronRight, X, AlertCircle, BarChart2, Search, Users, Award } from 'lucide-react';
+import Result from './result';
 
 const ATSChecker = () => {
     const [file, setFile] = useState(null);
@@ -277,6 +278,7 @@ const ATSChecker = () => {
                 )}
 
                 {/* Results Section */}
+                <Result/>
                
             </main>
         </div>

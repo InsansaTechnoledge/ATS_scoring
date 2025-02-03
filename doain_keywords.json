@@ -1,0 +1,17 @@
+{
+    "software_development": [
+        "python",
+        "java",
+        "javascript",
+        "api",
+        "cloud",
+        "database"
+    ],
+    "data_science": [
+        "machine learning",
+        "statistics",
+        "analytics",
+        "visualization",
+        "prediction"
+    ]
+}

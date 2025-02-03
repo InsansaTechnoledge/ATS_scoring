@@ -1,0 +1,2 @@
+2025-01-29 22:53:13,970 - ERROR - Error in main: 'utf-8' codec can't decode byte 0xd3 in position 10: invalid continuation byte
+2025-01-29 22:53:31,901 - ERROR - Error in main: 'utf-8' codec can't decode byte 0x9c in position 76: invalid start byte

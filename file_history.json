@@ -1,0 +1,1026 @@
+{
+    "d38f9b5155be92513d55105f5c589d6b": {
+        "filename": "410128d0-7be6-4fb1-9b54-7c13d62c5d4d_ATS_score_calculation_algorithm.pdf",
+        "last_checked": "2025-01-30T14:55:12.572287",
+        "result": {
+            "score": 0,
+            "messages": [
+                "Not enough industry-specific keywords detected.",
+                "Stylistic Improvements Suggested:",
+                "Grammar Issues Found: 23",
+                " - {'error': '...s the most relevant JD from DB and merge  it with user input JD. User uploads resu...', 'suggestions': [' '], 'category': 'TYPOGRAPHY', 'rule_id': 'CONSECUTIVE_SPACES', 'message': 'It seems like there are too many consecutive spaces here.', 'position': (532, 534)}",
+                " - {'error': '... resume Checking the format of resumes  file format ( word , docx , ATS-compliant PD...', 'suggestions': ['files'], 'category': 'GRAMMAR', 'rule_id': 'COLLECTIVE_NOUN_VERB_AGREEMENT_VBP', 'message': 'Possible verb agreement error. Did you mean \u201cfiles\u201d? (Some collective nouns can be treated as both singular and plural, so \u2018file\u2019 is not always incorrect.)', 'position': (609, 613)}",
+                " - {'error': '...king the format of resumes  file format ( word , docx , ATS-compliant PDF format )...', 'suggestions': ['('], 'category': 'TYPOGRAPHY', 'rule_id': 'COMMA_PARENTHESIS_WHITESPACE', 'message': 'Don\u2019t put a space after the opening parenthesis.', 'position': (621, 623)}",
+                " - {'error': '...he format of resumes  file format ( word , docx , ATS-compliant PDF format ) layou...', 'suggestions': [','], 'category': 'TYPOGRAPHY', 'rule_id': 'COMMA_PARENTHESIS_WHITESPACE', 'message': 'Put a space after the comma, but not before the comma.', 'position': (627, 629)}",
+                " - {'error': '...format of resumes  file format ( word , docx , ATS-compliant PDF format ) layouts of...', 'suggestions': ['DOCX'], 'category': 'CASING', 'rule_id': 'FILE_EXTENSIONS_CASE', 'message': 'File types are normally capitalized.', 'position': (630, 634)}",
+                "Readability Scores:",
+                " - Flesch Reading Ease: -9.57",
+                " - Gunning Fog Index: 33.36",
+                " - SMOG Index: 0.00",
+                " - Automated Readability Index: 40.20",
+                " - Coleman Liau Index: 14.82",
+                " - Dale Chall Readability: 13.81",
+                " - Difficult Words: 44.00",
+                " - Syllable Count: 238.00",
+                "Too few words (minimum 200)",
+                "Missing sections: experience, education, skills",
+                "Missing LinkedIn best-practice sections: experience, education, skills",
+                "Inconsistent font usage detected.",
+                "Most used font: Inter-Regular"
+            ],
+            "file_type": "application/pdf",
+            "word_count": 0,
+            "sections_present": [],
+            "sections_missing": [
+                "experience",
+                "education",
+                "skills"
+            ],
+            "formatting_issues": [],
+            "recommendations": [
+                "Add more relevant keywords related to your industry.",
+                "Consider simplifying language for better readability",
+                "Fix grammar mistakes for better ATS compliance.",
+                "Adjust document length to meet requirements",
+                "Add missing required sections",
+                "Add missing sections for LinkedIn compatibility.",
+                "Use a single font type throughout the document."
+            ]
+        }
+    },
+    "959dbf459a891f191f7708f229e36109": {
+        "filename": "Aanal Alpesh Shah - Batch 2025 - B.Tech. - Computer Science & Engineering (1).pdf",
+        "last_checked": "2025-01-29T22:59:48.371462",
+        "result": {
+            "score": 80,
+            "messages": [
+                "Word count acceptable (442 words)",
+                "Missing sections: experience"
+            ],
+            "file_type": "application/pdf",
+            "word_count": 0,
+            "sections_present": [],
+            "sections_missing": [
+                "experience"
+            ],
+            "formatting_issues": [],
+            "recommendations": [
+                "Add missing required sections"
+            ]
+        }
+    },
+    "a86230e45763ed60f5933268d5d9fb50": {
+        "filename": "Chaitanya_J_DEC24.docx",
+        "last_checked": "2025-01-29T23:12:13.216004",
+        "result": {
+            "score": 100,
+            "messages": [
+                "Word count acceptable (600 words)"
+            ],
+            "file_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "word_count": 0,
+            "sections_present": [],
+            "sections_missing": [],
+            "formatting_issues": [],
+            "recommendations": []
+        }
+    },
+    "3f55c8a6cbcceccad8ad019b770693c2": {
+        "filename": "Jay Fanse_Resume (1).pdf",
+        "last_checked": "2025-01-30T12:03:30.969557",
+        "result": {
+            "score": 60,
+            "messages": [
+                "Grammar Issues Found: 54",
+                " - {'error': 'JAY FANSE   [CodeChef] | [Codeforces] | [LeetCode...', 'suggestions': ['FANS', 'FALSE', 'MANSE', 'FAPSE', 'FAN SE', 'FANS E'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (4, 9)}",
+                " - {'error': 'JAY FANSE   [CodeChef] | [Codeforces] | [LeetCode] ...', 'suggestions': [' '], 'category': 'TYPOGRAPHY', 'rule_id': 'WHITESPACE_RULE', 'message': 'Possible typo: you repeated a whitespace', 'position': (9, 11)}",
+                " - {'error': 'JAY FANSE   [CodeChef] | [Codeforces] | [LeetCode]           ...', 'suggestions': ['Code Chef'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (13, 21)}",
+                " - {'error': 'JAY FANSE   [CodeChef] | [Codeforces] | [LeetCode]                  +91 9726...', 'suggestions': ['Code forces'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (26, 36)}",
+                " - {'error': '...AY FANSE   [CodeChef] | [Codeforces] | [LeetCode]                  +91 9726535193       ...', 'suggestions': ['Electrode', 'Encode', 'Postcode', 'Decode', 'Leeched', 'Bestrode', 'Lestrade', 'Geocode', 'Re-encode', 'Uuencode'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (41, 49)}",
+                "Readability Scores:",
+                " - Flesch Reading Ease: 44.95",
+                " - Gunning Fog Index: 11.75",
+                " - SMOG Index: 13.10",
+                " - Automated Readability Index: 17.20",
+                " - Coleman Liau Index: 15.89",
+                " - Dale Chall Readability: 12.66",
+                " - Difficult Words: 98.00",
+                " - Syllable Count: 551.00",
+                "Word count acceptable (377 words)",
+                "Missing sections: experience",
+                "Missing LinkedIn best-practice sections: experience",
+                "Inconsistent font usage detected.",
+                "Most used font: Roboto",
+                "Excessive bullet points detected (17)."
+            ],
+            "file_type": "application/pdf",
+            "word_count": 0,
+            "sections_present": [],
+            "sections_missing": [
+                "experience"
+            ],
+            "formatting_issues": [],
+            "recommendations": [
+                "Fix grammar mistakes for better ATS compliance.",
+                "Add missing required sections",
+                "Add missing sections for LinkedIn compatibility.",
+                "Use a single font type throughout the document.",
+                "Limit bullet points for better readability."
+            ]
+        }
+    },
+    "cf49a477d61007d685b35f3ff000627b": {
+        "filename": "Heer Patel.AIDS.2025 - Heer Patel.pdf",
+        "last_checked": "2025-01-29T23:23:29.001489",
+        "result": {
+            "score": 75,
+            "messages": [
+                "Word count acceptable (269 words)",
+                "Inconsistent font usage detected.",
+                "Most used font: Inter-Regular",
+                "Few section headers found: education"
+            ],
+            "file_type": "application/pdf",
+            "word_count": 0,
+            "sections_present": [],
+            "sections_missing": [],
+            "formatting_issues": [],
+            "recommendations": [
+                "Use a single font type throughout the document.",
+                "Ensure major sections like Experience, Education, and Skills are included."
+            ]
+        }
+    },
+    "451a86e64c75a34e096a4efb0b79e23c": {
+        "filename": "resume-44 (1) (1).pdf",
+        "last_checked": "2025-01-29T23:38:30.153765",
+        "result": {
+            "score": 90,
+            "messages": [
+                "Word count acceptable (287 words)",
+                "Inconsistent font usage detected.",
+                "Most used font: Roboto-Regular"
+            ],
+            "file_type": "application/pdf",
+            "word_count": 0,
+            "sections_present": [],
+            "sections_missing": [],
+            "formatting_issues": [],
+            "recommendations": [
+                "Use a single font type throughout the document."
+            ]
+        }
+    },
+    "e1076ce4e6d8d54c928c870a6c45d7a3": {
+        "filename": "undefined_Resume (2).pdf",
+        "last_checked": "2025-01-30T15:12:28.142634",
+        "result": {
+            "score": 75,
+            "messages": [
+                "Found 1 sentences using passive voice.",
+                "Stylistic Improvements Suggested:",
+                "LinkedIn Optimization Suggestions:",
+                "Grammar Issues Found: 17",
+                " - {'error': 'Janviba Dabhi  dabhijanviba25@gmailcom | 910493...', 'suggestions': ['Janina', 'Janvier'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (0, 7)}",
+                " - {'error': 'Janviba Dabhi  dabhijanviba25@gmailcom | 9104930828 |...', 'suggestions': ['Dab hi'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (8, 13)}",
+                " - {'error': '...f engineering in Information Technology:                                   [Oct 2021 \u2013 Persuing]  Sardar Vallabhbha...', 'suggestions': [' '], 'category': 'TYPOGRAPHY', 'rule_id': 'WHITESPACE_RULE', 'message': 'Possible typo: you repeated a whitespace', 'position': (406, 441)}",
+                " - {'error': '...                            [Oct 2021 \u2013 Persuing]  Sardar Vallabhbhai Patel institute of...', 'suggestions': ['Pursuing', 'Pershing', 'Perusing', 'Per suing'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (453, 461)}",
+                " - {'error': '...                 [Oct 2021 \u2013 Persuing]  Sardar Vallabhbhai Patel institute of technolo...', 'suggestions': ['Radar', 'Sarah', 'Harder', 'Saddam', 'Sandra', 'Sara', 'Saar', 'Sadat', 'Samar', 'Sandal', 'Sandbar', 'Saran', 'Ardor', 'Larder', 'Tartar', 'Adar', 'Sandor', 'Sadder', 'Warder', 'Yardarm', 'Sander', 'Weirder', 'BARDA', 'Cardan', 'Hadar', 'RADAR', 'RDAR', 'SARA', 'Sadr', 'S\u00e1ndor', 'Carder', 'Salwar', 'Yarder', 'Garda\u00ed'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (464, 470)}",
+                "Readability Scores:",
+                " - Flesch Reading Ease: 19.57",
+                " - Gunning Fog Index: 15.82",
+                " - SMOG Index: 16.20",
+                " - Automated Readability Index: 19.60",
+                " - Coleman Liau Index: 19.83",
+                " - Dale Chall Readability: 12.89",
+                " - Difficult Words: 105.00",
+                " - Syllable Count: 576.00",
+                "Word count acceptable (291 words)",
+                "Job Match Score: 0.0%",
+                "Inconsistent font usage detected.",
+                "Most used font: TimesNewRomanPSMT",
+                "Work Experience section lacks bullet points.",
+                "Few section headers found: skills, education"
+            ],
+            "file_type": "application/pdf",
+            "word_count": 0,
+            "sections_present": [],
+            "sections_missing": [],
+            "formatting_issues": [],
+            "recommendations": [
+                "Use active voice for stronger impact.",
+                "Consider simplifying language for better readability",
+                "Add more detail to your experience section",
+                "Include more relevant keywords in your experience section",
+                "Include more relevant keywords in your education section",
+                "Add more detail to your skills section",
+                "Include more relevant keywords in your skills section",
+                "Fix grammar mistakes for better ATS compliance.",
+                "Improve resume alignment with job description.",
+                "Use a single font type throughout the document.",
+                "Consider using bullet points to highlight key achievements.",
+                "Ensure major sections like Experience, Education, and Skills are included."
+            ]
+        }
+    },
+    "da5c0c81e9080a4e076d0d8e1d0f4605": {
+        "filename": "Om Tushar Mallick - Batch 2025 - B.Tech. - Computer Science & Engineering (1).pdf",
+        "last_checked": "2025-01-30T00:25:37.532368",
+        "result": {
+            "score": 55,
+            "messages": [
+                "Word count acceptable (497 words)",
+                "Missing sections: experience",
+                "Missing LinkedIn best-practice sections: experience",
+                "Job Match Score: 1.83%",
+                "Inconsistent font usage detected.",
+                "Most used font: NimbusSanL-Regu",
+                "Few section headers found: education"
+            ],
+            "file_type": "application/pdf",
+            "word_count": 0,
+            "sections_present": [],
+            "sections_missing": [
+                "experience"
+            ],
+            "formatting_issues": [],
+            "recommendations": [
+                "Add missing required sections",
+                "Add missing sections for LinkedIn compatibility.",
+                "Improve resume alignment with job description.",
+                "Use a single font type throughout the document.",
+                "Ensure major sections like Experience, Education, and Skills are included."
+            ]
+        }
+    },
+    "23bb427dfe320a7549395715708b4899": {
+        "filename": "Pranami_Patel-1 - Pranami Patel.pdf",
+        "last_checked": "2025-01-30T00:31:51.516997",
+        "result": {
+            "score": 90,
+            "messages": [
+                "Grammar Issues Found: 38",
+                " - Incorrect: ...on, Solidity, C, Java, JavaScript, SQL, Prolog, HTML Framework : TensorFlow, Keras, Py... \u2192 Suggestion: PROLOG, Prolong, Proof, Polo, Promo, Proto, Proton, Paolo, Promos, Provo, Prong, Prolongs, Prole, Proles, Prolix, ProDOS, Prologue, Urology, Prologis",
+                " - Incorrect: ... PyTorch, OpenCV, Scikit-learn, Pandas, Numpy Tools & Technologies : Jupyter notebook... \u2192 Suggestion: NumPy, Bumpy, Lumpy, Dumpy, Jumpy, Jump, Pump, Dump, Jumps, Pumps, Bump, Bumps, Dummy, Dumps, Lump, Mummy, Rump, Hump, Lumps, Nymph, Puppy, Sump, Campy, Grumpy, Mumps, Numb, Nutty, Gummy, Humps, Rummy, Tummy, NIMBY, Nappy, Pulpy, Stumpy, Wimpy, Clumpy, Frumpy, Guppy, Nippy, Rumps, Sumps, Yummy, Numbs, Numbly, Umps, Gimpy, NDMP, NMPP, NUMA, Nampa, Numpad, UMP, Bumph, Fumy, Humph, Nimby, Nubby, Rumply, Ump",
+                " - Incorrect: ...ols & Technologies : Jupyter notebooks, github, google colab, IBM CLoud  AI & ML : Dee... \u2192 Suggestion: GitHub",
+                " - Incorrect: ...ies : Jupyter notebooks, github, google colab, IBM CLoud  AI & ML : Deep learning, Ge... \u2192 Suggestion: cola, COLA, colas, coley, coleys, collab",
+                " - Incorrect: ...er notebooks, github, google colab, IBM CLoud  AI & ML : Deep learning, Gen AI, NLP C... \u2192 Suggestion: Cloud, Clouds, Loud, Aloud, Cloudy, Clout, Clod, CLOUS, iCloud, Could, Close, Club, Blood, Closed, Lord, Cold, Clock, Coup, Crowd, Flood, Load, Chord, Cloth, Cord, Flour, Proud, Claude, Floyd, Lloyd, Clad, Clone, Clue, Claus, Blond, Cloak, Cloned, Clown, Cod, Clot, Clouded, Coed, Chou, Clog, Clogs, Clots, Clove, Laud, Croup, Cud, Flout, Clods, Clued, Crud, Lout, Clop, Clouted, Clouts, Cooed, Plod, Lou, Clops, Cloy, Lour, CLD, CLSID, CLSPD, CLU, CLUF, CNOUS, COD, COPD, COU, CROUS, CRUD, CUD, Loyd, SOUD, Becloud, Clomp, Clonk, Cloyed, Cloys",
+                "Readability Scores:",
+                " - Flesch Reading Ease: 21.57",
+                " - Gunning Fog Index: 19.77",
+                " - SMOG Index: 19.20",
+                " - Automated Readability Index: 25.20",
+                "Word count acceptable (289 words)",
+                "Job Match Score: 10.1%",
+                "Inconsistent font usage detected.",
+                "Most used font: Inter-Regular"
+            ],
+            "file_type": "application/pdf",
+            "word_count": 0,
+            "sections_present": [],
+            "sections_missing": [],
+            "formatting_issues": [],
+            "recommendations": [
+                "Fix grammar mistakes for better ATS compliance.",
+                "Improve resume alignment with job description.",
+                "Use a single font type throughout the document."
+            ]
+        }
+    },
+    "8c9bc778f270de8004df2332a5aeec87": {
+        "filename": "Sagar_Gohil.pdf",
+        "last_checked": "2025-01-30T12:43:48.435069",
+        "result": {
+            "score": 40,
+            "messages": [
+                "Stylistic Improvements Suggested:",
+                "LinkedIn Optimization Suggestions:",
+                "Grammar Issues Found: 24",
+                " - {'error': 'Sagar Gohil \u00a7 sagarbgohil | \u00ef gohilsagar | # gohilb...', 'suggestions': ['Goal', 'Oil', 'Soil', 'Ohio', 'Phil', 'Gothic', 'Coil', 'Foil', 'Gil', 'OHL', 'Boil', 'Grail', 'Gogol', 'G\u00f6del', 'Kohl', 'Mobil', 'Toil', 'Gobi', 'Ghoul', 'Gail', 'Roil', 'Gorily', 'Moil', 'Akhil', 'GANIL', 'GHI', 'GHML', 'GIL', 'GOI', 'Gmail', 'Godel', 'Gomal', 'Mohit', 'OHI', 'Rohit'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (6, 11)}",
+                " - {'error': 'Sagar Gohil \u00a7 sagarbgohil | \u00ef gohilsagar | # gohilbsagar@gmail.co...', 'suggestions': [], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (14, 25)}",
+                " - {'error': 'Sagar Gohil \u00a7 sagarbgohil | \u00ef gohilsagar | # gohilbsagar@gmail.com | H +91-91737...', 'suggestions': [], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (30, 40)}",
+                " - {'error': '...developing scalable APIs using Node.js, NestJS, Prisma, and PostgreSQL. Proficient in ...', 'suggestions': ['Nests', 'Nest JS'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (174, 180)}",
+                " - {'error': '...ng scalable APIs using Node.js, NestJS, Prisma, and PostgreSQL. Proficient in real-tim...', 'suggestions': ['Prism', 'Prisms', 'Prism a'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (182, 188)}",
+                "Readability Scores:",
+                " - Flesch Reading Ease: 15.37",
+                " - Gunning Fog Index: 13.05",
+                " - SMOG Index: 15.00",
+                " - Automated Readability Index: 18.80",
+                " - Coleman Liau Index: 21.22",
+                " - Dale Chall Readability: 11.99",
+                " - Difficult Words: 155.00",
+                " - Syllable Count: 905.00",
+                "Word count acceptable (469 words)",
+                "Missing sections: education, skills",
+                "Missing LinkedIn best-practice sections: education, skills",
+                "Inconsistent font usage detected.",
+                "Most used font: CMR10",
+                "Excessive bullet points detected (48)."
+            ],
+            "file_type": "application/pdf",
+            "word_count": 0,
+            "sections_present": [],
+            "sections_missing": [
+                "education",
+                "skills"
+            ],
+            "formatting_issues": [],
+            "recommendations": [
+                "Consider simplifying language for better readability",
+                "Include more relevant keywords in your experience section",
+                "Fix grammar mistakes for better ATS compliance.",
+                "Add missing required sections",
+                "Add missing sections for LinkedIn compatibility.",
+                "Use a single font type throughout the document.",
+                "Limit bullet points for better readability."
+            ]
+        }
+    },
+    "723d77e81792c4eb9c402544551ddca1": {
+        "filename": "resume-45 (2).pdf",
+        "last_checked": "2025-01-30T12:00:32.075365",
+        "result": {
+            "score": 90,
+            "messages": [
+                "Grammar Issues Found: 37",
+                " - {'error': 'DRASHTI RANPARIYA Rajkot,Gujrat 360410 \\x83 +91 98...', 'suggestions': ['DRASTIC', 'VASHTI'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (0, 7)}",
+                " - {'error': 'DRASHTI RANPARIYA Rajkot,Gujrat 360410 \\x83 +91 9898708262 #...', 'suggestions': [], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (8, 17)}",
+                " - {'error': 'DRASHTI RANPARIYA Rajkot,Gujrat 360410 \\x83 +91 9898708262 # drashtiranpar...', 'suggestions': [', Gujrat'], 'category': 'TYPOGRAPHY', 'rule_id': 'COMMA_PARENTHESIS_WHITESPACE', 'message': 'Put a space after the comma.', 'position': (24, 31)}",
+                " - {'error': '...8262 # drashtiranpariya3012@gmail.com \u00a8 github \u00f0 linkedin Education Sardar Valabhbhai ...', 'suggestions': ['GitHub'], 'category': 'CASING', 'rule_id': 'GITHUB', 'message': 'The official name of this software platform is spelled with a capital \u201cH\u201d.', 'position': (91, 97)}",
+                " - {'error': '...ashtiranpariya3012@gmail.com \u00a8 github \u00f0 linkedin Education Sardar Valabhbhai Patel Insti...', 'suggestions': ['LinkedIn'], 'category': 'CASING', 'rule_id': 'LINKEDIN', 'message': 'The name of this social business platform is spelled with a capital \u201cI\u201d.', 'position': (100, 108)}",
+                "Readability Scores:",
+                " - Flesch Reading Ease: 19.30",
+                " - Gunning Fog Index: 18.00",
+                " - SMOG Index: 17.70",
+                " - Automated Readability Index: 23.00",
+                " - Coleman Liau Index: 19.67",
+                " - Dale Chall Readability: 14.11",
+                " - Difficult Words: 123.00",
+                " - Syllable Count: 602.00",
+                "Word count acceptable (342 words)",
+                "Inconsistent font usage detected.",
+                "Most used font: CMR10"
+            ],
+            "file_type": "application/pdf",
+            "word_count": 0,
+            "sections_present": [],
+            "sections_missing": [],
+            "formatting_issues": [],
+            "recommendations": [
+                "Fix grammar mistakes for better ATS compliance.",
+                "Use a single font type throughout the document."
+            ]
+        }
+    },
+    "ca0e5952e44449158b3d08399148a236": {
+        "filename": "resume-39 (1).pdf",
+        "last_checked": "2025-01-30T12:24:39.261108",
+        "result": {
+            "score": 90,
+            "messages": [
+                "Grammar Issues Found: 18",
+                " - {'error': '...havitdudhat689@gmail.com Surat, Gujarat Sardar Vallabhbhai Patel Institute of Technolo...', 'suggestions': ['Radar', 'Sarah', 'Harder', 'Saddam', 'Sandra', 'Sara', 'Saar', 'Sadat', 'Samar', 'Sandal', 'Sandbar', 'Saran', 'Ardor', 'Larder', 'Tartar', 'Adar', 'Sandor', 'Sadder', 'Warder', 'Yardarm', 'Sander', 'Weirder', 'BARDA', 'Cardan', 'Hadar', 'RADAR', 'RDAR', 'SARA', 'Sadr', 'S\u00e1ndor', 'Carder', 'Salwar', 'Yarder', 'Garda\u00ed'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (80, 86)}",
+                " - {'error': '...dhat689@gmail.com Surat, Gujarat Sardar Vallabhbhai Patel Institute of Technology(SVIT Vasa...', 'suggestions': [], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (87, 98)}",
+                " - {'error': '...llabhbhai Patel Institute of Technology(SVIT Vasad) Bachelor of Engineering, Informa...', 'suggestions': ['SUIT', 'SIT', 'SKIT', 'SLIT', 'SPIT', 'SVI', 'SVT', 'SNIT', 'SV IT', 'SVI T'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (129, 133)}",
+                " - {'error': '...bhai Patel Institute of Technology(SVIT Vasad) Bachelor of Engineering, Information a...', 'suggestions': ['Va sad'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (134, 139)}",
+                " - {'error': '...on and Technology  Duration : 2021-2025 Tapovan Science Academy Hsc - Science Stream (P...', 'suggestions': ['Radovan', 'Zapopan'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (215, 222)}",
+                "Readability Scores:",
+                " - Flesch Reading Ease: 38.52",
+                " - Gunning Fog Index: 13.34",
+                " - SMOG Index: 13.90",
+                " - Automated Readability Index: 15.00",
+                " - Coleman Liau Index: 15.66",
+                " - Dale Chall Readability: 13.12",
+                " - Difficult Words: 72.00",
+                " - Syllable Count: 370.00",
+                "Word count acceptable (211 words)",
+                "Inconsistent font usage detected.",
+                "Most used font: Nourd-Light"
+            ],
+            "file_type": "application/pdf",
+            "word_count": 0,
+            "sections_present": [],
+            "sections_missing": [],
+            "formatting_issues": [],
+            "recommendations": [
+                "Fix grammar mistakes for better ATS compliance.",
+                "Use a single font type throughout the document."
+            ]
+        }
+    },
+    "028c4933b5bae8826c0aa919bc7411a5": {
+        "filename": "Resume_one.pdf",
+        "last_checked": "2025-01-30T14:44:19.999045",
+        "result": {
+            "score": 90,
+            "messages": [
+                "Not enough industry-specific keywords detected.",
+                "Stylistic Improvements Suggested:",
+                "LinkedIn Optimization Suggestions:",
+                "Grammar Issues Found: 16",
+                " - {'error': 'TANMAY SETH +91 6353549290 sethtanmay72@gmail....', 'suggestions': ['TAMMY', 'TANYA', 'TASMAN', 'TARMAC', 'TAMAR', 'TAMMANY', 'TANIA', 'TANEY', 'TANGY', 'TANGUY', 'TANSY', 'TAXMAN', 'GAMAY', 'SANJAY', 'TAM\u00c1S', 'TANJA', 'YANMAR'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (0, 6)}",
+                " - {'error': '...sethtanmay72@gmail.com \u22c4linkedin.com/in/Tanmay-Seth \u22c4www.myPortfolio.com OBJECTIVE To lever...', 'suggestions': ['Tan may-Seth'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (67, 78)}",
+                " - {'error': '...@gmail.com \u22c4linkedin.com/in/Tanmay-Seth \u22c4www.myPortfolio.com OBJECTIVE To leverage m...', 'suggestions': ['\u22c4 WWW', '\u22c4 WWF', '\u22c4 WWI', '\u22c4 wow', '\u22c4 WNW', '\u22c4 WSW', '\u22c4 UWW', '\u22c4 WHW', '\u22c4 WLW', '\u22c4 WMW', '\u22c4 WW', '\u22c4 WWA', '\u22c4 WWC', '\u22c4 WWE', '\u22c4 WoW', '\u22c4 aww', '\u22c4 was', '\u22c4 we', '\u22c4 who', '\u22c4 new', '\u22c4 two', '\u22c4 now', '\u22c4 own', '\u22c4 won', '\u22c4 few', '\u22c4 how', '\u22c4 law', '\u22c4 low', '\u22c4 way', '\u22c4 win', '\u22c4 saw', '\u22c4 war', '\u22c4 web', '\u22c4 why', '\u22c4 raw', '\u22c4 row', '\u22c4 wet', '\u22c4 BMW', '\u22c4 NSW', '\u22c4 bow', '\u22c4 jaw', '\u22c4 BTW', '\u22c4 WHO', '\u22c4 WWII', '\u22c4 Web', '\u22c4 Wei', '\u22c4 cow', '\u22c4 tow', '\u22c4 wax', '\u22c4 wit', '\u22c4 Jew', '\u22c4 WPA', '\u22c4 WTA', '\u22c4 WTO', '\u22c4 Wii', '\u22c4 awe', '\u22c4 owe', '\u22c4 owl', '\u22c4 vow', '\u22c4 wed', '\u22c4 wig', '\u22c4 CWA', '\u22c4 Dow', '\u22c4 Lew', '\u22c4 TWA', '\u22c4 UAW', '\u22c4 WAC', '\u22c4 WC', '\u22c4 WMD', '\u22c4 WS', '\u22c4 WSU', '\u22c4 WTC', '\u22c4 dew', '\u22c4 kWh', '\u22c4 paw', '\u22c4 sow', '\u22c4 wee', '\u22c4 woo', '\u22c4 yaw', '\u22c4 BWF', '\u22c4 DWM', '\u22c4 FWD', '\u22c4 MSW', '\u22c4 MWC', '\u22c4 NWT', '\u22c4 PW', '\u22c4 SSW', '\u22c4 VFW', '\u22c4 WAP', '\u22c4 WD', '\u22c4 pew', '\u22c4 sew', '\u22c4 wan', '\u22c4 woe', '\u22c4 wry', '\u22c4 BWI', '\u22c4 BWR', '\u22c4 CWC', '\u22c4 DWI', '\u22c4 DWT', '\u22c4 MWh', '\u22c4 RWA', '\u22c4 ewe', '\u22c4 mow', '\u22c4 pow', '\u22c4 wag', '\u22c4 wok', '\u22c4 DWG', '\u22c4 Twp', '\u22c4 WLM', '\u22c4 WSJ', '\u22c4 Wed', '\u22c4 awl', '\u22c4 hew', '\u22c4 maw', '\u22c4 mew', '\u22c4 wows', '\u22c4 wpm', '\u22c4 TWX', '\u22c4 caw', '\u22c4 cw', '\u22c4 hwy', '\u22c4 wiz', '\u22c4 Wyo', '\u22c4 yow', '\u22c4 ECW', '\u22c4 MW', '\u22c4 whew', '\u22c4 AAW', '\u22c4 ABW', '\u22c4 ACW', '\u22c4 AEW', '\u22c4 AFW', '\u22c4 AGW', '\u22c4 AHW', '\u22c4 AIW', '\u22c4 AJW', '\u22c4 ALW', '\u22c4 AMW', '\u22c4 ANW', '\u22c4 AOW', '\u22c4 APW', '\u22c4 ARW', '\u22c4 ASW', '\u22c4 ATW', '\u22c4 AUW', '\u22c4 AVW', '\u22c4 AWA', '\u22c4 AWB', '\u22c4 AWC', '\u22c4 AWD', '\u22c4 AWE', '\u22c4 AWF', '\u22c4 AWG', '\u22c4 AWK', '\u22c4 AWM', '\u22c4 AWN', '\u22c4 AWP', '\u22c4 AWR', '\u22c4 AWS', '\u22c4 AWU', '\u22c4 AWZ', '\u22c4 AZW', '\u22c4 B&W', '\u22c4 BAW', '\u22c4 BBW', '\u22c4 BDW', '\u22c4 BEW', '\u22c4 BFW', '\u22c4 BGW', '\u22c4 BIW', '\u22c4 BJW', '\u22c4 BKW', '\u22c4 BLW', '\u22c4 BNW', '\u22c4 BOW', '\u22c4 BQW', '\u22c4 BSW', '\u22c4 BUW', '\u22c4 BVW', '\u22c4 BWA', '\u22c4 BWB', '\u22c4 BWC', '\u22c4 BWD', '\u22c4 BWE', '\u22c4 BWG', '\u22c4 BWH', '\u22c4 BWK', '\u22c4 BWL', '\u22c4 BWM', '\u22c4 BWN', '\u22c4 BWP', '\u22c4 BWQ', '\u22c4 BWS', '\u22c4 BWT', '\u22c4 BWU', '\u22c4 BWV', '\u22c4 BWY', '\u22c4 BYW', '\u22c4 CAW', '\u22c4 CCW', '\u22c4 CDW', '\u22c4 CHW', '\u22c4 CLW', '\u22c4 CMW', '\u22c4 CNW', '\u22c4 CRW', '\u22c4 CUW', '\u22c4 CW', '\u22c4 CWB', '\u22c4 CWE', '\u22c4 CWF', '\u22c4 CWL', '\u22c4 CWM', '\u22c4 CWO', '\u22c4 CWP', '\u22c4 CWR', '\u22c4 CWT', '\u22c4 CZW', '\u22c4 DFW', '\u22c4 DPW', '\u22c4 DTW', '\u22c4 DWH', '\u22c4 DWV', '\u22c4 EDW', '\u22c4 EW', '\u22c4 EWG', '\u22c4 EWP', '\u22c4 EWR', '\u22c4 EWS', '\u22c4 FCW', '\u22c4 FIW', '\u22c4 FSW', '\u22c4 FTW', '\u22c4 FW', '\u22c4 FWA', '\u22c4 FWI', '\u22c4 FWIW', '\u22c4 GSW', '\u22c4 GW', '\u22c4 GWG', '\u22c4 GWP', '\u22c4 GWh', '\u22c4 HW', '\u22c4 HWD', '\u22c4 HWK', '\u22c4 HWs', '\u22c4 Haw', '\u22c4 IWC', '\u22c4 IWF', '\u22c4 JWD', '\u22c4 JWS', '\u22c4 JWT', '\u22c4 KPW', '\u22c4 KRW', '\u22c4 KUW', '\u22c4 KW', '\u22c4 KWC', '\u22c4 KWD', '\u22c4 KWG', '\u22c4 KWH', '\u22c4 KWL', '\u22c4 KWT', '\u22c4 LAW', '\u22c4 LDW', '\u22c4 LGW', '\u22c4 LHW', '\u22c4 LSW', '\u22c4 L\u00f6w', '\u22c4 MLW', '\u22c4 MNW', '\u22c4 MTW', '\u22c4 MWA', '\u22c4 MWK', '\u22c4 MWS', '\u22c4 NCW', '\u22c4 NOW', '\u22c4 NRW', '\u22c4 NTW', '\u22c4 NW', '\u22c4 NWD', '\u22c4 OWA', '\u22c4 OWB', '\u22c4 OWL', '\u22c4 OWS', '\u22c4 PLW', '\u22c4 PNW', '\u22c4 POW', '\u22c4 PWA', '\u22c4 PWB', '\u22c4 PWF', '\u22c4 PWG', '\u22c4 PWI', '\u22c4 PWM', '\u22c4 PWR', '\u22c4 PoW', '\u22c4 PwC', '\u22c4 RAW', '\u22c4 RCW', '\u22c4 RRW', '\u22c4 RSW', '\u22c4 RTW', '\u22c4 RWD', '\u22c4 RWF', '\u22c4 Rwy', '\u22c4 S&W', '\u22c4 SAW', '\u22c4 SFW', '\u22c4 SJW', '\u22c4 SPW', '\u22c4 SW', '\u22c4 SWE', '\u22c4 SWL', '\u22c4 SWR', '\u22c4 SWT', '\u22c4 SWV', '\u22c4 SWZ', '\u22c4 TBW', '\u22c4 TCW', '\u22c4 TGW', '\u22c4 TNW', '\u22c4 TW', '\u22c4 TWC', '\u22c4 TWD', '\u22c4 TWE', '\u22c4 TWF', '\u22c4 TWS', '\u22c4 TWU', '\u22c4 TWV', '\u22c4 UFW', '\u22c4 UW', '\u22c4 UWA', '\u22c4 UWC', '\u22c4 UWP', '\u22c4 VW', '\u22c4 VWs', '\u22c4 W', '\u22c4 W10', '\u22c4 W3C', '\u22c4 W99', '\u22c4 WA', '\u22c4 WAB', '\u22c4 WAD', '\u22c4 WAG', '\u22c4 WAM', '\u22c4 WB', '\u22c4 WBA', '\u22c4 WBC', '\u22c4 WBF', '\u22c4 WBS', '\u22c4 WCC', '\u22c4 WCF', '\u22c4 WCG', '\u22c4 WCS', '\u22c4 WCT', '\u22c4 WCU', '\u22c4 WDC', '\u22c4 WDI', '\u22c4 WDM', '\u22c4 WDS', '\u22c4 WEC', '\u22c4 WEG', '\u22c4 WET', '\u22c4 WF', '\u22c4 WFA', '\u22c4 WFC', '\u22c4 WFH', '\u22c4 WFM', '\u22c4 WFP', '\u22c4 WGA', '\u22c4 WGC', '\u22c4 WGS', '\u22c4 WGU', '\u22c4 WHA', '\u22c4 WHM', '\u22c4 WHS', '\u22c4 WHT', '\u22c4 WI', '\u22c4 WIA', '\u22c4 WIC', '\u22c4 WIF', '\u22c4 WIM', '\u22c4 WIP', '\u22c4 WIR', '\u22c4 WKB', '\u22c4 WKT', '\u22c4 WLF', '\u22c4 WLG', '\u22c4 WLT', '\u22c4 WMF', '\u22c4 WML', '\u22c4 WMS', '\u22c4 WNS', '\u22c4 WNT', '\u22c4 WOL', '\u22c4 WON', '\u22c4 WP', '\u22c4 WPC', '\u22c4 WPF', '\u22c4 WPP', '\u22c4 WPS', '\u22c4 WRC', '\u22c4 WRI', '\u22c4 WRT', '\u22c4 WRV', '\u22c4 WSA', '\u22c4 WSB', '\u22c4 WSC', '\u22c4 WSD', '\u22c4 WSF', '\u22c4 WSL', '\u22c4 WSM', '\u22c4 WSN', '\u22c4 WSP', '\u22c4 WSS', '\u22c4 WST', '\u22c4 WTF', '\u22c4 WTH', '\u22c4 WTN', '\u22c4 WTP', '\u22c4 WU', '\u22c4 WV', '\u22c4 WWDC', '\u22c4 WY', '\u22c4 WYA', '\u22c4 WYWH', '\u22c4 WZ', '\u22c4 Wac', '\u22c4 Wis', '\u22c4 Wix', '\u22c4 Wm', '\u22c4 Wu', '\u22c4 YCW', '\u22c4 YW', '\u22c4 YWH', '\u22c4 ZWE', '\u22c4 ZWJ', '\u22c4 aw', '\u22c4 awn', '\u22c4 cwt', '\u22c4 fwd', '\u22c4 fwy', '\u22c4 haw', '\u22c4 kW', '\u22c4 kw', '\u22c4 lbw', '\u22c4 mW', '\u22c4 ow', '\u22c4 pwn', '\u22c4 twp', '\u22c4 w', '\u22c4 wad', '\u22c4 wk', '\u22c4 wog', '\u22c4 wot', '\u22c4 wt', '\u22c4 yew', '\u22c4 CWV', '\u22c4 DAW', '\u22c4 WAV'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (79, 83)}",
+                " - {'error': '...he finals of the Smart India Hackathon (SIH) and won an inter-college GD competitio...', 'suggestions': ['SIX', 'SIR', 'SIT', 'SIC', 'SIKH', 'SH', 'IH', 'SIGH', 'SIP', 'SCH', 'SIS', 'SSH', 'SIN', 'AIH', 'BIH', 'CIH', 'GIH', 'LIH', 'NIH', 'SAH', 'SDH', 'SFH', 'SGH', 'SI', 'SIA', 'SIB', 'SID', 'SIG', 'SII', 'SIL', 'SIM', 'SIV', 'SMH', 'SPH', 'SITH', 'SHH', 'SI H'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (584, 587)}",
+                " - {'error': '...d Java certifications from IIT Bombay\u2019s \u201dSpoken Tutorial\u201d program. Skilled in bot...', 'suggestions': [], 'category': 'PUNCTUATION', 'rule_id': 'EN_UNPAIRED_QUOTES', 'message': 'Unpaired symbol: \u2018\u201c\u2019 seems to be missing', 'position': (705, 706)}",
+                "Readability Scores:",
+                " - Flesch Reading Ease: 21.90",
+                " - Gunning Fog Index: 13.45",
+                " - SMOG Index: 15.00",
+                " - Automated Readability Index: 17.00",
+                " - Coleman Liau Index: 18.56",
+                " - Dale Chall Readability: 12.12",
+                " - Difficult Words: 129.00",
+                " - Syllable Count: 683.00",
+                "Word count acceptable (355 words)",
+                "Inconsistent font usage detected.",
+                "Most used font: CMR10"
+            ],
+            "file_type": "application/pdf",
+            "word_count": 0,
+            "sections_present": [],
+            "sections_missing": [],
+            "formatting_issues": [],
+            "recommendations": [
+                "Add more relevant keywords related to your industry.",
+                "Consider simplifying language for better readability",
+                "Add more detail to your skills section",
+                "Include more relevant keywords in your skills section",
+                "Add more detail to your education section",
+                "Include more relevant keywords in your education section",
+                "Add more detail to your experience section",
+                "Include more relevant keywords in your experience section",
+                "Fix grammar mistakes for better ATS compliance.",
+                "Use a single font type throughout the document."
+            ]
+        }
+    },
+    "d3603ccfe00c9f35976a8d2d17b3ff2e": {
+        "filename": "Resume_two.pdf",
+        "last_checked": "2025-01-30T13:07:29.048084",
+        "result": {
+            "score": 90,
+            "messages": [
+                "Not enough industry-specific keywords detected.",
+                "Stylistic Improvements Suggested:",
+                "LinkedIn Optimization Suggestions:",
+                "Grammar Issues Found: 13",
+                " - {'error': 'TANMAY SETH +91 6353549290 sethtanmay72@gmail....', 'suggestions': ['TAMMY', 'TANYA', 'TASMAN', 'TARMAC', 'TAMAR', 'TAMMANY', 'TANIA', 'TANEY', 'TANGY', 'TANGUY', 'TANSY', 'TAXMAN', 'GAMAY', 'SANJAY', 'TAM\u00c1S', 'TANJA', 'YANMAR'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (0, 6)}",
+                " - {'error': '...sethtanmay72@gmail.com \u22c4linkedin.com/in/Tanmay-Seth \u22c4www.myPortfolio.com OBJECTIVE To lever...', 'suggestions': ['Tan may-Seth'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (67, 78)}",
+                " - {'error': '...@gmail.com \u22c4linkedin.com/in/Tanmay-Seth \u22c4www.myPortfolio.com OBJECTIVE To leverage m...', 'suggestions': ['\u22c4 WWW', '\u22c4 WWF', '\u22c4 WWI', '\u22c4 wow', '\u22c4 WNW', '\u22c4 WSW', '\u22c4 UWW', '\u22c4 WHW', '\u22c4 WLW', '\u22c4 WMW', '\u22c4 WW', '\u22c4 WWA', '\u22c4 WWC', '\u22c4 WWE', '\u22c4 WoW', '\u22c4 aww', '\u22c4 was', '\u22c4 we', '\u22c4 who', '\u22c4 new', '\u22c4 two', '\u22c4 now', '\u22c4 own', '\u22c4 won', '\u22c4 few', '\u22c4 how', '\u22c4 law', '\u22c4 low', '\u22c4 way', '\u22c4 win', '\u22c4 saw', '\u22c4 war', '\u22c4 web', '\u22c4 why', '\u22c4 raw', '\u22c4 row', '\u22c4 wet', '\u22c4 BMW', '\u22c4 NSW', '\u22c4 bow', '\u22c4 jaw', '\u22c4 BTW', '\u22c4 WHO', '\u22c4 WWII', '\u22c4 Web', '\u22c4 Wei', '\u22c4 cow', '\u22c4 tow', '\u22c4 wax', '\u22c4 wit', '\u22c4 Jew', '\u22c4 WPA', '\u22c4 WTA', '\u22c4 WTO', '\u22c4 Wii', '\u22c4 awe', '\u22c4 owe', '\u22c4 owl', '\u22c4 vow', '\u22c4 wed', '\u22c4 wig', '\u22c4 CWA', '\u22c4 Dow', '\u22c4 Lew', '\u22c4 TWA', '\u22c4 UAW', '\u22c4 WAC', '\u22c4 WC', '\u22c4 WMD', '\u22c4 WS', '\u22c4 WSU', '\u22c4 WTC', '\u22c4 dew', '\u22c4 kWh', '\u22c4 paw', '\u22c4 sow', '\u22c4 wee', '\u22c4 woo', '\u22c4 yaw', '\u22c4 BWF', '\u22c4 DWM', '\u22c4 FWD', '\u22c4 MSW', '\u22c4 MWC', '\u22c4 NWT', '\u22c4 PW', '\u22c4 SSW', '\u22c4 VFW', '\u22c4 WAP', '\u22c4 WD', '\u22c4 pew', '\u22c4 sew', '\u22c4 wan', '\u22c4 woe', '\u22c4 wry', '\u22c4 BWI', '\u22c4 BWR', '\u22c4 CWC', '\u22c4 DWI', '\u22c4 DWT', '\u22c4 MWh', '\u22c4 RWA', '\u22c4 ewe', '\u22c4 mow', '\u22c4 pow', '\u22c4 wag', '\u22c4 wok', '\u22c4 DWG', '\u22c4 Twp', '\u22c4 WLM', '\u22c4 WSJ', '\u22c4 Wed', '\u22c4 awl', '\u22c4 hew', '\u22c4 maw', '\u22c4 mew', '\u22c4 wows', '\u22c4 wpm', '\u22c4 TWX', '\u22c4 caw', '\u22c4 cw', '\u22c4 hwy', '\u22c4 wiz', '\u22c4 Wyo', '\u22c4 yow', '\u22c4 ECW', '\u22c4 MW', '\u22c4 whew', '\u22c4 AAW', '\u22c4 ABW', '\u22c4 ACW', '\u22c4 AEW', '\u22c4 AFW', '\u22c4 AGW', '\u22c4 AHW', '\u22c4 AIW', '\u22c4 AJW', '\u22c4 ALW', '\u22c4 AMW', '\u22c4 ANW', '\u22c4 AOW', '\u22c4 APW', '\u22c4 ARW', '\u22c4 ASW', '\u22c4 ATW', '\u22c4 AUW', '\u22c4 AVW', '\u22c4 AWA', '\u22c4 AWB', '\u22c4 AWC', '\u22c4 AWD', '\u22c4 AWE', '\u22c4 AWF', '\u22c4 AWG', '\u22c4 AWK', '\u22c4 AWM', '\u22c4 AWN', '\u22c4 AWP', '\u22c4 AWR', '\u22c4 AWS', '\u22c4 AWU', '\u22c4 AWZ', '\u22c4 AZW', '\u22c4 B&W', '\u22c4 BAW', '\u22c4 BBW', '\u22c4 BDW', '\u22c4 BEW', '\u22c4 BFW', '\u22c4 BGW', '\u22c4 BIW', '\u22c4 BJW', '\u22c4 BKW', '\u22c4 BLW', '\u22c4 BNW', '\u22c4 BOW', '\u22c4 BQW', '\u22c4 BSW', '\u22c4 BUW', '\u22c4 BVW', '\u22c4 BWA', '\u22c4 BWB', '\u22c4 BWC', '\u22c4 BWD', '\u22c4 BWE', '\u22c4 BWG', '\u22c4 BWH', '\u22c4 BWK', '\u22c4 BWL', '\u22c4 BWM', '\u22c4 BWN', '\u22c4 BWP', '\u22c4 BWQ', '\u22c4 BWS', '\u22c4 BWT', '\u22c4 BWU', '\u22c4 BWV', '\u22c4 BWY', '\u22c4 BYW', '\u22c4 CAW', '\u22c4 CCW', '\u22c4 CDW', '\u22c4 CHW', '\u22c4 CLW', '\u22c4 CMW', '\u22c4 CNW', '\u22c4 CRW', '\u22c4 CUW', '\u22c4 CW', '\u22c4 CWB', '\u22c4 CWE', '\u22c4 CWF', '\u22c4 CWL', '\u22c4 CWM', '\u22c4 CWO', '\u22c4 CWP', '\u22c4 CWR', '\u22c4 CWT', '\u22c4 CZW', '\u22c4 DFW', '\u22c4 DPW', '\u22c4 DTW', '\u22c4 DWH', '\u22c4 DWV', '\u22c4 EDW', '\u22c4 EW', '\u22c4 EWG', '\u22c4 EWP', '\u22c4 EWR', '\u22c4 EWS', '\u22c4 FCW', '\u22c4 FIW', '\u22c4 FSW', '\u22c4 FTW', '\u22c4 FW', '\u22c4 FWA', '\u22c4 FWI', '\u22c4 FWIW', '\u22c4 GSW', '\u22c4 GW', '\u22c4 GWG', '\u22c4 GWP', '\u22c4 GWh', '\u22c4 HW', '\u22c4 HWD', '\u22c4 HWK', '\u22c4 HWs', '\u22c4 Haw', '\u22c4 IWC', '\u22c4 IWF', '\u22c4 JWD', '\u22c4 JWS', '\u22c4 JWT', '\u22c4 KPW', '\u22c4 KRW', '\u22c4 KUW', '\u22c4 KW', '\u22c4 KWC', '\u22c4 KWD', '\u22c4 KWG', '\u22c4 KWH', '\u22c4 KWL', '\u22c4 KWT', '\u22c4 LAW', '\u22c4 LDW', '\u22c4 LGW', '\u22c4 LHW', '\u22c4 LSW', '\u22c4 L\u00f6w', '\u22c4 MLW', '\u22c4 MNW', '\u22c4 MTW', '\u22c4 MWA', '\u22c4 MWK', '\u22c4 MWS', '\u22c4 NCW', '\u22c4 NOW', '\u22c4 NRW', '\u22c4 NTW', '\u22c4 NW', '\u22c4 NWD', '\u22c4 OWA', '\u22c4 OWB', '\u22c4 OWL', '\u22c4 OWS', '\u22c4 PLW', '\u22c4 PNW', '\u22c4 POW', '\u22c4 PWA', '\u22c4 PWB', '\u22c4 PWF', '\u22c4 PWG', '\u22c4 PWI', '\u22c4 PWM', '\u22c4 PWR', '\u22c4 PoW', '\u22c4 PwC', '\u22c4 RAW', '\u22c4 RCW', '\u22c4 RRW', '\u22c4 RSW', '\u22c4 RTW', '\u22c4 RWD', '\u22c4 RWF', '\u22c4 Rwy', '\u22c4 S&W', '\u22c4 SAW', '\u22c4 SFW', '\u22c4 SJW', '\u22c4 SPW', '\u22c4 SW', '\u22c4 SWE', '\u22c4 SWL', '\u22c4 SWR', '\u22c4 SWT', '\u22c4 SWV', '\u22c4 SWZ', '\u22c4 TBW', '\u22c4 TCW', '\u22c4 TGW', '\u22c4 TNW', '\u22c4 TW', '\u22c4 TWC', '\u22c4 TWD', '\u22c4 TWE', '\u22c4 TWF', '\u22c4 TWS', '\u22c4 TWU', '\u22c4 TWV', '\u22c4 UFW', '\u22c4 UW', '\u22c4 UWA', '\u22c4 UWC', '\u22c4 UWP', '\u22c4 VW', '\u22c4 VWs', '\u22c4 W', '\u22c4 W10', '\u22c4 W3C', '\u22c4 W99', '\u22c4 WA', '\u22c4 WAB', '\u22c4 WAD', '\u22c4 WAG', '\u22c4 WAM', '\u22c4 WB', '\u22c4 WBA', '\u22c4 WBC', '\u22c4 WBF', '\u22c4 WBS', '\u22c4 WCC', '\u22c4 WCF', '\u22c4 WCG', '\u22c4 WCS', '\u22c4 WCT', '\u22c4 WCU', '\u22c4 WDC', '\u22c4 WDI', '\u22c4 WDM', '\u22c4 WDS', '\u22c4 WEC', '\u22c4 WEG', '\u22c4 WET', '\u22c4 WF', '\u22c4 WFA', '\u22c4 WFC', '\u22c4 WFH', '\u22c4 WFM', '\u22c4 WFP', '\u22c4 WGA', '\u22c4 WGC', '\u22c4 WGS', '\u22c4 WGU', '\u22c4 WHA', '\u22c4 WHM', '\u22c4 WHS', '\u22c4 WHT', '\u22c4 WI', '\u22c4 WIA', '\u22c4 WIC', '\u22c4 WIF', '\u22c4 WIM', '\u22c4 WIP', '\u22c4 WIR', '\u22c4 WKB', '\u22c4 WKT', '\u22c4 WLF', '\u22c4 WLG', '\u22c4 WLT', '\u22c4 WMF', '\u22c4 WML', '\u22c4 WMS', '\u22c4 WNS', '\u22c4 WNT', '\u22c4 WOL', '\u22c4 WON', '\u22c4 WP', '\u22c4 WPC', '\u22c4 WPF', '\u22c4 WPP', '\u22c4 WPS', '\u22c4 WRC', '\u22c4 WRI', '\u22c4 WRT', '\u22c4 WRV', '\u22c4 WSA', '\u22c4 WSB', '\u22c4 WSC', '\u22c4 WSD', '\u22c4 WSF', '\u22c4 WSL', '\u22c4 WSM', '\u22c4 WSN', '\u22c4 WSP', '\u22c4 WSS', '\u22c4 WST', '\u22c4 WTF', '\u22c4 WTH', '\u22c4 WTN', '\u22c4 WTP', '\u22c4 WU', '\u22c4 WV', '\u22c4 WWDC', '\u22c4 WY', '\u22c4 WYA', '\u22c4 WYWH', '\u22c4 WZ', '\u22c4 Wac', '\u22c4 Wis', '\u22c4 Wix', '\u22c4 Wm', '\u22c4 Wu', '\u22c4 YCW', '\u22c4 YW', '\u22c4 YWH', '\u22c4 ZWE', '\u22c4 ZWJ', '\u22c4 aw', '\u22c4 awn', '\u22c4 cwt', '\u22c4 fwd', '\u22c4 fwy', '\u22c4 haw', '\u22c4 kW', '\u22c4 kw', '\u22c4 lbw', '\u22c4 mW', '\u22c4 ow', '\u22c4 pwn', '\u22c4 twp', '\u22c4 w', '\u22c4 wad', '\u22c4 wk', '\u22c4 wog', '\u22c4 wot', '\u22c4 wt', '\u22c4 yew', '\u22c4 CWV', '\u22c4 DAW', '\u22c4 WAV'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (79, 83)}",
+                " - {'error': '...cience) - Chandigarh Group of Colleges, Mohali - India 2020-2024 CGPA: 8.14 SKILLS Lan...', 'suggestions': ['Moral', 'Morale', 'Mali', 'Somali', 'Modal', 'Morals', 'Mohawk', 'Mohave', 'Mowgli', 'Mohair', 'Mihail', 'Mohacs', 'Sonali', 'Modals'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (504, 510)}",
+                " - {'error': '...KILLS Language C++, Java Databases MYSQL , MongoDB Framework React, Spring Boot To...', 'suggestions': [','], 'category': 'TYPOGRAPHY', 'rule_id': 'COMMA_PARENTHESIS_WHITESPACE', 'message': 'Put a space after the comma, but not before the comma.', 'position': (581, 583)}",
+                "Readability Scores:",
+                " - Flesch Reading Ease: 21.40",
+                " - Gunning Fog Index: 13.90",
+                " - SMOG Index: 15.00",
+                " - Automated Readability Index: 17.80",
+                " - Coleman Liau Index: 19.14",
+                " - Dale Chall Readability: 13.20",
+                " - Difficult Words: 115.00",
+                " - Syllable Count: 545.00",
+                "Word count acceptable (285 words)",
+                "Inconsistent font usage detected.",
+                "Most used font: CMR10"
+            ],
+            "file_type": "application/pdf",
+            "word_count": 0,
+            "sections_present": [],
+            "sections_missing": [],
+            "formatting_issues": [],
+            "recommendations": [
+                "Add more relevant keywords related to your industry.",
+                "Consider simplifying language for better readability",
+                "Add more detail to your skills section",
+                "Include more relevant keywords in your skills section",
+                "Add more detail to your education section",
+                "Include more relevant keywords in your education section",
+                "Add more detail to your experience section",
+                "Include more relevant keywords in your experience section",
+                "Fix grammar mistakes for better ATS compliance.",
+                "Use a single font type throughout the document."
+            ]
+        }
+    },
+    "4973d87bedbdc10e013f447788006f3e": {
+        "filename": "resume-40.pdf",
+        "last_checked": "2025-01-30T15:01:18.032429",
+        "result": {
+            "score": 70,
+            "messages": [
+                "Not enough industry-specific keywords detected.",
+                "LinkedIn Optimization Suggestions:",
+                "Grammar Issues Found: 86",
+                " - {'error': 'SOHAN  P RA J AP ATI  Surat, Gujarat | Linked...', 'suggestions': ['JOHAN', 'SHAN', 'COHAN', 'ROHAN'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (0, 5)}",
+                " - {'error': '... J AP ATI  Surat, Gujarat | LinkedIn :- Sohan Prajapati  96646 91917 | sohan11903@gma...', 'suggestions': ['Johan', 'Shan', 'Cohan', 'Rohan'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (51, 56)}",
+                " - {'error': '...ATI  Surat, Gujarat | LinkedIn :- Sohan Prajapati  96646 91917 | sohan11903@gmail.com  A ...', 'suggestions': ['Prabhavati'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (57, 66)}",
+                " - {'error': '...  96646 91917 | sohan11903@gmail.com  A deta il-o riented  and h igh ly  motivated  IT st...', 'suggestions': ['detail-o'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (106, 115)}",
+                " - {'error': '...917 | sohan11903@gmail.com  A deta il-o riented  and h igh ly  motivated  IT student wi...', 'suggestions': ['oriented', 'rented', 'rained'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (116, 123)}",
+                "Readability Scores:",
+                " - Flesch Reading Ease: 52.94",
+                " - Gunning Fog Index: 14.99",
+                " - SMOG Index: 13.70",
+                " - Automated Readability Index: 13.10",
+                " - Coleman Liau Index: 8.13",
+                " - Dale Chall Readability: 14.14",
+                " - Difficult Words: 45.00",
+                " - Syllable Count: 347.00",
+                "Word count acceptable (253 words)",
+                "Missing sections: skills",
+                "Missing LinkedIn best-practice sections: skills",
+                "Job Match Score: 8.654940584704773%",
+                "Inconsistent font usage detected.",
+                "Most used font: TimesNewRomanPSMT"
+            ],
+            "file_type": "application/pdf",
+            "word_count": 0,
+            "sections_present": [],
+            "sections_missing": [
+                "skills"
+            ],
+            "formatting_issues": [],
+            "recommendations": [
+                "Add more relevant keywords related to your industry.",
+                "Add more detail to your experience section",
+                "Include more relevant keywords in your experience section",
+                "Add more detail to your education section",
+                "Include more relevant keywords in your education section",
+                "Fix grammar mistakes for better ATS compliance.",
+                "Add missing required sections",
+                "Add missing sections for LinkedIn compatibility.",
+                "Improve resume alignment with job description.",
+                "Use a single font type throughout the document.",
+                "Consider breaking long paragraphs into concise bullet points for readability."
+            ]
+        }
+    },
+    "421cb957a9c71f37bc054ed968eb20f8": {
+        "filename": "Kaushal_Resume.pdf",
+        "last_checked": "2025-01-30T15:22:49.086038",
+        "result": {
+            "score": 75,
+            "messages": [
+                "Not enough industry-specific keywords detected.",
+                "Stylistic Improvements Suggested:",
+                "LinkedIn Optimization Suggestions:",
+                "Grammar Issues Found: 29",
+                " - {'error': '...kaushal2807@gmail.com Vadodara, Gujarat Kaushal Patel CERTIFICATES SKILLS WORK EXPERIEN...', 'suggestions': ['Kushal'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (60, 67)}",
+                " - {'error': '...uter Science and Engineering student at Drs. Kiran and Pallavi Patel Global Univers...', 'suggestions': ['DRS', 'Dr', 'Dry', 'Mrs', 'DNS', 'DRM', 'FRS', 'IRS', 'DMS', 'DRC', 'DSS', 'DTS', 'PRS', 'DDS', 'DRG', 'DRI', 'SRS', 'BRS', 'DLS', 'DRA', 'DVRs', 'ERS', 'GRS', 'LRS', 'DPs', 'DRV', 'DVS', 'DJs', 'Dds', 'CRS', 'DCS', 'DES', 'DFS', 'DGS', 'DHS', 'DMs', 'DOS', 'DPS', 'DR', 'DR1', 'DRH', 'DRMs', 'DRP', 'DRT', 'DS', 'DUS', 'Dis', 'DoS', 'MRS', 'NRS', 'ORS', 'PRs', 'RRS', 'RS', 'TRS', 'URS', 'Urs', 'VRS', 'Dms', 'Dos', 'Drys', 'Hrs', 'Rs', 'Yrs', 'Is', 'Was', 'As', 'His', 'Are', 'Has', 'Or', 'Day', 'Did', 'Due', 'Its', 'Us', 'Yes', 'Art', 'Days', 'Do', 'Does', 'Arms', 'Cars', 'Era', 'Gas', 'DVD', 'Los', 'Mr', 'Arm', 'Arts', 'Bus', 'Dark', 'Die', 'Disc', 'Dog', 'Draw', 'Drop', 'Drug', 'Pro', 'Try', 'Jr', 'Bars', 'Dies', 'Disk', 'Dogs', 'Doors', 'Dress', 'Drew', 'Drugs', 'Drum', 'Drums', 'Duo', 'Vs', 'Wars', 'CDs', 'Dan', 'IRA', 'Adds', 'Ads', 'Airs', 'Arc', 'Desk', 'Dirt', 'Dish', 'Dose', 'Drag', 'Draws', 'Drops', 'Dust', 'Ears', 'Odds', 'Ups', 'Bros', 'CSS', 'DVDs', 'Del', 'GPS', 'Mars', 'NHS', 'NRL', 'PCs', 'PR', 'PRC', 'SAS', 'Cry', 'Dad', 'Dam', 'Dams', 'Dash', 'Den', 'Dig', 'Dot', 'Dots', 'Dub', 'Dug', 'Dye', 'Eras', 'Lbs', 'ACS', 'BBS', 'CNS', 'CRT', 'DA', 'DDR', 'DDT', 'DEC', 'DL', 'DM', 'DSM', 'DSO', 'DSP', 'DT', 'DX', 'Dec', 'Dee', 'Doris', 'EPs', 'Fry', 'GDR', 'Gus', 'INS', 'LPs', 'MRI', 'MRT', 'PRI', 'RMS', 'RSA', 'RSS', 'RTS', 'SBS', 'SDS', 'SMS', 'SOS', 'URL', 'Arcs', 'Bra', 'dB', 'Dare', 'Dart', 'Darts', 'Dim', 'Din', 'Dip', 'Dire', 'Dorm', 'Dues', 'Dusk', 'Dyes', 'Eds', 'Furs', 'Hers', 'Ire', 'Iris', 'Jars', 'Ores', 'Pas', 'Urn', 'ADR', 'APS', 'ARL', 'ARP', 'Ares', 'CCS', 'CDR', 'CFS', 'CRC', 'CVS', 'DAC', 'DAT', 'DCC', 'DCI', 'DG', 'DLR', 'DMA', 'DMC', 'DMZ', 'DSC', 'DSL', 'DST', 'DTM', 'DUI', 'DUP', 'Dirk', 'Doe', 'Dora', 'Dow', 'FBS', 'FCS', 'FDR', 'GPRS', 'GRC', 'IAS', 'ICS', 'IDs', 'ILS', 'IPS', 'IRL', 'KBS', 'Kris', 'Lars', 'MCs', 'MDR', 'MTS', 'NPS', 'NRA', 'NRC', 'OAS', 'OCS', 'PDS', 'RCS', 'RDS', 'RJ', 'RL', 'RR', 'RSC', 'SARS', 'SRC', 'TCS', 'TFS', 'TLS', 'TVs', 'UPS', 'URLs', 'VMS', 'WS', 'Ark', 'Bras', 'Dens', 'Dew', 'Digs', 'Dips', 'Dons', 'Dorms', 'Drab', 'Drags', 'Dries', 'Drip', 'Dubs', 'Fr', 'Ms', 'Oars', 'Ops', 'Orb', 'Ours', 'Pros', 'Urns', 'AGS', 'AHS', 'ARF', 'Ara', 'BDS', 'BMS', 'BRM', 'CGS', 'CLS', 'CNRS', 'DBA', 'DBMS', 'DCE', 'DCL', 'DCM', 'DKK', 'DLA', 'DLL', 'DME', 'DMG', 'DMK', 'DNC', 'DNR', 'DOA', 'DPI', 'DQ', 'DSA', 'DSB', 'DSE', 'DTC', 'DTI', 'DVR', 'DWM', 'Desi', 'Dias', 'Dir', 'ERM', 'ESS', 'Eros', 'FRC', 'GLS', 'GRE', 'GRP', 'GRU', 'HDR', 'HFS', 'HHS', 'HSS', 'IBS', 'IFRS', 'IHS', 'IVs', 'JCS', 'LCS', 'LRC', 'MBS', 'MDS', 'MMS', 'MRA', 'MRO', 'NBS', 'NFS', 'NLS', 'NRG', 'NRI', 'ORP', 'ORT', 'PMS', 'PNS', 'PRA', 'PSS', 'RSI', 'RSM', 'RSV', 'SCS', 'SDR', 'SLRs', 'SLS', 'SRA', 'SRM', 'SRT', 'TRC', 'TSS', 'UDR', 'VCRs', 'Dais', 'Dares', 'Deg', 'Doc', 'Dud', 'Duos', 'Firs', 'Fro', 'Odes', 'Odors', 'Orbs', 'Orcs', 'Pars', 'Pts', 'Pus', 'Tors', 'Ts', 'Wry', 'BRI', 'CDOs', 'CRL', 'CRTs', 'DCB', 'DCF', 'DDA', 'DDB', 'DDC', 'DDD', 'DDE', 'DLM', 'DMD', 'DMP', 'DMV', 'DND', 'DOB', 'DPD', 'DPT', 'DSD', 'DSR', 'DTA', 'DTP', 'DVT', 'DWI', 'DWT', 'Debs', 'Eris', 'GDS', 'Gris', 'Hus', 'IQs', 'IRAs', 'JMS', 'KSS', 'LFS', 'LTS', 'MNS', 'Ora', 'PDFs', 'PVS', 'Pres', 'RSP', 'RSX', 'RVs', 'Ru', 'SRO', 'Ursa', 'VCS', 'Abs', 'Dads', 'Darn', 'Dist', 'Doers', 'Dory', 'Dram', 'Drips', 'Dz', 'Err', 'Fps', 'Pry', 'DBC', 'DCD', 'DLI', 'DNAs', 'DPN', 'DSPs', 'DVM', 'DVP', 'DWG', 'Fri', 'HDDs', 'HDS', 'HRI', 'IRQ', 'LGS', 'MRE', 'MRIs', 'Rx', 'URB', 'VRI', 'Bps', 'Bro', 'dBm', 'Dab', 'Dibs', 'Docs', 'Dork', 'Dost', 'Dray', 'Drays', 'Dregs', 'Dross', 'Duds', 'Duh', 'Duns', 'Dyers', 'Ergs', 'Errs', 'Gars', 'Ifs', 'Mos', 'Rt', 'Sis', 'Tars', 'BKS', 'BRG', 'Duse', 'PMs', 'Uris', 'Arks', 'Burs', 'Dabs', 'Dims', 'Drams', 'Ides', 'Irks', 'Nus', 'Obs', 'ODs', 'Sirs', 'Curs', 'Dirks', 'Doss', 'Drabs', 'Ems', 'Irk', 'Qr', 'CBS', 'DJ', 'DNA', 'Erse', 'HMS', 'LDS', 'MPs', 'OKs', 'PS', 'SOs', 'USS', 'Dbl', 'Dears', 'Dob', 'Dorks', 'Doz', 'Dpt', 'Dreys', 'Drub', 'Mks', 'Ohs', 'Oms', 'Ore', 'Rps', 'Hts', 'Odis', 'Xes', 'Brr', 'Darns', 'Dins', 'Drat', '2RM', '3rd', 'AAS', 'ABS', 'ADBS', 'ADLs', 'ADS', 'AES', 'AFS', 'AGs', 'AIS', 'AIs', 'AJS', 'AKS', 'ALS', 'AMS', 'ANS', 'AOS', 'APRS', 'APs', 'AQS', 'AR', 'ARB', 'ARC', 'ARD', 'ARDS', 'ARE', 'ARH', 'ARI', 'ARJ', 'ARK', 'ARM', 'ARN', 'ARQ', 'ARR', 'ARSI', 'ART', 'ARTS', 'ARU', 'ARV', 'ARW', 'ARX', 'ARY', 'ASS', 'ATS', 'AUS', 'AVS', 'AVs', 'AWS', 'AXS', 'AYS', 'AZS', 'Adas', 'Ar', 'Aras', 'Ats', 'BAS', 'BCS', 'BDR', 'BES', 'BFS', 'BGS', 'BHS', 'BIS', 'BJS', 'BJs', 'BLS', 'BNS', 'BOS', 'BPS', 'BR', 'BRA', 'BRB', 'BRC', 'BRD', 'BRE', 'BRF', 'BRH', 'BRJ', 'BRL', 'BRN', 'BRO', 'BRP', 'BRR', 'BRT', 'BRV', 'BRX', 'BRZ', 'BS', 'BSS', 'BTS', 'BVS', 'BWS', 'BXS', 'BYS', 'BZS', 'Br', 'CAS', 'CCs', 'CDNs', 'CDS', 'CES', 'CHRS', 'CHS', 'CIS', 'CJS', 'CKS', 'CKs', 'CMS', 'CORS', 'CPS', 'CQS', 'CR', 'CRA', 'CRB', 'CRD', 'CRE', 'CRF', 'CRG', 'CRH', 'CRJ', 'CRK', 'CRM', 'CRN', 'CRO', 'CROS', 'CRP', 'CRQ', 'CRR', 'CRSA', 'CRW', 'CRY', 'CRZ', 'CS', 'CTs', 'CVs', 'CZS', 'Cr', 'Cs', 'D', 'D&D', 'D10', 'D11', 'D12', 'D13', 'D14', 'D15', 'D16', 'D17', 'D18', 'D19', 'D20', 'D21', 'D22', 'D23', 'D24', 'D25', 'D26', 'D27', 'D28', 'D29', 'D2D', 'D30', 'D31', 'D32', 'D33', 'D34', 'D35', 'D36', 'D37', 'D38', 'D39', 'D40', 'D41', 'D42', 'D45', 'D46', 'D48', 'D50', 'D51', 'D52', 'D55', 'D56', 'D57', 'D58', 'D59', 'D60', 'D61', 'D62', 'D63', 'D64', 'D65', 'D66', 'D67', 'D68', 'D70', 'D71', 'D72', 'D73', 'D74', 'D76', 'D78', 'D79', 'D8', 'D80', 'D82', 'D83', 'D86', 'D89', 'D90', 'D91', 'D96', 'D97', 'D99', 'DAA', 'DAB', 'DAE', 'DAF', 'DAI', 'DAJ', 'DAK', 'DAL', 'DAP', 'DAR', 'DARE', 'DARES', 'DAU', 'DAUs', 'DAV', 'DAX', 'DB7', 'DB9', 'DBB', 'DBCS', 'DBD', 'DBF', 'DBL', 'DBO', 'DBP', 'DBQ', 'DBR', 'DBU', 'DBZ', 'DC', 'DCA', 'DCK', 'DCN', 'DCO', 'DCP', 'DCR', 'DCRG', 'DCRI', 'DCT', 'DCU', 'DD', 'DDH', 'DDI', 'DDL', 'DDM', 'DDO', 'DDSP', 'DDTs', 'DDV', 'DDoS', 'DE', 'DEA', 'DEB', 'DECs', 'DEG', 'DEI', 'DEL', 'DEM', 'DEP', 'DEQ', 'DESE', 'DET', 'DEU', 'DFA', 'DFB', 'DFC', 'DFE', 'DFF', 'DFG', 'DFI', 'DFL', 'DFM', 'DFN', 'DFO', 'DFP', 'DFT', 'DFV', 'DFW', 'DGA', 'DGD', 'DGE', 'DGF', 'DGH', 'DGI', 'DGP', 'DGRH', 'DGSE', 'DGSI', 'DGSN', 'DGT', 'DH', 'DHA', 'DHC', 'DHH', 'DHI', 'DHL', 'DHM', 'DHP', 'DHR', 'DHT', 'DI', 'DIC', 'DID', 'DIF', 'DIL', 'DIN', 'DIP', 'DIR', 'DISA', 'DIV', 'DIVS', 'DIY', 'DJF', 'DJG', 'DJI', 'DJO', 'DJT', 'DJU', 'DK', 'DKA', 'DKB', 'DKP', 'DKR', 'DKZ', 'DLC', 'DLF', 'DLG', 'DLH', 'DLP', 'DLT', 'DMF', 'DMGs', 'DMI', 'DMM', 'DMO', 'DMR', 'DMX', 'DMZs', 'DN', 'DNB', 'DNF', 'DNI', 'DNK', 'DNL', 'DNP', 'DNT', 'DO', 'DOC', 'DOD', 'DOE', 'DOF', 'DOH', 'DOI', 'DOJ', 'DOL', 'DOM', 'DON', 'DOP', 'DOT', 'DP', 'DPA', 'DPB', 'DPC', 'DPE', 'DPH', 'DPO', 'DPSD', 'DPU', 'DPW', 'DRAC', 'DRAF', 'DRAM', 'DRASS', 'DRESG', 'DSF', 'DSG', 'DSI', 'DSK', 'DSN', 'DSQ', 'DSU', 'DSV', 'DTT', 'DTU', 'DTV', 'DTW', 'DUD', 'DUIs', 'DVA', 'DVB', 'DVC', 'DVI', 'DVMs', 'DVRP', 'DWH', 'DWV', 'DXB', 'DXF', 'DXM', 'DXO', 'DZA', 'DZD', 'DZI', 'DZO', 'Dem', 'Dems', 'Di', 'Dix', 'DnD', 'DoD', 'DoJ', 'Don', 'Du', 'Dy', 'EAS', 'EBS', 'ECS', 'EDS', 'EFS', 'EHS', 'EIS', 'ELS', 'ENS', 'EPS', 'ER', 'ERA', 'ERC', 'ERD', 'ERF', 'ERK', 'ERO', 'ERP', 'ERPs', 'ERT', 'ERV', 'ES', 'ETS', 'EUS', 'EVS', 'EVs', 'EWS', 'EXS', 'EZS', 'Er', 'Es', 'FAS', 'FCs', 'FDES', 'FDS', 'FES', 'FFRS', 'FFS', 'FHS', 'FLS', 'FMS', 'FMs', 'FNRS', 'FNS', 'FOS', 'FPS', 'FPs', 'FR', 'FRA', 'FRB', 'FRD', 'FRF', 'FRG', 'FRM', 'FRO', 'FRP', 'FRQ', 'FRR', 'FRT', 'FS', 'FSS', 'GAS', 'GBS', 'GCS', 'GCs', 'GDPs', 'GES', 'GFS', 'GGS', 'GHS', 'GIS', 'GIs', 'GMS', 'GR', 'GR5', 'GRA', 'GRD', 'GRH', 'GRI', 'GRJ', 'GRN', 'GRPS', 'GTS', 'Gr', 'Grus', 'H&S', 'HBS', 'HCS', 'HCs', 'HDDS', 'HDPS', 'HES', 'HLS', 'HNS', 'HPS', 'HR', 'HRA', 'HRB', 'HRC', 'HRD', 'HRH', 'HRIS', 'HRK', 'HRM', 'HRMS', 'HRT', 'HS', 'HTS', 'HWs', 'I&S', 'ID3S', 'IDES', 'IDEs', 'IDMS', 'IDPs', 'IDR', 'IDS', 'IERS', 'IES', 'IFS', 'IGS', 'IIS', 'IMS', 'IMs', 'INRS', 'IOS', 'IPs', 'IR', 'IRAS', 'IRB', 'IRC', 'IRD', 'IRE', 'IRG', 'IRI', 'IRIS', 'IRM', 'IRN', 'IRP', 'IRR', 'IRSN', 'IRT', 'IRU', 'IS', 'ISS', 'ITS', 'Idris', 'Ir', 'Ira', 'JBS', 'JDKs', 'JHS', 'JIRS', 'JLS', 'JRC', 'JRE', 'JRI', 'JS', 'JWS', 'KDS', 'KES', 'KHS', 'KKS', 'KMS', 'KOS', 'KR', 'KRW', 'KS', 'KTS', 'Kr', 'Ks', 'LDCs', 'LES', 'LHS', 'LMS', 'LMs', 'LPS', 'LR', 'LRD', 'LRF', 'LRI', 'LRM', 'LRP', 'LRU', 'LS', 'LVS', 'Las', 'Les', 'Lr', 'MARS', 'MAS', 'MCS', 'MDRD', 'MDs', 'MERS', 'MES', 'MFS', 'MGS', 'MIS', 'MKS', 'MLS', 'MOS', 'MPS', 'MR', 'MRC', 'MRF', 'MRG', 'MRR', 'MRSA', 'MRU', 'MS', 'MSS', 'MUS', 'MWS', 'NAS', 'NCS', 'NDAs', 'NDR', 'NDRC', 'NDS', 'NGS', 'NOS', 'NR', 'NRF', 'NRH', 'NRM', 'NRN', 'NRO', 'NRP', 'NRT', 'NRU', 'NRW', 'NS', 'NSS', 'NTS', 'NUS', 'NYS', 'Nos', 'OBS', 'ODAS', 'ODMs', 'ODR', 'ODS', 'OFS', 'OKRs', 'OMS', 'ONS', 'OR', 'ORD', 'ORI', 'ORL', 'ORM', 'ORN', 'ORU', 'ORUs', 'ORY', 'OS', 'OSS', 'OVS', 'OWS', 'Orr', 'Os', 'PAS', 'PAs', 'PBS', 'PCS', 'PDMS', 'PES', 'PFS', 'PGS', 'PHS', 'PIS', 'PKS', 'PLS', 'POS', 'PPS', 'PRAS', 'PRD', 'PRE', 'PRF', 'PRG', 'PRL', 'PRM', 'PRN', 'PRO', 'PRP', 'PRR', 'PRT', 'PRU', 'PRV', 'PRY', 'PUS', 'Pr', 'QBs', 'QDR', 'QRC', 'QRF', 'QRQ', 'QRU', 'R', 'RAS', 'RBS', 'RC', 'RD', 'RE', 'RERS', 'RES', 'RF', 'RFS', 'RGS', 'RHS', 'RI', 'RIS', 'RLS', 'RM', 'RN', 'RNS', 'RO', 'ROS', 'RP', 'RPS', 'RRC', 'RRF', 'RRG', 'RRI', 'RRL', 'RRN', 'RRQ', 'RRR', 'RRT', 'RRW', 'RS7', 'RSE', 'RSF', 'RSH', 'RSO', 'RSR', 'RST', 'RSU', 'RSW', 'RT', 'RTs', 'RU', 'RV', 'Ra', 'Rb', 'Rd', 'Re', 'Rf', 'Rh', 'Rn', 'Ry', 'S', 'SCRS', 'SDFS', 'SDGs', 'SDIS', 'SDKs', 'SDPS', 'SES', 'SFS', 'SGS', 'SHS', 'SIS', 'SNS', 'SPS', 'SQS', 'SR1', 'SR2', 'SR3', 'SRB', 'SRD', 'SRE', 'SRF', 'SRI', 'SRP', 'SRU', 'SRV', 'SRX', 'SS', 'SSRS', 'SSS', 'STS', 'SUS', 'Sr', 'Sri', 'T&S', 'TBS', 'TDPS', 'TDR', 'TDS', 'TES', 'TGS', 'THS', 'TIS', 'TJS', 'TKS', 'TMS', 'TNS', 'TOS', 'TPS', 'TQS', 'TR', 'TRE', 'TRI', 'TRL', 'TRM', 'TRP', 'TRT', 'TRX', 'TRY', 'TS', 'TTS', 'TTs', 'TVS', 'TWS', 'TZS', 'ToS', 'UAS', 'UBS', 'UDPS', 'UDS', 'UES', 'UFS', 'UGS', 'UIs', 'UMS', 'URA', 'URD', 'URE', 'URG', 'URI', 'URIs', 'URN', 'URSS', 'URT', 'URV', 'URY', 'US', 'UUS', 'V6s', 'V8s', 'VBS', 'VCs', 'VES', 'VFS', 'VGS', 'VHS', 'VMs', 'VPS', 'VPs', 'VR', 'VRB', 'VRD', 'VRF', 'VRG', 'VRP', 'VRV', 'VSS', 'VVS', 'VWs', 'WBS', 'WCS', 'WDS', 'WGS', 'WHS', 'WMS', 'WNS', 'WPS', 'WRC', 'WRI', 'WRT', 'WRV', 'WSS', 'Wis', 'XMS', 'XPS', 'XR', 'XRF', 'XRT', 'XS', 'XSS', 'YBS', 'YHS', 'YRQ', 'ZFS', 'ZRO', 'ZRR', 'Zr', 'Zs', 'Ais', 'Ans', 'Arr', 'Ass', 'Bdrm', 'Bis', 'Bxs', 'Cis', 'Cos', 'Cps', 'Cts', 'Dag', 'Dags', 'Db', 'Dd', 'Deb', 'Def', 'Dep', 'Deps', 'Derv', 'Dev', 'Devs', 'Div', 'Dm', 'Dobs', 'Dosh', 'Dox', 'Dpi', 'Drey', 'Drubs', 'Dun', 'Durst', 'Ens', 'Ere', 'Erg', 'Grr', 'Gs', 'Hdqrs', 'Hes', 'Hos', 'Hr', 'iOS', 'Ids', 'Ls', 'Mas', 'Mes', 'Mfrs', 'Mus', 'Mys', 'Orc', 'Org', 'pHs', 'Pcs', 'Pgs', 'Pis', 'Pls', 'Pms', 'Pre', 'Qts', 'Res', 'Rm', 'Src', 'Tbs', 'Tr', 'Vars', 'Xis', 'Yr', 'CR7', 'DAW', 'DEX', 'DTD', 'EQS', 'HDRI', 'XLS', 'mDNS'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (285, 288)}",
+                " - {'error': '...d Engineering student at Drs. Kiran and Pallavi Patel Global University. Skilled in HTM...', 'suggestions': ['Pahlavi'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (300, 307)}",
+                " - {'error': '...problems in a professional environment.       Full Professional Proficiency Gujarati  ...', 'suggestions': [' '], 'category': 'TYPOGRAPHY', 'rule_id': 'WHITESPACE_RULE', 'message': 'Possible typo: you repeated a whitespace', 'position': (625, 631)}",
+                " - {'error': '...      Native or Bilingual Proficiency B.Tech in Computer Science and Engineering Drs...', 'suggestions': [' Tech'], 'category': 'TYPOGRAPHY', 'rule_id': 'SENTENCE_WHITESPACE', 'message': 'Add a space between sentences.', 'position': (710, 714)}",
+                "Readability Scores:",
+                " - Flesch Reading Ease: 28.43",
+                " - Gunning Fog Index: 13.12",
+                " - SMOG Index: 15.70",
+                " - Automated Readability Index: 17.80",
+                " - Coleman Liau Index: 18.44",
+                " - Dale Chall Readability: 11.25",
+                " - Difficult Words: 116.00",
+                " - Syllable Count: 834.00",
+                "Word count acceptable (442 words)",
+                "Inconsistent font usage detected.",
+                "Most used font: Poppins-Regular",
+                "Work Experience section lacks bullet points.",
+                "Few section headers found: skills, education"
+            ],
+            "file_type": "application/pdf",
+            "word_count": 0,
+            "sections_present": [],
+            "sections_missing": [],
+            "formatting_issues": [],
+            "recommendations": [
+                "Add more relevant keywords related to your industry.",
+                "Consider simplifying language for better readability",
+                "Add more detail to your skills section",
+                "Include more relevant keywords in your skills section",
+                "Add more detail to your experience section",
+                "Include more relevant keywords in your experience section",
+                "Include more relevant keywords in your education section",
+                "Fix grammar mistakes for better ATS compliance.",
+                "Use a single font type throughout the document.",
+                "Consider using bullet points to highlight key achievements.",
+                "Consider breaking long paragraphs into concise bullet points for readability.",
+                "Ensure major sections like Experience, Education, and Skills are included."
+            ]
+        }
+    },
+    "cd99206cc58b94313ec51a1e8c7415d6": {
+        "filename": "new 1.docx",
+        "last_checked": "2025-01-30T15:29:14.148365",
+        "result": {
+            "score": 75,
+            "messages": [
+                "Found 3 sentences using passive voice.",
+                "Stylistic Improvements Suggested:",
+                "LinkedIn Optimization Suggestions:",
+                "Grammar Issues Found: 59",
+                " - {'error': 'Bhadrika Raval +91-81419-47838 || Surat, Vadodar...', 'suggestions': ['Sharia', 'Hadrian', 'Paprika', 'Quadriga', 'Bhatia', 'Fredrika', 'Khadija', 'Shamika'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (0, 8)}",
+                " - {'error': 'Bhadrika Raval +91-81419-47838 || Surat, Vadodara - Gu...', 'suggestions': ['Naval', 'Rival', 'Laval', 'Ravel', 'Ra val'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (9, 14)}",
+                " - {'error': '... Faculty of Technology and Engineering (Kalabhavan),The Maharaja Sayajirao University of B...', 'suggestions': ['Alabaman'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (259, 269)}",
+                " - {'error': '... Technology and Engineering (Kalabhavan),The Maharaja Sayajirao University of Baroda...', 'suggestions': [', The'], 'category': 'TYPOGRAPHY', 'rule_id': 'COMMA_PARENTHESIS_WHITESPACE', 'message': 'Put a space after the comma.', 'position': (270, 274)}",
+                " - {'error': '...nology and Engineering (Kalabhavan),The Maharaja Sayajirao University of Baroda Aggregat...', 'suggestions': ['Maharajah'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (275, 283)}",
+                "Readability Scores:",
+                " - Flesch Reading Ease: 41.06",
+                " - Gunning Fog Index: 10.56",
+                " - SMOG Index: 12.00",
+                " - Automated Readability Index: 16.70",
+                " - Coleman Liau Index: 17.79",
+                " - Dale Chall Readability: 11.64",
+                " - Difficult Words: 106.00",
+                " - Syllable Count: 642.00",
+                "Word count acceptable (407 words)",
+                "Inconsistent font usage detected.",
+                "Most used font: List Paragraph",
+                "Work Experience section lacks bullet points.",
+                "Few section headers found: education"
+            ],
+            "file_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "word_count": 0,
+            "sections_present": [],
+            "sections_missing": [],
+            "formatting_issues": [],
+            "recommendations": [
+                "Use active voice for stronger impact.",
+                "Consider reducing use of passive voice",
+                "Add more detail to your education section",
+                "Include more relevant keywords in your education section",
+                "Add more detail to your skills section",
+                "Include more relevant keywords in your skills section",
+                "Add more detail to your experience section",
+                "Include more relevant keywords in your experience section",
+                "Fix grammar mistakes for better ATS compliance.",
+                "Use a single font type throughout the document.",
+                "Consider using bullet points to highlight key achievements.",
+                "Consider breaking long paragraphs into concise bullet points for readability.",
+                "Ensure major sections like Experience, Education, and Skills are included."
+            ]
+        }
+    },
+    "7151d686dfde494bfb4d5763f8f39e47": {
+        "filename": "Jay Amrish Fanse_Resume_December2024.pdf",
+        "last_checked": "2025-01-30T15:32:32.717890",
+        "result": {
+            "score": 80,
+            "messages": [
+                "Not enough industry-specific keywords detected.",
+                "Found 2 sentences using passive voice.",
+                "Stylistic Improvements Suggested:",
+                "LinkedIn Optimization Suggestions:",
+                "Grammar Issues Found: 46",
+                " - {'error': 'JAY FANSE  LinkedIn | CodeChef | LeetCode | Githu...', 'suggestions': ['FANS', 'FALSE', 'MANSE', 'FAPSE', 'FAN SE', 'FANS E'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (4, 9)}",
+                " - {'error': 'JAY FANSE  LinkedIn | CodeChef | LeetCode | Github      +91 9726535193...', 'suggestions': ['Code Chef'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (22, 30)}",
+                " - {'error': 'JAY FANSE  LinkedIn | CodeChef | LeetCode | Github      +91 9726535193 |  jayf291...', 'suggestions': ['Electrode', 'Encode', 'Postcode', 'Decode', 'Leeched', 'Bestrode', 'Lestrade', 'Geocode', 'Re-encode', 'Uuencode'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (33, 41)}",
+                " - {'error': '...FANSE  LinkedIn | CodeChef | LeetCode | Github      +91 9726535193 |  jayf29112003@gma...', 'suggestions': ['GitHub'], 'category': 'CASING', 'rule_id': 'GITHUB', 'message': 'The official name of this software platform is spelled with a capital \u201cH\u201d.', 'position': (44, 50)}",
+                " - {'error': '... LinkedIn | CodeChef | LeetCode | Github      +91 9726535193 |  jayf29112003@gmail.co...', 'suggestions': [' '], 'category': 'TYPOGRAPHY', 'rule_id': 'WHITESPACE_RULE', 'message': 'Possible typo: you repeated a whitespace', 'position': (50, 55)}",
+                "Readability Scores:",
+                " - Flesch Reading Ease: 39.84",
+                " - Gunning Fog Index: 12.17",
+                " - SMOG Index: 12.80",
+                " - Automated Readability Index: 16.30",
+                " - Coleman Liau Index: 16.99",
+                " - Dale Chall Readability: 13.37",
+                " - Difficult Words: 102.00",
+                " - Syllable Count: 519.00",
+                "Word count acceptable (358 words)",
+                "Inconsistent font usage detected.",
+                "Most used font: Roboto,Bold",
+                "Excessive bullet points detected (44)."
+            ],
+            "file_type": "application/pdf",
+            "word_count": 0,
+            "sections_present": [],
+            "sections_missing": [],
+            "formatting_issues": [],
+            "recommendations": [
+                "Add more relevant keywords related to your industry.",
+                "Use active voice for stronger impact.",
+                "Consider simplifying language for better readability",
+                "Include more relevant keywords in your education section",
+                "Add more detail to your experience section",
+                "Include more relevant keywords in your experience section",
+                "Add more detail to your skills section",
+                "Include more relevant keywords in your skills section",
+                "Fix grammar mistakes for better ATS compliance.",
+                "Use a single font type throughout the document.",
+                "Limit bullet points to a maximum of 15 for better readability."
+            ]
+        }
+    },
+    "b1395ebea342e7d414e4d4d98b116ecc": {
+        "filename": "Akshay patel ABAP 1.pdf",
+        "last_checked": "2025-01-30T15:36:11.235381",
+        "result": {
+            "score": 60,
+            "messages": [
+                "Not enough industry-specific keywords detected.",
+                "Stylistic Improvements Suggested:",
+                "LinkedIn Optimization Suggestions:",
+                "Grammar Issues Found: 14",
+                " - {'error': '...ay.patel@insansa.com Skills SAP ABAP on HANA OO ABAP Languages Hindi Marathi  Englis...', 'suggestions': ['HAND', 'GHANA', 'HAN', 'HANS', 'HANG', 'ANA', 'DANA', 'HANK', 'HANNA', 'LANA', 'NANA', 'KANA', 'JANA', 'SANA', 'SHANA', 'HAHA', 'HAWA', 'HARA', 'MANA'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (106, 110)}",
+                " - {'error': '...n HANA OO ABAP Languages Hindi Marathi  Englis TECHNICAL SKILLS  \u2022 Having 2.5 years  e...', 'suggestions': ['English'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (144, 150)}",
+                " - {'error': '...lis TECHNICAL SKILLS  \u2022 Having 2.5 years  experience in SAP ABAP implementation an...', 'suggestions': [' '], 'category': 'TYPOGRAPHY', 'rule_id': 'CONSECUTIVE_SPACES', 'message': 'It seems like there are too many consecutive spaces here.', 'position': (187, 189)}",
+                " - {'error': '... SAP ABAP implementation and support. \u2022 Ures, Table Maintenance, Data Type, Domain, ...', 'suggestions': ['Uses', 'Cures', 'Ores', 'Urges', 'Ares', 'URLs', 'Lures', 'Urns', 'Pres', 'Urey', 'Uris', 'RES', 'UES', 'URE', 'URIs', 'URS', 'URSS', 'Urs', 'Utes', 'Res', 'Urea'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (242, 246)}",
+                " - {'error': '...odule pool programming. \u2022 Experience in Smartforms and Abodeforms. \u2022 Debugging techniques ...', 'suggestions': ['Smart forms'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (519, 529)}",
+                "Readability Scores:",
+                " - Flesch Reading Ease: 32.90",
+                " - Gunning Fog Index: 13.44",
+                " - SMOG Index: 13.90",
+                " - Automated Readability Index: 15.00",
+                " - Coleman Liau Index: 17.15",
+                " - Dale Chall Readability: 12.18",
+                " - Difficult Words: 99.00",
+                " - Syllable Count: 526.00",
+                "Word count acceptable (297 words)",
+                "Missing sections: education",
+                "Missing LinkedIn best-practice sections: education",
+                "Inconsistent font usage detected.",
+                "Most used font: Lato-Regular",
+                "Excessive bullet points detected (26)."
+            ],
+            "file_type": "application/pdf",
+            "word_count": 0,
+            "sections_present": [],
+            "sections_missing": [
+                "education"
+            ],
+            "formatting_issues": [],
+            "recommendations": [
+                "Add more relevant keywords related to your industry.",
+                "Consider simplifying language for better readability",
+                "Add more detail to your skills section",
+                "Include more relevant keywords in your skills section",
+                "Add more detail to your experience section",
+                "Include more relevant keywords in your experience section",
+                "Fix grammar mistakes for better ATS compliance.",
+                "Add missing required sections",
+                "Add missing sections for LinkedIn compatibility.",
+                "Use a single font type throughout the document.",
+                "Limit bullet points to a maximum of 15 for better readability."
+            ]
+        }
+    },
+    "c87d85c8679f772f9b00901a3625d4a6": {
+        "filename": "Naukri_harshitavarma[12y_0m]A.pdf",
+        "last_checked": "2025-01-30T15:52:10.233757",
+        "result": {
+            "score": 25,
+            "messages": [
+                "Not enough industry-specific keywords detected.",
+                "LinkedIn Optimization Suggestions:",
+                "Grammar Issues Found: 30",
+                " - {'error': '...                                    Name  HARSHITA VARMA  Ph- 8401044509  Email- h...', 'suggestions': [' '], 'category': 'TYPOGRAPHY', 'rule_id': 'CONSECUTIVE_SPACES', 'message': 'It seems like there are too many consecutive spaces here.', 'position': (74, 76)}",
+                " - {'error': '...                                  Name  HARSHITA VARMA  Ph- 8401044509  Email- harshi.19...', 'suggestions': ['HARSHITHA', 'HARSH ITA'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (76, 84)}",
+                " - {'error': '...                         Name  HARSHITA VARMA  Ph- 8401044509  Email- harshi.1919@gma...', 'suggestions': ['KARMA', 'PARMA', 'VA RMA', 'VAR MA'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (85, 90)}",
+                " - {'error': '...                  Name  HARSHITA VARMA  Ph- 8401044509  Email- harshi.1919@gmail.c...', 'suggestions': ['pH', 'PH', 'PA', 'PC', 'Mph', 'PM', 'PhD', 'Pm', 'PR', 'PT', 'Oh', 'PD', 'PV', 'Pa', 'Pi', 'GH', 'MPH', 'PJ', 'VH', 'Ah', 'Sh', 'BH', 'IH', 'PTH', 'PW', 'Eh', 'Phi', 'Pt', 'Uh', 'PX', 'Pah', 'Pk', 'Kph', 'PS', 'APH', 'BPH', 'CH', 'CPH', 'Ch', 'DH', 'DPH', 'FH', 'FPH', 'H', 'HH', 'LH', 'MH', 'NH', 'OH', 'P', 'PAH', 'PB', 'PE', 'PG', 'PHA', 'PHC', 'PHD', 'PHI', 'PHL', 'PHP', 'PHR', 'PHS', 'PHX', 'PHY', 'PK', 'PL', 'PLH', 'PMH', 'PNH', 'PO', 'POH', 'PP', 'PPH', 'PQ', 'PU', 'Pb', 'Pd', 'Pl', 'Po', 'Pr', 'Pu', 'Rh', 'SH', 'SPH', 'TH', 'Th', 'VPH', 'ZH', 'pHs', 'Pc', 'Pf', 'Pg', 'Pj', 'Pp'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (92, 94)}",
+                " - {'error': '...mail.com                                                         SAP HANA Consultant      ...', 'suggestions': [' '], 'category': 'TYPOGRAPHY', 'rule_id': 'WHITESPACE_RULE', 'message': 'Possible typo: you repeated a whitespace', 'position': (168, 178)}",
+                "Readability Scores:",
+                " - Flesch Reading Ease: 40.45",
+                " - Gunning Fog Index: 12.51",
+                " - SMOG Index: 13.70",
+                " - Automated Readability Index: 13.30",
+                " - Coleman Liau Index: 14.72",
+                " - Dale Chall Readability: 11.21",
+                " - Difficult Words: 88.00",
+                " - Syllable Count: 551.00",
+                "Word count acceptable (329 words)",
+                "Missing sections: education, skills",
+                "Missing LinkedIn best-practice sections: education, skills",
+                "Inconsistent font usage detected.",
+                "Most used font: BookAntiqua",
+                "Excessive bullet points detected (51).",
+                "Few section headers found: "
+            ],
+            "file_type": "application/pdf",
+            "word_count": 0,
+            "sections_present": [],
+            "sections_missing": [
+                "education",
+                "skills"
+            ],
+            "formatting_issues": [],
+            "recommendations": [
+                "Add more relevant keywords related to your industry.",
+                "Add more detail to your experience section",
+                "Include more relevant keywords in your experience section",
+                "Fix grammar mistakes for better ATS compliance.",
+                "Add missing required sections",
+                "Add missing sections for LinkedIn compatibility.",
+                "Use a single font type throughout the document.",
+                "Limit bullet points to a maximum of 15 for better readability.",
+                "Ensure major sections like Experience, Education, and Skills are included."
+            ]
+        }
+    },
+    "00f6b19b312a99ba2a710fc4fabe2147": {
+        "filename": "Gyan Pradeep Dash.pdf",
+        "last_checked": "2025-01-31T14:25:39.714353",
+        "result": {
+            "score": 60,
+            "messages": [
+                "Not enough industry-specific keywords detected.",
+                "Stylistic Improvements Suggested:",
+                "LinkedIn Optimization Suggestions:",
+                "Grammar Issues Found: 11",
+                " - {'error': '  Powered by  www.enhancv.com    GYAN PRADEEP DASH  Sales Manager  E 938 012-...', 'suggestions': ['RYAN', 'CYAN', 'GRAN', 'GY AN'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (33, 37)}",
+                " - {'error': '...ms, increasing  SKILLS    Cold calling  Hubspot      Lead Generation  SalesForce  SAP  ...', 'suggestions': ['HubSpot'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (394, 401)}",
+                " - {'error': '... calling  Hubspot      Lead Generation  SalesForce  SAP  revenue, and developing strategic...', 'suggestions': ['Salesforce', 'Sales Force'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (424, 434)}",
+                " - {'error': '...tegic business partnerships. Seeking            a challenging role where I can lev...', 'suggestions': [' '], 'category': 'TYPOGRAPHY', 'rule_id': 'WHITESPACE_RULE', 'message': 'Possible typo: you repeated a whitespace', 'position': (509, 511)}",
+                " - {'error': '...siness partnerships. Seeking            a challenging role where I can leverage m...', 'suggestions': ['A'], 'category': 'CASING', 'rule_id': 'UPPERCASE_SENTENCE_START', 'message': 'This sentence does not start with an uppercase letter.', 'position': (517, 518)}",
+                "Readability Scores:",
+                " - Flesch Reading Ease: 32.02",
+                " - Gunning Fog Index: 14.56",
+                " - SMOG Index: 15.50",
+                " - Automated Readability Index: 17.60",
+                " - Coleman Liau Index: 15.95",
+                " - Dale Chall Readability: 10.96",
+                " - Difficult Words: 123.00",
+                " - Syllable Count: 779.00",
+                "Word count acceptable (471 words)",
+                "Missing sections: education",
+                "Missing LinkedIn best-practice sections: education",
+                "Inconsistent font usage detected.",
+                "Most used font: Tahoma",
+                "Excessive bullet points detected (29)."
+            ],
+            "file_type": "application/pdf",
+            "word_count": 0,
+            "sections_present": [],
+            "sections_missing": [
+                "education"
+            ],
+            "formatting_issues": [],
+            "recommendations": [
+                "Add more relevant keywords related to your industry.",
+                "Consider simplifying language for better readability",
+                "Include more relevant keywords in your experience section",
+                "Add more detail to your skills section",
+                "Include more relevant keywords in your skills section",
+                "Fix grammar mistakes for better ATS compliance.",
+                "Add missing required sections",
+                "Add missing sections for LinkedIn compatibility.",
+                "Use a single font type throughout the document.",
+                "Limit bullet points to a maximum of 15 for better readability."
+            ]
+        }
+    },
+    "10d10b737071c798a3a6356533d7da87": {
+        "filename": "Naukri_MunirajSiddhan.pdf",
+        "last_checked": "2025-01-31T14:37:19.895376",
+        "result": {
+            "score": 25,
+            "messages": [
+                "Stylistic Improvements Suggested:",
+                "Grammar Issues Found: 12",
+                " - {'error': '  - M U N I R A J  S I D D H A N -  CIO | SAP Expert | IT A...', 'suggestions': [' '], 'category': 'TYPOGRAPHY', 'rule_id': 'CONSECUTIVE_SPACES', 'message': 'It seems like there are too many consecutive spaces here.', 'position': (17, 19)}",
+                " - {'error': '...rchitect | Experienced Technology Expert   Experienced technology leader with a pr...', 'suggestions': [' '], 'category': 'TYPOGRAPHY', 'rule_id': 'WHITESPACE_RULE', 'message': 'Possible typo: you repeated a whitespace', 'position': (99, 101)}",
+                " - {'error': '...ules including SAP S/4HANA PP,  SD, MM, EWM, Re-FX, PI/PO, CPI, and SAP EHS, I have...', 'suggestions': ['ELM', 'DWM', 'EAM', 'ERM', 'EWE', 'AWM', 'BWM', 'CWM', 'ECM', 'EDM', 'EEM', 'EM', 'EMM', 'ENM', 'EOM', 'EPM', 'EQM', 'ESM', 'ETM', 'EVM', 'EW', 'EWG', 'EWP', 'EWR', 'EWS', 'PWM', 'WM', 'EW M'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (861, 864)}",
+                " - {'error': '...management for SAP Finance (SF),  HRMS (HCM), and managing complex IT architecture....', 'suggestions': ['HIM', 'CM', 'ACM', 'HAM', 'PCM', 'HUM', 'DCM', 'HCA', 'HCC', 'HCl', 'HMC', 'ICM', 'RCM', 'TCM', 'HEM', 'LCM', 'BCM', 'CCM', 'CHM', 'ECM', 'FCM', 'GCM', 'H&M', 'HBM', 'HC', 'HCB', 'HCG', 'HCI', 'HCL', 'HCS', 'HCT', 'HCs', 'HDM', 'HLM', 'HM', 'HOM', 'HRM', 'HSM', 'MCM', 'NCM', 'QCM', 'SCM', 'UCM', 'VCM', 'HMM', 'HC M'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (1082, 1085)}",
+                " - {'error': '...ve worked with Microsoft Dynamics D365, MPOs,  XSTORE Configurations, and Oracle ERP...', 'suggestions': ['IPOs', 'MP3s', 'MMOs', 'Mos', 'Moos', 'MPs', 'EPOS', 'MOS', 'MP4s', 'MPLS', 'MPS', 'POS', 'MP Os'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (1170, 1174)}",
+                "Readability Scores:",
+                " - Flesch Reading Ease: 15.91",
+                " - Gunning Fog Index: 15.61",
+                " - SMOG Index: 17.30",
+                " - Automated Readability Index: 19.70",
+                " - Coleman Liau Index: 17.98",
+                " - Dale Chall Readability: 12.39",
+                " - Difficult Words: 117.00",
+                " - Syllable Count: 759.00",
+                "Word count acceptable (404 words)",
+                "Missing sections: education, skills",
+                "Missing LinkedIn best-practice sections: education, skills",
+                "Inconsistent font usage detected.",
+                "Most used font: PalatinoLinotype-Roman",
+                "Excessive bullet points detected (135).",
+                "Few section headers found: certifications, education"
+            ],
+            "file_type": "application/pdf",
+            "word_count": 0,
+            "sections_present": [],
+            "sections_missing": [
+                "education",
+                "skills"
+            ],
+            "formatting_issues": [],
+            "recommendations": [
+                "Consider simplifying language for better readability",
+                "Fix grammar mistakes for better ATS compliance.",
+                "Add missing required sections",
+                "Add missing sections for LinkedIn compatibility.",
+                "Use a single font type throughout the document.",
+                "Limit bullet points to a maximum of 15 for better readability.",
+                "Ensure major sections like Experience, Education, and Skills are included."
+            ]
+        }
+    },
+    "30bbee98f35c09bc716a634fa45c65ef": {
+        "filename": "Naukri_BhuwanBhaskar[14y_0m].pdf",
+        "last_checked": "2025-01-31T14:41:17.537468",
+        "result": {
+            "score": 45,
+            "messages": [
+                "Not enough industry-specific keywords detected.",
+                "Stylistic Improvements Suggested:",
+                "LinkedIn Optimization Suggestions:",
+                "Grammar Issues Found: 31",
+                " - {'error': 'Name: Bhuwan Bhaskar                                ...', 'suggestions': ['Bhutan'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (6, 12)}",
+                " - {'error': 'Name: Bhuwan Bhaskar                                                         Mobile - 7702031023                     ...', 'suggestions': [' '], 'category': 'TYPOGRAPHY', 'rule_id': 'WHITESPACE_RULE', 'message': 'Possible typo: you repeated a whitespace', 'position': (20, 77)}",
+                " - {'error': '...                     Mobile - 7702031023                                              Education - B. Tech [IT-2010]          ...', 'suggestions': [' '], 'category': 'TYPOGRAPHY', 'rule_id': 'WHITESPACE_RULE', 'message': 'Possible typo: you repeated a whitespace', 'position': (96, 141)}",
+                " - {'error': '...           Education - B. Tech [IT-2010]                                                 Email: bhu1bhaskar2020@gmail.com   A res...', 'suggestions': [' '], 'category': 'TYPOGRAPHY', 'rule_id': 'WHITESPACE_RULE', 'message': 'Possible typo: you repeated a whitespace', 'position': (171, 220)}",
+                " - {'error': '...        Email: bhu1bhaskar2020@gmail.com   A results-driven Source to Pay Manager ...', 'suggestions': [' '], 'category': 'TYPOGRAPHY', 'rule_id': 'WHITESPACE_RULE', 'message': 'Possible typo: you repeated a whitespace', 'position': (252, 254)}",
+                "Readability Scores:",
+                " - Flesch Reading Ease: 26.91",
+                " - Gunning Fog Index: 13.83",
+                " - SMOG Index: 16.60",
+                " - Automated Readability Index: 19.20",
+                " - Coleman Liau Index: 19.03",
+                " - Dale Chall Readability: 11.37",
+                " - Difficult Words: 118.00",
+                " - Syllable Count: 871.00",
+                "Word count acceptable (484 words)",
+                "Missing sections: skills",
+                "Missing LinkedIn best-practice sections: skills",
+                "Inconsistent font usage detected.",
+                "Most used font: ArialMT",
+                "Excessive bullet points detected (121).",
+                "Few section headers found: summary"
+            ],
+            "file_type": "application/pdf",
+            "word_count": 0,
+            "sections_present": [],
+            "sections_missing": [
+                "skills"
+            ],
+            "formatting_issues": [],
+            "recommendations": [
+                "Add more relevant keywords related to your industry.",
+                "Consider simplifying language for better readability",
+                "Add more detail to your education section",
+                "Include more relevant keywords in your education section",
+                "Add more detail to your experience section",
+                "Include more relevant keywords in your experience section",
+                "Fix grammar mistakes for better ATS compliance.",
+                "Add missing required sections",
+                "Add missing sections for LinkedIn compatibility.",
+                "Use a single font type throughout the document.",
+                "Limit bullet points to a maximum of 15 for better readability.",
+                "Ensure major sections like Experience, Education, and Skills are included."
+            ]
+        }
+    },
+    "a71ead38033aaa4bab7f39ed0c10a10e": {
+        "filename": "Naukri_SatyajitRaskar[12y_0m].pdf",
+        "last_checked": "2025-01-31T14:46:31.564982",
+        "result": {
+            "score": 45,
+            "messages": [
+                "Not enough industry-specific keywords detected.",
+                "Stylistic Improvements Suggested:",
+                "LinkedIn Optimization Suggestions:",
+                "Grammar Issues Found: 26",
+                " - {'error': 'Satyajit Raskar  Pune, MH, 411030  Email : satya...', 'suggestions': ['Strait', 'Satanic', 'Satanist', 'Satyric', 'Nayarit', 'Satya'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (0, 8)}",
+                " - {'error': 'Satyajit Raskar  Pune, MH, 411030  Email : satyajit.ras...', 'suggestions': ['Radar', 'NASCAR', 'Dakar', 'Raster', 'Caspar', 'Gaspar', 'Vassar', 'Rascal', 'Taskbar', 'Masker', 'Ranker', 'Rasher', 'Racker', 'Bashar', 'Bhaskar', 'NASTAR', 'Oskar', 'RADAR', 'Rashad', 'Rasta', 'Rastas'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (9, 15)}",
+                " - {'error': '...0  Email : satyajit.raskar1980@gmail.com               Cell : +91 9921 589 589 / +...', 'suggestions': [' '], 'category': 'TYPOGRAPHY', 'rule_id': 'WHITESPACE_RULE', 'message': 'Possible typo: you repeated a whitespace', 'position': (72, 74)}",
+                " - {'error': '...1 9921 589 589 / +1 845 281 2298                                                             ...', 'suggestions': [' '], 'category': 'TYPOGRAPHY', 'rule_id': 'WHITESPACE_RULE', 'message': 'Possible typo: you repeated a whitespace', 'position': (136, 149)}",
+                " - {'error': '... 281 2298                                                                                                                                         SAP Basis/S4 Hana Administrator  (Lin...', 'suggestions': [' '], 'category': 'TYPOGRAPHY', 'rule_id': 'WHITESPACE_RULE', 'message': 'Possible typo: you repeated a whitespace', 'position': (159, 262)}",
+                "Readability Scores:",
+                " - Flesch Reading Ease: 28.20",
+                " - Gunning Fog Index: 19.03",
+                " - SMOG Index: 17.40",
+                " - Automated Readability Index: 24.20",
+                " - Coleman Liau Index: 15.62",
+                " - Dale Chall Readability: 14.23",
+                " - Difficult Words: 87.00",
+                " - Syllable Count: 524.00",
+                "Word count acceptable (341 words)",
+                "Missing sections: education",
+                "Missing LinkedIn best-practice sections: education",
+                "Inconsistent font usage detected.",
+                "Most used font: Verdana",
+                "Excessive bullet points detected (114).",
+                "Few section headers found: "
+            ],
+            "file_type": "application/pdf",
+            "word_count": 0,
+            "sections_present": [],
+            "sections_missing": [
+                "education"
+            ],
+            "formatting_issues": [],
+            "recommendations": [
+                "Add more relevant keywords related to your industry.",
+                "Consider simplifying language for better readability",
+                "Add more detail to your experience section",
+                "Include more relevant keywords in your experience section",
+                "Include more relevant keywords in your skills section",
+                "Fix grammar mistakes for better ATS compliance.",
+                "Add missing required sections",
+                "Add missing sections for LinkedIn compatibility.",
+                "Use a single font type throughout the document.",
+                "Limit bullet points to a maximum of 15 for better readability.",
+                "Consider breaking long paragraphs into concise bullet points for readability.",
+                "Ensure major sections like Experience, Education, and Skills are included."
+            ]
+        }
+    }
+}

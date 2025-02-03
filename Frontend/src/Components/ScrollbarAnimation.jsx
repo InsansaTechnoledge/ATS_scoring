@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 const ScrollbarAnimation = () => {
-
     const [scrollProgress, setScrollProgress] = useState(0);
 
     useEffect(() => {
@@ -12,16 +11,16 @@ const ScrollbarAnimation = () => {
             setScrollProgress(progress);
         };
 
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-  return (
-      <div
-          className="fixed bottom-0 left-0 h-1 bg-emerald-500 transition-all duration-300 z-200"
-          style={{ width: `${scrollProgress}%` }}
-      />
-  )
-}
+    return (
+        <div
+            className="fixed bottom-0 left-0 h-1 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-tr-full transition-all duration-300 ease-out z-[100]"
+            style={{ width: `${scrollProgress}%` }}
+        />
+    );
+};
 
-export default ScrollbarAnimation
+export default ScrollbarAnimation;

@@ -4,6 +4,7 @@ import { Upload, FileText, ChevronRight, Check, X, Loader } from "lucide-react";
 const UploadBox = ({ file, setFile, setIsAnalyzing, setActiveStep }) => {
     const [isDragging, setIsDragging] = useState(false);
     const [uploading, setUploading] = useState(false);
+    const [jobDescription, setJobDescription] = useState("");
 
     const handleFile = (uploadedFile) => {
         if (!uploadedFile) return;
@@ -21,8 +22,21 @@ const UploadBox = ({ file, setFile, setIsAnalyzing, setActiveStep }) => {
         handleFile(droppedFile);
     };
 
+    const handleAnalyze = () => {
+        if (!file) {
+            alert("Please upload a resume first");
+            return;
+        }
+        setUploading(true);
+        setTimeout(() => {
+            setUploading(false);
+            setIsAnalyzing(true);
+            setActiveStep("analyzing");
+        }, 1000);
+    };
+
     return (
-        <div className="max-w-xl mx-auto">
+        <div className="max-w-xl mx-auto space-y-6">
             <div
                 className={`p-8 bg-white rounded-3xl shadow-lg border border-gray-200 text-center transition-all ${isDragging ? "border-emerald-500 bg-gray-50" : ""
                     }`}
@@ -61,15 +75,10 @@ const UploadBox = ({ file, setFile, setIsAnalyzing, setActiveStep }) => {
                                 <X className="h-5 w-5 mr-1" /> Remove
                             </button>
                             <button
-                                onClick={() => {
-                                    setUploading(true);
-                                    setTimeout(() => {
-                                        setUploading(false);
-                                        setIsAnalyzing(true);
-                                        setActiveStep("analyzing");
-                                    }, 1000);
-                                }}
-                                className="px-8 py-3 text-lg font-medium rounded-xl text-white bg-gradient-to-r from-emerald-500 to-blue-500 hover:from-emerald-600 hover:to-blue-600 transition-all duration-300 flex items-center"
+                                onClick={handleAnalyze}
+                                disabled={!jobDescription.trim() && !file}
+                                className={`px-8 py-3 text-lg font-medium rounded-xl text-white bg-gradient-to-r from-emerald-500 to-blue-500 hover:from-emerald-600 hover:to-blue-600 transition-all duration-300 flex items-center ${!jobDescription.trim() && !file ? "opacity-50 cursor-not-allowed" : ""
+                                    }`}
                             >
                                 {uploading ? (
                                     <>
@@ -84,6 +93,18 @@ const UploadBox = ({ file, setFile, setIsAnalyzing, setActiveStep }) => {
                         </div>
                     </>
                 )}
+            </div>
+
+            <div className="bg-white rounded-3xl shadow-lg border border-gray-200 p-6">
+                <label className="block text-lg font-medium text-gray-700 mb-2">
+                    Job Description (Optional)
+                </label>
+                <textarea
+                    value={jobDescription}
+                    onChange={(e) => setJobDescription(e.target.value)}
+                    placeholder="Paste the job description here to compare with the resume..."
+                    className="w-full h-32 p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 resize-none"
+                ></textarea>
             </div>
         </div>
     );

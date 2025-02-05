@@ -659,7 +659,7 @@
     },
     "7151d686dfde494bfb4d5763f8f39e47": {
         "filename": "Jay Amrish Fanse_Resume_December2024.pdf",
-        "last_checked": "2025-02-03T16:41:49.132883",
+        "last_checked": "2025-02-04T10:34:02.804147",
         "result": {
             "score": 80,
             "messages": [
@@ -667,12 +667,7 @@
                 "Found 2 sentences using passive voice.",
                 "Stylistic Improvements Suggested:",
                 "LinkedIn Optimization Suggestions:",
-                "Grammar Issues Found: 46",
-                " - {'error': 'JAY FANSE  LinkedIn | CodeChef | LeetCode | Githu...', 'suggestions': ['FANS', 'FALSE', 'MANSE', 'FAPSE', 'FAN SE', 'FANS E'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (4, 9)}",
-                " - {'error': 'JAY FANSE  LinkedIn | CodeChef | LeetCode | Github      +91 9726535193...', 'suggestions': ['Code Chef'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (22, 30)}",
-                " - {'error': 'JAY FANSE  LinkedIn | CodeChef | LeetCode | Github      +91 9726535193 |  jayf291...', 'suggestions': ['Electrode', 'Encode', 'Postcode', 'Decode', 'Leeched', 'Bestrode', 'Lestrade', 'Geocode', 'Re-encode', 'Uuencode'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (33, 41)}",
-                " - {'error': '...FANSE  LinkedIn | CodeChef | LeetCode | Github      +91 9726535193 |  jayf29112003@gma...', 'suggestions': ['GitHub'], 'category': 'CASING', 'rule_id': 'GITHUB', 'message': 'The official name of this software platform is spelled with a capital \u201cH\u201d.', 'position': (44, 50)}",
-                " - {'error': '... LinkedIn | CodeChef | LeetCode | Github      +91 9726535193 |  jayf29112003@gmail.co...', 'suggestions': [' '], 'category': 'TYPOGRAPHY', 'rule_id': 'WHITESPACE_RULE', 'message': 'Possible typo: you repeated a whitespace', 'position': (50, 55)}",
+                "Grammar Issues Found: 17",
                 "Readability Scores:",
                 " - Flesch Reading Ease: 39.84",
                 " - Gunning Fog Index: 12.17",
@@ -684,7 +679,6 @@
                 " - Syllable Count: 519.00",
                 "Word count acceptable (358 words)",
                 "Missing LinkedIn best-practice sections: Summary, Accomplishments",
-                "Job Match Score: 0.0%",
                 "Inconsistent font usage detected.",
                 "Most used font: Roboto,Bold",
                 "Excessive bullet points detected (44)."
@@ -705,9 +699,27 @@
                 "Include more relevant keywords in your Skills section",
                 "Fix grammar mistakes for better ATS compliance.",
                 "Add missing sections for LinkedIn compatibility.",
-                "Improve resume alignment with job description.",
                 "Use a single font type throughout the document.",
                 "Limit bullet points to a maximum of 15 for better readability."
+            ],
+            "grammar_issues": [
+                "{'type': 'Spelling', 'context': '...26535193 |  jayf29112003@gmail.com  \\n \\n \\n \\n   \\n \\nE...', 'issue': \"Spelling mistake: 'gmail.com'\", 'suggestions': ['email.com']}",
+                "{'type': 'Spelling', 'context': '...Expensia [ GitHub \u2022 Live ] \\nTech Stack: Mongo...', 'issue': \"Spelling mistake: 'Live'\", 'suggestions': ['Give']}",
+                "{'type': 'Spelling', 'context': '...\u2022 \\nSimplifies settle ups by minimizing the number...', 'issue': \"Spelling mistake: 'ups'\", 'suggestions': ['up']}",
+                "{'type': 'Spelling', 'context': '...rsh - Website [ GitHub \u2022 Live ] \\nTech Stack: Mongo...', 'issue': \"Spelling mistake: 'Live'\", 'suggestions': ['Give']}",
+                "{'type': 'Spelling', 'context': '...Python \\n\u2022 \\nDesigned and implemented the profile p...', 'issue': \"Spelling mistake: 'implemented'\", 'suggestions': ['implements']}",
+                "{'type': 'Spelling', 'context': '...g, removing, and listing admins....', 'issue': \"Spelling mistake: 'admins'\", 'suggestions': ['admits']}",
+                "{'type': 'Spelling', 'context': '...t registration form with validation and secure dat...', 'issue': \"Spelling mistake: 'validation'\", 'suggestions': ['variation']}",
+                "{'type': 'Spelling', 'context': '...\u2022 \\nImplemented a website navigation bot using sent...', 'issue': \"Spelling mistake: 'website'\", 'suggestions': ['webster']}",
+                "{'type': 'Spelling', 'context': '...ted a website navigation bot using sentence-transf...', 'issue': \"Spelling mistake: 'bot'\", 'suggestions': ['not']}",
+                "{'type': 'Spelling', 'context': '...l Shark Tank event where alumni provide funding to...', 'issue': \"Spelling mistake: 'alumni'\", 'suggestions': ['calumny']}",
+                "{'type': 'Spelling', 'context': '...ide funding to promising startup ideas....', 'issue': \"Spelling mistake: 'startup'\", 'suggestions': ['started']}",
+                "{'type': 'Spelling', 'context': '...I Redefines Reading\", an AI-integrated e-book mark...', 'issue': \"Spelling mistake: 'AI-integrated'\", 'suggestions': ['of-integrated']}",
+                "{'type': 'Spelling', 'context': '...marketplace \\noffering an immersive reading experie...', 'issue': \"Spelling mistake: 'immersive'\", 'suggestions': ['immersion']}",
+                "{'type': 'Spelling', 'context': '...- USP : Infinite book snippets, BooKi.ai \\n\u2022 Coordi...', 'issue': \"Spelling mistake: 'snippets'\", 'suggestions': ['shippers']}",
+                "{'type': 'Spelling', 'context': '...ing DSA based events and coding contests....', 'issue': \"Spelling mistake: 'coding'\", 'suggestions': ['coming']}",
+                "{'type': 'Spelling', 'context': '...s  \\n: C, Java, Python \\n\u2022 Frontend \\n: HTML, CSS, Re...', 'issue': \"Spelling mistake: 'Frontend'\", 'suggestions': ['Contend']}",
+                "{'type': 'Spelling', 'context': '...L, MongoDB \\n\u2022 Tools   \\n: Git/Github, Postman \\n \\nAC...', 'issue': \"Spelling mistake: 'Git/Github'\", 'suggestions': ['It/Github']}"
             ]
         }
     },
@@ -1078,7 +1090,7 @@
     },
     "5ef7deec59296266d86ca5c9d9897fce": {
         "filename": "Jay Amrish Fanse_Resume_April2024.pdf",
-        "last_checked": "2025-02-03T16:38:29.508000",
+        "last_checked": "2025-02-05T10:59:15.991297",
         "result": {
             "score": 60,
             "messages": [
@@ -1086,12 +1098,7 @@
                 "Found 3 sentences using passive voice.",
                 "Stylistic Improvements Suggested:",
                 "LinkedIn Optimization Suggestions:",
-                "Grammar Issues Found: 52",
-                " - {'error': 'JAY FANSE   [CodeChef] | [Codeforces] | [LeetCode...', 'suggestions': ['FANS', 'FALSE', 'MANSE', 'FAPSE', 'FAN SE', 'FANS E'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (4, 9)}",
-                " - {'error': 'JAY FANSE   [CodeChef] | [Codeforces] | [LeetCode] ...', 'suggestions': [' '], 'category': 'TYPOGRAPHY', 'rule_id': 'WHITESPACE_RULE', 'message': 'Possible typo: you repeated a whitespace', 'position': (9, 11)}",
-                " - {'error': 'JAY FANSE   [CodeChef] | [Codeforces] | [LeetCode]           ...', 'suggestions': ['Code Chef'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (13, 21)}",
-                " - {'error': 'JAY FANSE   [CodeChef] | [Codeforces] | [LeetCode]                  +91 9726...', 'suggestions': ['Code forces'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (26, 36)}",
-                " - {'error': '...AY FANSE   [CodeChef] | [Codeforces] | [LeetCode]                  +91 9726535193       ...', 'suggestions': ['Electrode', 'Encode', 'Postcode', 'Decode', 'Leeched', 'Bestrode', 'Lestrade', 'Geocode', 'Re-encode', 'Uuencode'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (41, 49)}",
+                "Grammar Issues Found: 13",
                 "Readability Scores:",
                 " - Flesch Reading Ease: 43.22",
                 " - Gunning Fog Index: 12.16",
@@ -1129,6 +1136,21 @@
                 "Improve resume alignment with job description.",
                 "Use a single font type throughout the document.",
                 "Limit bullet points to a maximum of 15 for better readability."
+            ],
+            "grammar_issues": [
+                "{'type': 'Spelling', 'context': '...A chess enthusiast and self-motivated learner al...', 'issue': \"Spelling mistake: 'self-motivated'\", 'suggestions': ['self-motivate']}",
+                "{'type': 'Spelling', 'context': '...ing forward to learn new skills and utilise my \\nkn...', 'issue': \"Spelling mistake: 'skills'\", 'suggestions': ['skill']}",
+                "{'type': 'Spelling', 'context': '...\u25cf https://github.com/JayFanse29/MineSweeper-\\nGame....', 'issue': \"Spelling mistake: 'https'\", 'suggestions': ['http']}",
+                "{'type': 'Spelling', 'context': '...\u25cf Provides data analytics such as Profit-Loss anal...', 'issue': \"Spelling mistake: 'analytics'\", 'suggestions': ['analysis']}",
+                "{'type': 'Spelling', 'context': '...\u25cf https://github.com/JayFanse29/Shop-Management-\\nS...', 'issue': \"Spelling mistake: 'https'\", 'suggestions': ['http']}",
+                "{'type': 'Spelling', 'context': '...Project Report has been generated keeping in \\nmin...', 'issue': \"Spelling mistake: 'generated'\", 'suggestions': ['generate']}",
+                "{'type': 'Spelling', 'context': '...\u25cf Report consists of Normalised tables, E-R Diagra...', 'issue': \"Spelling mistake: 'Normalised'\", 'suggestions': ['Normalized']}",
+                "{'type': 'Spelling', 'context': '...unctions, procedures and triggers....', 'issue': \"Spelling mistake: 'triggers'\", 'suggestions': ['trigger']}",
+                "{'type': 'Spelling', 'context': '...\u25cf https://github.com/JayFanse29/Bank-\\nDatabaseMana...', 'issue': \"Spelling mistake: 'https'\", 'suggestions': ['http']}",
+                "{'type': 'Spelling', 'context': '...ERCENTAGE : 80.28%(up to 5th sem)  \\n   (2021 \u2013 202...', 'issue': \"Spelling mistake: '5th'\", 'suggestions': ['th']}",
+                "{'type': 'Spelling', 'context': '...NTAGE : 80.28%(up to 5th sem)  \\n   (2021 \u2013 2025)...', 'issue': \"Spelling mistake: 'sem'\", 'suggestions': ['see']}",
+                "{'type': 'Spelling', 'context': '...ase : MySQL, MongoDB \\n\u2022 \\nFrontend  : HTML, CSS, Re...', 'issue': \"Spelling mistake: 'Frontend'\", 'suggestions': ['Contend']}",
+                "{'type': 'Spelling', 'context': '..., SpringBoot \\n\u2022 \\nTools : Git/Github, Postman \\n \\nAC...', 'issue': \"Spelling mistake: 'Git/Github'\", 'suggestions': ['It/Github']}"
             ]
         }
     },

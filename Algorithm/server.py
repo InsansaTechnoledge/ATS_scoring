@@ -26,10 +26,12 @@ def post_example():
         file_path = os.path.join('Uploads', file.filename)
         file.save(file_path)
 
-
     if file.filename == '':
         return jsonify({"error": "No selected file"}), 400
     response = analyseResume(file_path, job_description)
+
+    os.remove(file_path)
+    
     return jsonify({"message": "File analysed successfully!", "result":response}), 200
 if __name__ == '__main__':
     app.run(debug=True)

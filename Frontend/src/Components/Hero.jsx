@@ -1,7 +1,18 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+    const navigate = useNavigate();
+
+    const handleLogin = () => {
+        navigate('/auth', { state: { mode: 'login' } });
+    };
+
+    const handleSignUp = () => {
+        navigate('/auth', { state: { mode: 'signup' } });
+    };
+
     return (
         <div className="text-center py-16 px-6 sm:px-12 lg:px-20 bg-gradient-to-b from-blue-50 to-white">
             <motion.h1
@@ -32,11 +43,17 @@ const Hero = () => {
                 transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
                 className="mt-8 flex justify-center gap-4"
             >
-                <button className="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg text-lg shadow-lg hover:bg-blue-700 transition duration-300">
+                <button
+                    onClick={handleLogin}
+                    className="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg text-lg shadow-lg hover:bg-blue-700 transition duration-300"
+                >
                     Login
                 </button>
-                <button className="px-6 py-3 bg-gray-200 text-gray-900 font-medium rounded-lg text-lg shadow-md hover:bg-gray-300 transition duration-300">
-                    sign Up
+                <button
+                    onClick={handleSignUp}
+                    className="px-6 py-3 bg-gray-200 text-gray-900 font-medium rounded-lg text-lg shadow-md hover:bg-gray-300 transition duration-300"
+                >
+                    Sign Up
                 </button>
             </motion.div>
         </div>

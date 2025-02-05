@@ -6,9 +6,8 @@ import Metrics from '../Components/Metrics';
 import UploadBox from '../Components/UploadBox';
 import ProgressModal from '../Components/ProgressModal';
 import Result from './result';
-import axios from 'axios'
+import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-
 
 const Landing = () => {
     const [file, setFile] = useState(null);
@@ -16,52 +15,62 @@ const Landing = () => {
     const [isAnalyzing, setIsAnalyzing] = useState(false);
     const [progress, setProgress] = useState(0);
     const [analysisData, setAnalysisData] = useState(null);
-    const [jobDescription, setJobDescription] = useState();
+    const [jobDescription, setJobDescription] = useState('');
     const navigate = useNavigate();
 
     useEffect(() => {
-        // if (isAnalyzing) {
-        //     let interval = setInterval(() => {
-        //         setProgress((prev) => {
-        //             if (prev >= 100) {
-        //                 clearInterval(interval);
-        //                 setIsAnalyzing(false);
-        //                 setActiveStep('results');
-        //                 setAnalysisData(sampleData); // Set sample data instead of generating mock data
-        //                 return 100;
-        //             }
-        //             return prev + 2;
-        //         });
-        //     }, 50);
-        //     return () => clearInterval(interval);
-        // }
+        if (!isAnalyzing || !file) return;
 
+        const startTime = Date.now();
+        const expectedBackendTime = 10000; 
+
+        // Simulated Progress Update
+        const progressInterval = setInterval(() => {
+            const elapsedTime = Date.now() - startTime;
+            const calculatedProgress = Math.min(
+                Math.floor((elapsedTime / expectedBackendTime) * 100),
+                85 // Stop at 85% before getting actual response
+            );
+            setProgress(calculatedProgress);
+        }, 50);
+
+        // Function to Handle API Call
         const analyseResume = async () => {
+            try {
+                const formData = new FormData();
+                formData.append('file', file);
+                formData.append('job_description', jobDescription);
 
-            const formData = new FormData();
-            formData.append('file', file);
-            formData.append('job_description', jobDescription)
+                const response = await axios.post('http://localhost:5000/analyse', formData, {
+                    headers: { 'Content-Type': 'multipart/form-data' },
+                    timeout: 60000,
+                });
 
-            const response = await axios.post('http://localhost:5000/analyse', formData, {
-                headers: {
-                    'Content-Type': 'multipart/form-data',  // Important for file uploads
-                },
-            });
+                if (response.status === 200) {
+                    clearInterval(progressInterval); // Stop progress updates
+                    setProgress(100);
 
-            if(response.status===200){
+                    setTimeout(() => {
+                        setIsAnalyzing(false);
+                        setActiveStep('results');
+                        setAnalysisData(response.data.result);
+                        navigate('/result', { state: { result: response.data.result } });
+                    }, 500);
+                }
+            } catch (error) {
+                console.error('Analysis failed:', error);
+                clearInterval(progressInterval);
+                setProgress(0);
                 setIsAnalyzing(false);
-                setActiveStep('results');
-                setAnalysisData(response.data.result); 
-                navigate('/result',{state:{"result":response.data.result}});
             }
-            console.log(response.data);
-        }
-        
-        if(isAnalyzing){
-            analyseResume();
-            
-        }
-    }, [isAnalyzing]);
+        };
+
+        analyseResume();
+
+        return () => {
+            clearInterval(progressInterval); // Cleanup interval on unmount
+        };
+    }, [isAnalyzing, file, jobDescription, navigate]);
 
     return (
         <div className="bg-gradient-to-b from-blue-50 to-white">
@@ -82,12 +91,8 @@ const Landing = () => {
                         jobDescription={jobDescription}
                     />
                 )}
-                {isAnalyzing && (
-                    <ProgressModal progress={progress} />
-                )}
-                {activeStep === 'results' && analysisData && (
-                    <Result resultData={analysisData} />
-                )}
+                {isAnalyzing && <ProgressModal progress={progress} />}
+                {activeStep === 'results' && analysisData && <Result resultData={analysisData} />}
             </main>
         </div>
     );

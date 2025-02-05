@@ -71,18 +71,48 @@
     },
     "a86230e45763ed60f5933268d5d9fb50": {
         "filename": "Chaitanya_J_DEC24.docx",
-        "last_checked": "2025-01-29T23:12:13.216004",
+        "last_checked": "2025-02-04T00:30:56.706314",
         "result": {
-            "score": 100,
+            "score": 90,
             "messages": [
-                "Word count acceptable (600 words)"
+                "Not enough industry-specific keywords detected.",
+                "LinkedIn Optimization Suggestions:",
+                "Grammar Issues Found: 39",
+                " - {'error': '...chnical experience in SAP ABAP, ABAP on HANA developments using Advance SQL, CDS vie...', 'suggestions': ['HAND', 'GHANA', 'HAN', 'HANS', 'HANG', 'ANA', 'DANA', 'HANK', 'HANNA', 'LANA', 'NANA', 'KANA', 'JANA', 'SANA', 'SHANA', 'HAHA', 'HAWA', 'HARA', 'MANA'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (261, 265)}",
+                " - {'error': '...elopments using Advance SQL, CDS views, AMDPs and SAP FIORI.  Uses OOPS approach to d...', 'suggestions': ['Amps', 'AM DPs'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (309, 314)}",
+                " - {'error': '...g Advance SQL, CDS views, AMDPs and SAP FIORI.  Uses OOPS approach to develop applica...', 'suggestions': ['FI ORI'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (323, 328)}",
+                " - {'error': '...pplications.  Worked extensively on Web Dynpro application involving Floor Plan Manage...', 'suggestions': ['Dynamo', 'Dnipro', 'Dinero'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (402, 408)}",
+                " - {'error': '...nds-on experience in developing Classic Dynpro applications. He has good communication...', 'suggestions': ['Dynamo', 'Dnipro', 'Dinero'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (493, 499)}",
+                "Readability Scores:",
+                " - Flesch Reading Ease: 42.17",
+                " - Gunning Fog Index: 11.23",
+                " - SMOG Index: 12.90",
+                " - Automated Readability Index: 12.90",
+                " - Coleman Liau Index: 15.53",
+                " - Dale Chall Readability: 11.03",
+                " - Difficult Words: 173.00",
+                " - Syllable Count: 1059.00",
+                "Word count acceptable (600 words)",
+                "Missing LinkedIn best-practice sections: Summary, Accomplishments",
+                "Inconsistent font usage detected.",
+                "Most used font: List Paragraph"
             ],
             "file_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
             "word_count": 0,
             "sections_present": [],
             "sections_missing": [],
             "formatting_issues": [],
-            "recommendations": []
+            "recommendations": [
+                "Add more relevant keywords related to your industry.",
+                "Include more relevant keywords in your Experience section",
+                "Include more relevant keywords in your Skills section",
+                "Add more detail to your Education section",
+                "Include more relevant keywords in your Education section",
+                "Fix grammar mistakes for better ATS compliance.",
+                "Add missing sections for LinkedIn compatibility.",
+                "Use a single font type throughout the document.",
+                "Consider breaking long paragraphs into concise bullet points for readability."
+            ]
         }
     },
     "3f55c8a6cbcceccad8ad019b770693c2": {
@@ -410,7 +440,7 @@
     },
     "028c4933b5bae8826c0aa919bc7411a5": {
         "filename": "Resume_one.pdf",
-        "last_checked": "2025-01-30T14:44:19.999045",
+        "last_checked": "2025-02-04T00:28:03.268058",
         "result": {
             "score": 90,
             "messages": [
@@ -433,6 +463,7 @@
                 " - Difficult Words: 129.00",
                 " - Syllable Count: 683.00",
                 "Word count acceptable (355 words)",
+                "Missing LinkedIn best-practice sections: Accomplishments",
                 "Inconsistent font usage detected.",
                 "Most used font: CMR10"
             ],
@@ -444,20 +475,23 @@
             "recommendations": [
                 "Add more relevant keywords related to your industry.",
                 "Consider simplifying language for better readability",
-                "Add more detail to your skills section",
-                "Include more relevant keywords in your skills section",
-                "Add more detail to your education section",
-                "Include more relevant keywords in your education section",
-                "Add more detail to your experience section",
-                "Include more relevant keywords in your experience section",
+                "Add more detail to your Skills section",
+                "Include more relevant keywords in your Skills section",
+                "Add more detail to your Summary section",
+                "Include more relevant keywords in your Summary section",
+                "Add more detail to your Education section",
+                "Include more relevant keywords in your Education section",
+                "Add more detail to your Experience section",
+                "Include more relevant keywords in your Experience section",
                 "Fix grammar mistakes for better ATS compliance.",
+                "Add missing sections for LinkedIn compatibility.",
                 "Use a single font type throughout the document."
             ]
         }
     },
     "d3603ccfe00c9f35976a8d2d17b3ff2e": {
         "filename": "Resume_two.pdf",
-        "last_checked": "2025-01-30T13:07:29.048084",
+        "last_checked": "2025-02-03T16:53:09.721039",
         "result": {
             "score": 90,
             "messages": [
@@ -480,6 +514,8 @@
                 " - Difficult Words: 115.00",
                 " - Syllable Count: 545.00",
                 "Word count acceptable (285 words)",
+                "Missing LinkedIn best-practice sections: Summary, Accomplishments",
+                "Job Match Score: 0.0%",
                 "Inconsistent font usage detected.",
                 "Most used font: CMR10"
             ],
@@ -491,13 +527,15 @@
             "recommendations": [
                 "Add more relevant keywords related to your industry.",
                 "Consider simplifying language for better readability",
-                "Add more detail to your skills section",
-                "Include more relevant keywords in your skills section",
-                "Add more detail to your education section",
-                "Include more relevant keywords in your education section",
-                "Add more detail to your experience section",
-                "Include more relevant keywords in your experience section",
+                "Add more detail to your Skills section",
+                "Include more relevant keywords in your Skills section",
+                "Add more detail to your Education section",
+                "Include more relevant keywords in your Education section",
+                "Add more detail to your Experience section",
+                "Include more relevant keywords in your Experience section",
                 "Fix grammar mistakes for better ATS compliance.",
+                "Add missing sections for LinkedIn compatibility.",
+                "Improve resume alignment with job description.",
                 "Use a single font type throughout the document."
             ]
         }
@@ -556,7 +594,7 @@
     },
     "421cb957a9c71f37bc054ed968eb20f8": {
         "filename": "Kaushal_Resume.pdf",
-        "last_checked": "2025-01-30T15:22:49.086038",
+        "last_checked": "2025-02-03T16:48:59.976335",
         "result": {
             "score": 75,
             "messages": [
@@ -579,9 +617,10 @@
                 " - Difficult Words: 116.00",
                 " - Syllable Count: 834.00",
                 "Word count acceptable (442 words)",
+                "Missing LinkedIn best-practice sections: Summary, Accomplishments",
+                "Job Match Score: 0.0%",
                 "Inconsistent font usage detected.",
                 "Most used font: Poppins-Regular",
-                "Work Experience section lacks bullet points.",
                 "Few section headers found: skills, education"
             ],
             "file_type": "application/pdf",
@@ -592,14 +631,15 @@
             "recommendations": [
                 "Add more relevant keywords related to your industry.",
                 "Consider simplifying language for better readability",
-                "Add more detail to your skills section",
-                "Include more relevant keywords in your skills section",
-                "Add more detail to your experience section",
-                "Include more relevant keywords in your experience section",
-                "Include more relevant keywords in your education section",
+                "Add more detail to your Skills section",
+                "Include more relevant keywords in your Skills section",
+                "Add more detail to your Experience section",
+                "Include more relevant keywords in your Experience section",
+                "Include more relevant keywords in your Education section",
                 "Fix grammar mistakes for better ATS compliance.",
+                "Add missing sections for LinkedIn compatibility.",
+                "Improve resume alignment with job description.",
                 "Use a single font type throughout the document.",
-                "Consider using bullet points to highlight key achievements.",
                 "Consider breaking long paragraphs into concise bullet points for readability.",
                 "Ensure major sections like Experience, Education, and Skills are included."
             ]
@@ -607,7 +647,7 @@
     },
     "cd99206cc58b94313ec51a1e8c7415d6": {
         "filename": "new 1.docx",
-        "last_checked": "2025-01-30T15:29:14.148365",
+        "last_checked": "2025-02-03T18:01:27.740165",
         "result": {
             "score": 75,
             "messages": [
@@ -630,9 +670,10 @@
                 " - Difficult Words: 106.00",
                 " - Syllable Count: 642.00",
                 "Word count acceptable (407 words)",
+                "Missing LinkedIn best-practice sections: Summary, Accomplishments",
+                "Job Match Score: 0.0%",
                 "Inconsistent font usage detected.",
                 "Most used font: List Paragraph",
-                "Work Experience section lacks bullet points.",
                 "Few section headers found: education"
             ],
             "file_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
@@ -643,15 +684,16 @@
             "recommendations": [
                 "Use active voice for stronger impact.",
                 "Consider reducing use of passive voice",
-                "Add more detail to your education section",
-                "Include more relevant keywords in your education section",
-                "Add more detail to your skills section",
-                "Include more relevant keywords in your skills section",
-                "Add more detail to your experience section",
-                "Include more relevant keywords in your experience section",
+                "Add more detail to your Education section",
+                "Include more relevant keywords in your Education section",
+                "Add more detail to your Skills section",
+                "Include more relevant keywords in your Skills section",
+                "Add more detail to your Experience section",
+                "Include more relevant keywords in your Experience section",
                 "Fix grammar mistakes for better ATS compliance.",
+                "Add missing sections for LinkedIn compatibility.",
+                "Improve resume alignment with job description.",
                 "Use a single font type throughout the document.",
-                "Consider using bullet points to highlight key achievements.",
                 "Consider breaking long paragraphs into concise bullet points for readability.",
                 "Ensure major sections like Experience, Education, and Skills are included."
             ]
@@ -659,7 +701,7 @@
     },
     "7151d686dfde494bfb4d5763f8f39e47": {
         "filename": "Jay Amrish Fanse_Resume_December2024.pdf",
-        "last_checked": "2025-02-03T16:41:49.132883",
+        "last_checked": "2025-02-03T17:58:47.213383",
         "result": {
             "score": 80,
             "messages": [
@@ -713,7 +755,7 @@
     },
     "b1395ebea342e7d414e4d4d98b116ecc": {
         "filename": "Akshay patel ABAP 1.pdf",
-        "last_checked": "2025-01-30T15:36:11.235381",
+        "last_checked": "2025-02-04T11:19:35.177609",
         "result": {
             "score": 60,
             "messages": [
@@ -737,7 +779,7 @@
                 " - Syllable Count: 526.00",
                 "Word count acceptable (297 words)",
                 "Missing sections: education",
-                "Missing LinkedIn best-practice sections: education",
+                "Missing LinkedIn best-practice sections: Summary, Education, Accomplishments",
                 "Inconsistent font usage detected.",
                 "Most used font: Lato-Regular",
                 "Excessive bullet points detected (26)."
@@ -752,10 +794,10 @@
             "recommendations": [
                 "Add more relevant keywords related to your industry.",
                 "Consider simplifying language for better readability",
-                "Add more detail to your skills section",
-                "Include more relevant keywords in your skills section",
-                "Add more detail to your experience section",
-                "Include more relevant keywords in your experience section",
+                "Add more detail to your Skills section",
+                "Include more relevant keywords in your Skills section",
+                "Add more detail to your Experience section",
+                "Include more relevant keywords in your Experience section",
                 "Fix grammar mistakes for better ATS compliance.",
                 "Add missing required sections",
                 "Add missing sections for LinkedIn compatibility.",
@@ -818,7 +860,7 @@
     },
     "00f6b19b312a99ba2a710fc4fabe2147": {
         "filename": "Gyan Pradeep Dash.pdf",
-        "last_checked": "2025-01-31T14:25:39.714353",
+        "last_checked": "2025-02-04T00:38:07.111889",
         "result": {
             "score": 60,
             "messages": [
@@ -842,7 +884,7 @@
                 " - Syllable Count: 779.00",
                 "Word count acceptable (471 words)",
                 "Missing sections: education",
-                "Missing LinkedIn best-practice sections: education",
+                "Missing LinkedIn best-practice sections: Education, Accomplishments",
                 "Inconsistent font usage detected.",
                 "Most used font: Tahoma",
                 "Excessive bullet points detected (29)."
@@ -857,9 +899,11 @@
             "recommendations": [
                 "Add more relevant keywords related to your industry.",
                 "Consider simplifying language for better readability",
-                "Include more relevant keywords in your experience section",
-                "Add more detail to your skills section",
-                "Include more relevant keywords in your skills section",
+                "Add more detail to your Summary section",
+                "Include more relevant keywords in your Summary section",
+                "Include more relevant keywords in your Experience section",
+                "Add more detail to your Skills section",
+                "Include more relevant keywords in your Skills section",
                 "Fix grammar mistakes for better ATS compliance.",
                 "Add missing required sections",
                 "Add missing sections for LinkedIn compatibility.",

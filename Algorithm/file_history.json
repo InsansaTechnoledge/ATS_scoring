@@ -594,7 +594,7 @@
     },
     "421cb957a9c71f37bc054ed968eb20f8": {
         "filename": "Kaushal_Resume.pdf",
-        "last_checked": "2025-02-03T16:48:59.976335",
+        "last_checked": "2025-02-07T17:57:49.632667",
         "result": {
             "score": 75,
             "messages": [
@@ -618,10 +618,9 @@
                 " - Syllable Count: 834.00",
                 "Word count acceptable (442 words)",
                 "Missing LinkedIn best-practice sections: Summary, Accomplishments",
-                "Job Match Score: 0.0%",
                 "Inconsistent font usage detected.",
                 "Most used font: Poppins-Regular",
-                "Few section headers found: skills, education"
+                "Few section headers found: education, skills"
             ],
             "file_type": "application/pdf",
             "word_count": 0,
@@ -638,7 +637,6 @@
                 "Include more relevant keywords in your Education section",
                 "Fix grammar mistakes for better ATS compliance.",
                 "Add missing sections for LinkedIn compatibility.",
-                "Improve resume alignment with job description.",
                 "Use a single font type throughout the document.",
                 "Consider breaking long paragraphs into concise bullet points for readability.",
                 "Ensure major sections like Experience, Education, and Skills are included."
@@ -755,7 +753,7 @@
     },
     "b1395ebea342e7d414e4d4d98b116ecc": {
         "filename": "Akshay patel ABAP 1.pdf",
-        "last_checked": "2025-02-04T11:19:35.177609",
+        "last_checked": "2025-02-07T17:56:11.526042",
         "result": {
             "score": 60,
             "messages": [

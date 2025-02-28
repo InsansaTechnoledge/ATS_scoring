@@ -15,11 +15,11 @@ const MetricCard = ({ icon: Icon, label, value, color = "emerald" }) => (
     </div>
 );
 
-const Result = ({resultData}) => {
+const Result = () => {
     // Extract readability scores from messages
     const location = useLocation();
 
-    // const resultData = location.state?.result
+    const resultData = location.state?.result;
 
     const readabilityScores = useMemo(() => {
         const scores = {};
@@ -102,7 +102,7 @@ const Result = ({resultData}) => {
         </div>
     );
 
-    if (!resultData || !resultData.result) {
+    if (!resultData || !resultData) {
         return (
             <div className="flex items-center justify-center h-64">
                 <p className="text-gray-500 text-lg">No results available</p>
@@ -125,10 +125,10 @@ const Result = ({resultData}) => {
             {/* Overall Score Section */}
             <div className="bg-white p-8 rounded-2xl shadow-lg">
                 <h2 className="text-2xl font-bold text-center mb-6">ATS Compatibility Score</h2>
-                <ScoreGauge score={resultData.result.score} />
+                <ScoreGauge score={resultData.score} />
                 <p className="text-center mt-4 text-gray-600">
-                    {resultData.result.score >= 70 ? "Great! Your resume is ATS-friendly." :
-                        resultData.result.score >= 40 ? "Your resume needs some improvements." :
+                    {resultData.score >= 70 ? "Great! Your resume is ATS-friendly." :
+                        resultData.score >= 40 ? "Your resume needs some improvements." :
                             "Your resume needs significant improvements."}
                 </p>
             </div>
@@ -172,14 +172,14 @@ const Result = ({resultData}) => {
             </div>
 
             {/* Missing Sections */}
-            {resultData.result.sections_missing?.length > 0 && (
+            {resultData?.sections_missing?.length > 0 && (
                 <div className="bg-white p-6 rounded-xl shadow-md">
                     <h3 className="text-xl font-semibold mb-4 flex items-center">
                         <AlertCircle className="h-5 w-5 text-red-500 mr-2" />
                         Missing Sections
                     </h3>
                     <div className="flex flex-wrap gap-2">
-                        {resultData.result.sections_missing.map((section) => (
+                        {resultData?.sections_missing.map((section) => (
                             <span key={section} className="px-3 py-1 bg-red-100 text-red-700 rounded-full">
                                 {section}
                             </span>
@@ -195,7 +195,7 @@ const Result = ({resultData}) => {
                     Recommendations
                 </h3>
                 <div className="space-y-3">
-                    {resultData.result.recommendations.map((recommendation, index) => (
+                    {resultData?.recommendations.map((recommendation, index) => (
                         <div key={index} className="flex items-start p-3 bg-emerald-50 rounded-lg">
                             <Check className="h-5 w-5 text-emerald-500 mr-2 mt-0.5" />
                             <p className="text-emerald-800">{recommendation}</p>

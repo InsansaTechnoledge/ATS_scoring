@@ -305,5 +305,112 @@
             ],
             "industry": "software"
         }
+    },
+    "380555e134cdf775bbaac1609ca1b9f4": {
+        "filename": "Jay Amrish Fanse_MSU.pdf",
+        "last_checked": "2025-02-28T12:40:34.966366",
+        "result": {
+            "score": 30,
+            "component_scores": {
+                "sections": 30,
+                "grammar": 5,
+                "active_voice": 100,
+                "buzzwords": 100,
+                "keyword_match": 0,
+                "action_verbs": 0
+            },
+            "messages": [
+                "Grammar Issues: 19",
+                "Passive Voice Instances: 0",
+                "Word Count: 357 words",
+                "Missing Sections: profile summary, summary, work experience, experience, certificates, certifications, training",
+                "Job Description Keyword Match: 0%",
+                "Detected Industry: Software"
+            ],
+            "file_type": "application/pdf",
+            "word_count": 357,
+            "sections_present": [
+                "OTHER",
+                "EDUCATION",
+                "PROJECTS",
+                "SKILLS",
+                "ACHIEVEMENTS",
+                "CERTIFICATIONS"
+            ],
+            "sections_missing": [
+                "profile summary",
+                "summary",
+                "work experience",
+                "experience",
+                "certificates",
+                "certifications",
+                "training"
+            ],
+            "formatting_issues": [
+                "Inconsistent line spacing detected",
+                "Extremely long paragraph detected (consider breaking it up)",
+                "Possible font or spacing inconsistency detected"
+            ],
+            "recommendations": [
+                "Add missing sections: profile summary, summary, work experience, experience, certificates, certifications, training",
+                "Remove special characters that may not be ATS-friendly",
+                "Fix 19 grammar/spelling issues",
+                "Start bullet points with strong action verbs"
+            ],
+            "industry": "software"
+        }
+    },
+    "598b7f99d865bc6b910663c28a9f59fa": {
+        "filename": "Jay Amrish Fanse_Resume_April2024.pdf",
+        "last_checked": "2025-02-28T12:39:58.158331",
+        "result": {
+            "score": 36,
+            "component_scores": {
+                "sections": 70,
+                "grammar": 10,
+                "active_voice": 100,
+                "buzzwords": 100,
+                "keyword_match": 0,
+                "action_verbs": 0
+            },
+            "messages": [
+                "Grammar Issues: 18",
+                "Passive Voice Instances: 0",
+                "Word Count: 367 words",
+                "Missing Sections: certificates, certifications, training",
+                "Job Description Keyword Match: 0%",
+                "Detected Industry: Software"
+            ],
+            "file_type": "application/pdf",
+            "word_count": 367,
+            "sections_present": [
+                "OTHER",
+                "SUMMARY",
+                "PROJECTS",
+                "EDUCATION",
+                "SKILLS",
+                "ACHIEVEMENTS",
+                "ACTIVITIES",
+                "EXPERIENCE"
+            ],
+            "sections_missing": [
+                "certificates",
+                "certifications",
+                "training"
+            ],
+            "formatting_issues": [
+                "Inconsistent line spacing detected",
+                "Extremely long paragraph detected (consider breaking it up)",
+                "Possible font or spacing inconsistency detected"
+            ],
+            "recommendations": [
+                "Add missing sections: certificates, certifications, training",
+                "Remove special characters that may not be ATS-friendly",
+                "Fix 18 grammar/spelling issues",
+                "Ensure contact information (email and phone) is clearly visible",
+                "Start bullet points with strong action verbs"
+            ],
+            "industry": "software"
+        }
     }
 }

@@ -1,0 +1,416 @@
+{
+    "79d491510d164462d3f48590d2c3fb6a": {
+        "filename": "Akshay patel ABAP 1.pdf",
+        "last_checked": "2025-02-28T07:54:17.098801",
+        "result": {
+            "score": 47,
+            "component_scores": {
+                "sections": 90,
+                "grammar": 55,
+                "active_voice": 100,
+                "buzzwords": 95,
+                "keyword_match": 0,
+                "action_verbs": 24
+            },
+            "messages": [
+                "Grammar Issues: 9",
+                "Passive Voice Instances: 0",
+                "Word Count: 480 words",
+                "Missing Sections: Projects",
+                "Job Description Keyword Match: 0%",
+                "Detected Industry: Tech"
+            ],
+            "file_type": "application/pdf",
+            "word_count": 480,
+            "sections_present": [
+                "OTHER",
+                "SUMMARY",
+                "SKILLS",
+                "EXPERIENCE",
+                "CERTIFICATIONS",
+                "EDUCATION"
+            ],
+            "sections_missing": [
+                "Projects"
+            ],
+            "formatting_issues": [
+                "Inconsistent line spacing detected",
+                "Extremely long paragraph detected (consider breaking it up)",
+                "Possible font or spacing inconsistency detected"
+            ],
+            "recommendations": [
+                "Add missing sections: Projects",
+                "Remove special characters that may not be ATS-friendly",
+                "Fix 9 grammar/spelling issues",
+                "Start bullet points with strong action verbs"
+            ],
+            "industry": "tech"
+        }
+    },
+    "38b39b29c873c797b7b44049a2ede2bb": {
+        "filename": "Jay Amrish Fanse_Resume_December2024.pdf",
+        "last_checked": "2025-02-28T08:24:23.236003",
+        "result": {
+            "score": 32,
+            "component_scores": {
+                "sections": 50,
+                "grammar": 0,
+                "active_voice": 100,
+                "buzzwords": 100,
+                "keyword_match": 0,
+                "action_verbs": 0
+            },
+            "messages": [
+                "Grammar Issues: 29",
+                "Passive Voice Instances: 0",
+                "Word Count: 358 words",
+                "Missing Sections: Professional Summary, Work Experience, Education, Skills, Contact Information",
+                "Job Description Keyword Match: 0%",
+                "Detected Industry: Software"
+            ],
+            "file_type": "application/pdf",
+            "word_count": 358,
+            "sections_present": [
+                "OTHER",
+                "EDUCATION",
+                "PROJECTS",
+                "CERTIFICATIONS",
+                "EXPERIENCE",
+                "LANGUAGES",
+                "ACHIEVEMENTS"
+            ],
+            "sections_missing": [
+                "Professional Summary",
+                "Work Experience",
+                "Education",
+                "Skills",
+                "Contact Information"
+            ],
+            "formatting_issues": [
+                "Inconsistent line spacing detected",
+                "Extremely long paragraph detected (consider breaking it up)",
+                "Possible font or spacing inconsistency detected"
+            ],
+            "recommendations": [
+                "Add missing sections: Professional Summary, Work Experience, Education, Skills, Contact Information",
+                "Remove special characters that may not be ATS-friendly",
+                "Fix 29 grammar/spelling issues",
+                "Start bullet points with strong action verbs"
+            ],
+            "industry": "software"
+        }
+    },
+    "01ceae308763ae2726e26d275864c81e": {
+        "filename": "Kaushal_Resume 1.pdf",
+        "last_checked": "2025-02-28T09:28:08.521844",
+        "result": {
+            "score": 25,
+            "component_scores": {
+                "sections": 20,
+                "grammar": 0,
+                "active_voice": 100,
+                "buzzwords": 100,
+                "keyword_match": 0,
+                "action_verbs": 0
+            },
+            "messages": [
+                "Grammar Issues: 23",
+                "Passive Voice Instances: 0",
+                "Word Count: 442 words",
+                "Missing Sections: profile summary, summary, projects, personal projects, professional projects, certificates, certifications, training",
+                "Job Description Keyword Match: 0%",
+                "Detected Industry: Software"
+            ],
+            "file_type": "application/pdf",
+            "word_count": 442,
+            "sections_present": [
+                "OTHER",
+                "EXPERIENCE",
+                "SKILLS",
+                "EDUCATION",
+                "ACTIVITIES"
+            ],
+            "sections_missing": [
+                "profile summary",
+                "summary",
+                "projects",
+                "personal projects",
+                "professional projects",
+                "certificates",
+                "certifications",
+                "training"
+            ],
+            "formatting_issues": [
+                "Inconsistent line spacing detected",
+                "Extremely long paragraph detected (consider breaking it up)",
+                "Possible font or spacing inconsistency detected"
+            ],
+            "recommendations": [
+                "Add missing sections: profile summary, summary, projects, personal projects, professional projects, certificates, certifications, training",
+                "Fix 23 grammar/spelling issues",
+                "Start bullet points with strong action verbs"
+            ],
+            "industry": "software"
+        }
+    },
+    "9a0031e2c95acdb02fcc92a5f575fd2d": {
+        "filename": "Resume_two.docx",
+        "last_checked": "2025-02-28T09:45:23.378713",
+        "result": {
+            "score": 36,
+            "component_scores": {
+                "sections": 30,
+                "grammar": 70,
+                "active_voice": 100,
+                "buzzwords": 95,
+                "keyword_match": 0,
+                "action_verbs": 0
+            },
+            "messages": [
+                "Grammar Issues: 6",
+                "Passive Voice Instances: 0",
+                "Word Count: 239 words",
+                "Missing Sections: work experience, experience, skills, key skills, certificates, certifications, training",
+                "Job Description Keyword Match: 0%",
+                "Detected Industry: Software"
+            ],
+            "file_type": "application/pdf",
+            "word_count": 239,
+            "sections_present": [
+                "OTHER",
+                "SUMMARY",
+                "EDUCATION",
+                "PROJECTS"
+            ],
+            "sections_missing": [
+                "work experience",
+                "experience",
+                "skills",
+                "key skills",
+                "certificates",
+                "certifications",
+                "training"
+            ],
+            "formatting_issues": [
+                "Inconsistent line spacing detected",
+                "Extremely long paragraph detected (consider breaking it up)",
+                "Possible font or spacing inconsistency detected"
+            ],
+            "recommendations": [
+                "Add missing sections: work experience, experience, skills, key skills, certificates, certifications, training",
+                "Remove special characters that may not be ATS-friendly",
+                "Fix 6 grammar/spelling issues",
+                "Start bullet points with strong action verbs",
+                "Include quantifiable achievements (%, $, metrics)"
+            ],
+            "industry": "software"
+        }
+    },
+    "d8a878cfbb49a7dc358aad1a12619d4d": {
+        "filename": "Resume_one.pdf",
+        "last_checked": "2025-02-28T10:21:35.259108",
+        "result": {
+            "score": 51,
+            "component_scores": {
+                "sections": 70,
+                "grammar": 55,
+                "active_voice": 100,
+                "buzzwords": 95,
+                "keyword_match": 0,
+                "action_verbs": 50
+            },
+            "messages": [
+                "Grammar Issues: 9",
+                "Passive Voice Instances: 0",
+                "Word Count: 355 words",
+                "Missing Sections: certificates, certifications, training",
+                "Job Description Keyword Match: 0%",
+                "Detected Industry: Software"
+            ],
+            "file_type": "application/pdf",
+            "word_count": 355,
+            "sections_present": [
+                "OTHER",
+                "SUMMARY",
+                "EDUCATION",
+                "SKILLS",
+                "EXPERIENCE",
+                "PROJECTS"
+            ],
+            "sections_missing": [
+                "certificates",
+                "certifications",
+                "training"
+            ],
+            "formatting_issues": [
+                "Inconsistent line spacing detected",
+                "Extremely long paragraph detected (consider breaking it up)"
+            ],
+            "recommendations": [
+                "Add missing sections: certificates, certifications, training",
+                "Remove special characters that may not be ATS-friendly",
+                "Fix 9 grammar/spelling issues",
+                "Start bullet points with strong action verbs",
+                "Include quantifiable achievements (%, $, metrics)"
+            ],
+            "industry": "software"
+        }
+    },
+    "777744c61a879270a2b95e948b50af51": {
+        "filename": "Resume_two.pdf",
+        "last_checked": "2025-02-28T11:51:39.770152",
+        "result": {
+            "score": 51,
+            "component_scores": {
+                "sections": 70,
+                "grammar": 55,
+                "active_voice": 100,
+                "buzzwords": 95,
+                "keyword_match": 0,
+                "action_verbs": 50
+            },
+            "messages": [
+                "Grammar Issues: 9",
+                "Passive Voice Instances: 0",
+                "Word Count: 285 words",
+                "Missing Sections: certificates, certifications, training",
+                "Job Description Keyword Match: 0%",
+                "Detected Industry: Software"
+            ],
+            "file_type": "application/pdf",
+            "word_count": 285,
+            "sections_present": [
+                "OTHER",
+                "SUMMARY",
+                "EDUCATION",
+                "SKILLS",
+                "EXPERIENCE",
+                "PROJECTS"
+            ],
+            "sections_missing": [
+                "certificates",
+                "certifications",
+                "training"
+            ],
+            "formatting_issues": [
+                "Inconsistent line spacing detected",
+                "Extremely long paragraph detected (consider breaking it up)"
+            ],
+            "recommendations": [
+                "Add missing sections: certificates, certifications, training",
+                "Remove special characters that may not be ATS-friendly",
+                "Fix 9 grammar/spelling issues",
+                "Start bullet points with strong action verbs",
+                "Include quantifiable achievements (%, $, metrics)"
+            ],
+            "industry": "software"
+        }
+    },
+    "380555e134cdf775bbaac1609ca1b9f4": {
+        "filename": "Jay Amrish Fanse_MSU.pdf",
+        "last_checked": "2025-02-28T12:40:34.966366",
+        "result": {
+            "score": 30,
+            "component_scores": {
+                "sections": 30,
+                "grammar": 5,
+                "active_voice": 100,
+                "buzzwords": 100,
+                "keyword_match": 0,
+                "action_verbs": 0
+            },
+            "messages": [
+                "Grammar Issues: 19",
+                "Passive Voice Instances: 0",
+                "Word Count: 357 words",
+                "Missing Sections: profile summary, summary, work experience, experience, certificates, certifications, training",
+                "Job Description Keyword Match: 0%",
+                "Detected Industry: Software"
+            ],
+            "file_type": "application/pdf",
+            "word_count": 357,
+            "sections_present": [
+                "OTHER",
+                "EDUCATION",
+                "PROJECTS",
+                "SKILLS",
+                "ACHIEVEMENTS",
+                "CERTIFICATIONS"
+            ],
+            "sections_missing": [
+                "profile summary",
+                "summary",
+                "work experience",
+                "experience",
+                "certificates",
+                "certifications",
+                "training"
+            ],
+            "formatting_issues": [
+                "Inconsistent line spacing detected",
+                "Extremely long paragraph detected (consider breaking it up)",
+                "Possible font or spacing inconsistency detected"
+            ],
+            "recommendations": [
+                "Add missing sections: profile summary, summary, work experience, experience, certificates, certifications, training",
+                "Remove special characters that may not be ATS-friendly",
+                "Fix 19 grammar/spelling issues",
+                "Start bullet points with strong action verbs"
+            ],
+            "industry": "software"
+        }
+    },
+    "598b7f99d865bc6b910663c28a9f59fa": {
+        "filename": "Jay Amrish Fanse_Resume_April2024.pdf",
+        "last_checked": "2025-02-28T12:39:58.158331",
+        "result": {
+            "score": 36,
+            "component_scores": {
+                "sections": 70,
+                "grammar": 10,
+                "active_voice": 100,
+                "buzzwords": 100,
+                "keyword_match": 0,
+                "action_verbs": 0
+            },
+            "messages": [
+                "Grammar Issues: 18",
+                "Passive Voice Instances: 0",
+                "Word Count: 367 words",
+                "Missing Sections: certificates, certifications, training",
+                "Job Description Keyword Match: 0%",
+                "Detected Industry: Software"
+            ],
+            "file_type": "application/pdf",
+            "word_count": 367,
+            "sections_present": [
+                "OTHER",
+                "SUMMARY",
+                "PROJECTS",
+                "EDUCATION",
+                "SKILLS",
+                "ACHIEVEMENTS",
+                "ACTIVITIES",
+                "EXPERIENCE"
+            ],
+            "sections_missing": [
+                "certificates",
+                "certifications",
+                "training"
+            ],
+            "formatting_issues": [
+                "Inconsistent line spacing detected",
+                "Extremely long paragraph detected (consider breaking it up)",
+                "Possible font or spacing inconsistency detected"
+            ],
+            "recommendations": [
+                "Add missing sections: certificates, certifications, training",
+                "Remove special characters that may not be ATS-friendly",
+                "Fix 18 grammar/spelling issues",
+                "Ensure contact information (email and phone) is clearly visible",
+                "Start bullet points with strong action verbs"
+            ],
+            "industry": "software"
+        }
+    }
+}

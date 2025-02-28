@@ -25,6 +25,7 @@ from Grammar.core.checker import GrammarChecker
 
 
 
+
 logger = logging.getLogger(__name__)
 
 class ResumeAnalyzer:

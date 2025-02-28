@@ -15,11 +15,11 @@ const MetricCard = ({ icon: Icon, label, value, color = "emerald" }) => (
     </div>
 );
 
-const Result = () => {
+const Result = ({resultData}) => {
     // Extract readability scores from messages
     const location = useLocation();
 
-    const resultData = location.state?.result
+    // const resultData = location.state?.result
 
     const readabilityScores = useMemo(() => {
         const scores = {};

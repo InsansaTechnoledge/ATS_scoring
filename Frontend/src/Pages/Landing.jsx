@@ -48,7 +48,7 @@ const Landing = () => {
                 if (response.status === 200) {
                     clearInterval(progressInterval); // Stop progress updates
                     setProgress(100);
-                    console.log(response);
+                    console.log(response.data.result);
 
                     setTimeout(() => {
                         setIsAnalyzing(false);

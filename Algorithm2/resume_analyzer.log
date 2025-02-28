@@ -1,0 +1,19 @@
+2025-02-28 13:00:43,792 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.11:5000
+2025-02-28 13:00:43,792 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-28 13:00:43,810 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-28 13:00:49,851 - werkzeug - WARNING -  * Debugger is active!
+2025-02-28 13:00:49,852 - werkzeug - INFO -  * Debugger PIN: 103-842-514
+2025-02-28 13:01:05,188 - __main__ - INFO - Analyzing file: Akshay patel ABAP 1.pdf
+2025-02-28 13:01:05,496 - __main__ - INFO - Analyzed resume: Akshay patel ABAP 1.pdf, Score: 47
+2025-02-28 13:01:05,501 - werkzeug - INFO - 127.0.0.1 - - [28/Feb/2025 13:01:05] "POST /analyze HTTP/1.1" 200 -
+2025-02-28 13:04:47,450 - __main__ - INFO - Analyzing file: Kaushal_Resume.pdf
+2025-02-28 13:04:47,658 - __main__ - INFO - Analyzed resume: Kaushal_Resume.pdf, Score: 39
+2025-02-28 13:04:47,659 - werkzeug - INFO - 127.0.0.1 - - [28/Feb/2025 13:04:47] "POST /analyze HTTP/1.1" 200 -
+2025-02-28 13:14:18,510 - werkzeug - INFO -  * Detected change in 'C:\\Users\\TANMAY\\Desktop\\ATS_scoring\\algorithm2\\test.py', reloading
+2025-02-28 13:14:18,510 - werkzeug - INFO -  * Detected change in 'C:\\Users\\TANMAY\\Desktop\\ATS_scoring\\algorithm2\\test1.py', reloading
+2025-02-28 13:14:19,639 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-28 13:14:27,129 - werkzeug - WARNING -  * Debugger is active!
+2025-02-28 13:14:27,135 - werkzeug - INFO -  * Debugger PIN: 103-842-514

@@ -1272,7 +1272,7 @@
     },
     "79d491510d164462d3f48590d2c3fb6a": {
         "filename": "Akshay patel ABAP 1.pdf",
-        "last_checked": "2025-02-28T06:25:53.022795",
+        "last_checked": "2025-02-28T06:53:19.328465",
         "result": {
             "score": 81,
             "messages": [
@@ -1291,6 +1291,35 @@
                 "EDUCATION"
             ],
             "sections_missing": [],
+            "formatting_issues": [],
+            "recommendations": [
+                "Fix grammar mistakes for better ATS compliance.",
+                "Font consistency maintained."
+            ]
+        }
+    },
+    "8b1d2d515937c2150c65b5638d6d11e8": {
+        "filename": "Naukri_SatyajitRaskar[12y_0m].pdf",
+        "last_checked": "2025-02-28T06:52:04.770497",
+        "result": {
+            "score": 36,
+            "messages": [
+                "Grammar Issues Found: 22",
+                "Sufficient word count",
+                "Missing sections: Profile Summary, Skills"
+            ],
+            "file_type": "application/pdf",
+            "word_count": 2128,
+            "sections_present": [
+                "OTHER",
+                "CERTIFICATIONS",
+                "EDUCATION",
+                "EXPERIENCE"
+            ],
+            "sections_missing": [
+                "Profile Summary",
+                "Skills"
+            ],
             "formatting_issues": [],
             "recommendations": [
                 "Fix grammar mistakes for better ATS compliance.",

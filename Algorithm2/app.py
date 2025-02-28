@@ -103,7 +103,7 @@ class ResumeAnalyzer:
         
         print(json.dumps(result, indent=4))  # Print to terminal
         
-        return result
+        return result[unique_id]
     
     def analyze_passive_voice(self, text):
         passive_phrases = [

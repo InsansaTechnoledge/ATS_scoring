@@ -2,3 +2,7 @@ Algorithm/myenv
 Algorithm/myenv/*
 Algorithm/.venv/*
 .vscode
+Algorithm2/myenv
+Algorithm2/myenv/*
+Algorithm2/.venv/*
+.vscode

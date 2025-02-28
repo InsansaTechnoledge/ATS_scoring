@@ -1,0 +1,4 @@
+{'type': 'Grammar', 'context': '......', 'issue': 'Possible spelling mistake. ‘organisation’ is British English.', 'suggestions': ['organization']}
+{'type': 'Spelling', 'context': '...S Java Python MERN Stack contedt\nCareer Objective:...', 'issue': "Spelling mistake: 'contedt'", 'suggestions': ['contest']}
+{'type': 'Spelling', 'context': '...ganisation to enhance my skills and contribute to...', 'issue': "Spelling mistake: 'skills'", 'suggestions': ['skill']}
+{'type': 'Spelling', 'context': '...ls and contribute to the groth of the company....', 'issue': "Spelling mistake: 'groth'", 'suggestions': ['growth']}

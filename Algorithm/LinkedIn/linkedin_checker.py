@@ -105,7 +105,7 @@ class LinkedInProfileAnalyzer:
                 'Experience',
                 'Education',
                 'Skills',
-                'Accomplishments'
+                'Accomplishments',
             ],
             'recommended_lengths': {
                 'Summary': {'min': 100, 'max': 300},
@@ -162,15 +162,15 @@ class LinkedInProfileAnalyzer:
         
         return ' '.join(words)
 
-    def extract_sections(self, text: str) -> Dict[str, ProfileSection]:
+    def extract_sections(self, text: str) -> Dict[str, List[ProfileSection]]:
         """
-        Extract and analyze individual sections from the profile
+        Extract and analyze individual sections from the profile, handling multiple entries.
         
         Args:
             text (str): Profile text
             
         Returns:
-            Dict[str, ProfileSection]: Dictionary of analyzed sections
+            Dict[str, List[ProfileSection]]: Dictionary with lists of analyzed sections.
         """
         sections = {}
         current_section = None
@@ -183,49 +183,66 @@ class LinkedInProfileAnalyzer:
 
             # Check if line is a section header
             if any(section.lower() in line.lower() for section in self.config['required_sections']):
-                if current_section:
+                if current_section and current_content:
                     content = ' '.join(current_content)
-                    sections[current_section] = self.analyze_section(current_section, content)
+                    analyzed_entries = self.analyze_section(current_section, content)
+                    sections.setdefault(current_section, []).extend(analyzed_entries.values())
+
                 current_section = next(s for s in self.config['required_sections'] 
                                     if s.lower() in line.lower())
                 current_content = []
             else:
                 current_content.append(line)
 
-        # Add last section
-        if current_section and current_content:
-            content = ' '.join(current_content)
-            sections[current_section] = self.analyze_section(current_section, content)
+            # Add last section
+            # if current_section and current_content:
+            #     content = ' '.join(current_content)
+            #     analyzed_entries = self.analyze_section(current_section, content)
+            #     sections.setdefault(current_section, []).extend(analyzed_entries.values())
 
         return sections
 
-    def analyze_section(self, section_name: str, content: str) -> ProfileSection:
+
+    def analyze_section(self, section_name: str, content: str) -> Dict[str, ProfileSection]:
         """
-        Analyze individual section content
+        Analyze individual section content with multiple entries (like Education).
         
         Args:
             section_name (str): Name of the section
             content (str): Section content
             
         Returns:
-            ProfileSection: Analyzed section data
+            Dict[str, ProfileSection]: Dictionary of analyzed sections
         """
-        words = word_tokenize(content)
-        keywords = set(word.lower() for word in words 
-                      if word.lower() in self.get_all_keywords())
-        
-        # Calculate section score based on length and keyword presence
-        recommended_length = self.config['recommended_lengths'].get(section_name, {'min': 50, 'max': 500})
-        length_score = self.calculate_length_score(len(words), recommended_length)
-        keyword_score = len(keywords) / len(words) if words else 0
-        
-        return ProfileSection(
-            name=section_name,
-            content=content,
-            word_count=len(words),
-            keywords=keywords,
-            score=(length_score + keyword_score) / 2
-        )
+        entries = content.split("•")  # Splitting at bullet points
+        analyzed_sections = {}
+
+        for idx, entry in enumerate(entries):
+            print(f"Entries for {section_name}: {entries}")  # Debugging step
+
+            entry = entry.strip()
+            if not entry:  # Skip empty entries
+                continue
+            
+            words = word_tokenize(entry)
+            keywords = set(word.lower() for word in words 
+                        if word.lower() in self.get_all_keywords())
+
+            recommended_length = self.config['recommended_lengths'].get(section_name, {'min': 50, 'max': 500})
+            length_score = self.calculate_length_score(len(words), recommended_length)
+            keyword_score = len(keywords) / len(words) if words else 0
+
+            section_obj = ProfileSection(
+                name=f"{section_name} {idx+1}",  # Differentiating multiple entries
+                content=entry,
+                word_count=len(words),
+                keywords=keywords,
+                score=(length_score + keyword_score) / 2
+            )
+
+            analyzed_sections[f"{section_name}_{idx+1}"] = section_obj  # Unique key for each entry
+
+        return analyzed_sections
 
     def calculate_length_score(self, length: int, recommended: Dict[str, int]) -> float:
         """Calculate score based on content length"""
@@ -270,18 +287,20 @@ class LinkedInProfileAnalyzer:
         # Weighted average
         return (cosine_sim * 0.7 + keyword_overlap * 0.3) * 100
 
-    def generate_improvement_suggestions(self, sections: Dict[str, ProfileSection]) -> List[str]:
-        """Generate specific improvement suggestions"""
+    def generate_improvement_suggestions(self, sections: Dict[str, List[ProfileSection]]) -> List[str]:
+        """Generate specific improvement suggestions for each entry in a section"""
         suggestions = []
         
-        for section_name, section in sections.items():
-            if section.score < 0.7:
-                if section.word_count < self.config['recommended_lengths'][section_name]['min']:
-                    suggestions.append(f"Add more detail to your {section_name} section")
-                if len(section.keywords) < 5:
-                    suggestions.append(f"Include more relevant keywords in your {section_name} section")
+        for section_name, section_list in sections.items():
+            for section in section_list:  # Iterate through multiple entries per section
+                if section.score < 0.7:
+                    if section.word_count < self.config['recommended_lengths'].get(section_name, {'min': 50})['min']:
+                        suggestions.append(f"Add more detail to your {section.name} section")
+                    if len(section.keywords) < 5:
+                        suggestions.append(f"Include more relevant keywords in your {section.name} section")
 
         return suggestions
+
 
     def analyze_profile(self, profile_text: str, job_description: Optional[str] = None) -> AnalysisResult:
         """
@@ -295,49 +314,57 @@ class LinkedInProfileAnalyzer:
             AnalysisResult: Complete analysis results
         """
         try:
-            # Extract and analyze sections
+            # Extract and analyze sections (now returning lists of ProfileSection objects per section)
             sections = self.extract_sections(profile_text)
             
-            # Calculate overall scores
-            section_scores = {name: section.score for name, section in sections.items()}
-            
+            # Calculate overall scores (adjusted for multiple entries per section)
+            section_scores = {
+                name: [entry.score for entry in entries] for name, entries in sections.items()
+            }
+
             # Identify missing sections
-            missing_sections = [section for section in self.config['required_sections']
-                              if section not in sections]
+            missing_sections = [
+                section for section in self.config['required_sections'] if section not in sections
+            ]
             
             # Calculate job match if description provided
             job_match_score = None
             if job_description:
                 job_match_score = self.calculate_job_match_score(profile_text, job_description)
-            
-            # Generate improvement suggestions
+
+            # Generate improvement suggestions (now works with lists of ProfileSection)
             suggestions = self.generate_improvement_suggestions(sections)
-            
-            # Keyword analysis
+
+            # Keyword analysis (collect keywords across all entries)
             all_keywords = Counter()
-            for section in sections.values():
-                all_keywords.update(section.keywords)
-            
+            for entries in sections.values():
+                for entry in entries:
+                    all_keywords.update(entry.keywords)
+
             # Calculate readability metrics
             doc = self.nlp(profile_text)
+            sentences = list(doc.sents)
+            total_words = len([token.text for token in doc if token.is_alpha])
+
             readability_metrics = {
-                'avg_sentence_length': sum(len(sent.text.split()) for sent in doc.sents) / len(list(doc.sents)),
-                'unique_words_ratio': len(set(word.text.lower() for word in doc)) / len(doc)
+                'avg_sentence_length': sum(len(sent.text.split()) for sent in sentences) / len(sentences) if sentences else 0,
+                'unique_words_ratio': len(set(token.text.lower() for token in doc if token.is_alpha)) / total_words if total_words else 0
             }
-            
+
             return AnalysisResult(
                 linkedin_compatibility=len(missing_sections) == 0,
-                section_scores=section_scores,
+                section_scores=section_scores,  # Now lists of scores per section
                 missing_sections=missing_sections,
                 job_match_score=job_match_score,
                 improvement_suggestions=suggestions,
                 keyword_analysis=dict(all_keywords),
                 readability_metrics=readability_metrics
             )
-            
+
         except Exception as e:
             self.logger.error(f"Error analyzing profile: {str(e)}")
             raise
+
 
     def generate_report(self, analysis: AnalysisResult) -> Dict:
         """

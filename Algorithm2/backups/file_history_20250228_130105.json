@@ -1183,24 +1183,13 @@
     },
     "bf1e571f2b7a4a981dbe6c4e5c6dc5ec": {
         "filename": "Kaushal_Resume.pdf",
-        "last_checked": "2025-02-28T07:34:47.630673",
+        "last_checked": "2025-02-28T06:23:38.016235",
         "result": {
-            "score": 39,
-            "component_scores": {
-                "sections": 70,
-                "grammar": 45,
-                "active_voice": 100,
-                "buzzwords": 95,
-                "keyword_match": 0,
-                "action_verbs": 0
-            },
+            "score": 74,
             "messages": [
-                "Grammar Issues: 11",
-                "Passive Voice Instances: 0",
-                "Word Count: 442 words",
-                "Missing Sections: Profile Summary, Projects, Certifications",
-                "Job Description Keyword Match: 0%",
-                "Detected Industry: Tech"
+                "Grammar Issues Found: 11",
+                "Sufficient word count",
+                "Missing sections: Profile Summary"
             ],
             "file_type": "application/pdf",
             "word_count": 442,
@@ -1212,21 +1201,13 @@
                 "ACTIVITIES"
             ],
             "sections_missing": [
-                "Profile Summary",
-                "Projects",
-                "Certifications"
+                "Profile Summary"
             ],
-            "formatting_issues": [
-                "Inconsistent line spacing detected",
-                "Extremely long paragraph detected (consider breaking it up)",
-                "Possible font or spacing inconsistency detected"
-            ],
+            "formatting_issues": [],
             "recommendations": [
-                "Add missing sections: Profile Summary, Projects, Certifications",
-                "Fix 11 grammar/spelling issues",
-                "Start bullet points with strong action verbs"
-            ],
-            "industry": "tech"
+                "Fix grammar mistakes for better ATS compliance.",
+                "Font consistency maintained."
+            ]
         }
     },
     "53a5f23dbebc96dbdd61e0c472834e68": {

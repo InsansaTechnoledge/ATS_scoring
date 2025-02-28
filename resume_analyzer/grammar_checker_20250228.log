@@ -1,0 +1,161 @@
+2025-02-28 13:50:38,135 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.11:5000
+2025-02-28 13:50:38,135 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-28 13:50:38,152 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-28 13:50:45,083 - WARNING -  * Debugger is active!
+2025-02-28 13:50:45,083 - INFO -  * Debugger PIN: 103-842-514
+2025-02-28 13:51:04,226 - INFO - Analyzing file: Jay Amrish Fanse_Resume_December2024.pdf
+2025-02-28 13:51:04,555 - INFO - Analyzed resume: Jay Amrish Fanse_Resume_December2024.pdf, Score: 32
+2025-02-28 13:51:04,556 - INFO - 127.0.0.1 - - [28/Feb/2025 13:51:04] "POST /analyze HTTP/1.1" 200 -
+2025-02-28 13:52:50,598 - INFO - 127.0.0.1 - - [28/Feb/2025 13:52:50] "[31m[1mPOST /analyze HTTP/1.1[0m" 400 -
+2025-02-28 13:53:30,216 - INFO - 127.0.0.1 - - [28/Feb/2025 13:53:30] "[31m[1mPOST /analyze HTTP/1.1[0m" 400 -
+2025-02-28 13:54:23,236 - INFO - Analyzing file: Jay Amrish Fanse_Resume_December2024.pdf
+2025-02-28 13:54:23,236 - INFO - Cache hit for key 7151d686dfde494bfb4d5763f8f39e47
+2025-02-28 13:54:23,269 - INFO - Analyzed resume: Jay Amrish Fanse_Resume_December2024.pdf, Score: 32
+2025-02-28 13:54:23,271 - INFO - 127.0.0.1 - - [28/Feb/2025 13:54:23] "POST /analyze HTTP/1.1" 200 -
+2025-02-28 14:18:02,849 - INFO -  * Detected change in 'C:\\Users\\TANMAY\\Desktop\\ATS_scoring\\resume_analyzer\\api\\routes.py', reloading
+2025-02-28 14:18:02,849 - INFO -  * Detected change in 'C:\\Users\\TANMAY\\Desktop\\ATS_scoring\\resume_analyzer\\api\\routes.py', reloading
+2025-02-28 14:18:02,850 - INFO -  * Detected change in 'C:\\Users\\TANMAY\\Desktop\\ATS_scoring\\resume_analyzer\\api\\routes.py', reloading
+2025-02-28 14:18:02,850 - INFO -  * Detected change in 'C:\\Users\\TANMAY\\Desktop\\ATS_scoring\\resume_analyzer\\api\\routes.py', reloading
+2025-02-28 14:18:03,727 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-28 14:18:11,267 - WARNING -  * Debugger is active!
+2025-02-28 14:18:11,272 - INFO -  * Debugger PIN: 103-842-514
+2025-02-28 14:35:51,148 - INFO - Analyzing file: Resume_two.docx with extension .docx
+2025-02-28 14:35:51,170 - ERROR - File conversion error: [WinError 2] The system cannot find the file specified
+2025-02-28 14:35:51,170 - ERROR - Error in analyze endpoint: [WinError 2] The system cannot find the file specified
+2025-02-28 14:35:51,171 - INFO - 127.0.0.1 - - [28/Feb/2025 14:35:51] "[35m[1mPOST /analyze HTTP/1.1[0m" 500 -
+2025-02-28 14:36:34,417 - INFO -  * Detected change in 'C:\\Users\\TANMAY\\Desktop\\ATS_scoring\\resume_analyzer\\api\\routes.py', reloading
+2025-02-28 14:36:34,417 - INFO -  * Detected change in 'C:\\Users\\TANMAY\\Desktop\\ATS_scoring\\resume_analyzer\\api\\routes.py', reloading
+2025-02-28 14:36:34,417 - INFO -  * Detected change in 'C:\\Users\\TANMAY\\Desktop\\ATS_scoring\\resume_analyzer\\api\\routes.py', reloading
+2025-02-28 14:36:35,593 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-28 14:39:24,222 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.11:5000
+2025-02-28 14:39:24,222 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-28 14:39:24,248 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-28 14:39:31,007 - WARNING -  * Debugger is active!
+2025-02-28 14:39:31,015 - INFO -  * Debugger PIN: 103-842-514
+2025-02-28 14:39:40,397 - INFO - Analyzing file: Kaushal_Resume 1.pdf with extension .pdf
+2025-02-28 14:39:40,397 - ERROR - Error in analyze endpoint: name 'convert_to_pdf' is not defined
+2025-02-28 14:39:40,397 - INFO - 127.0.0.1 - - [28/Feb/2025 14:39:40] "[35m[1mPOST /analyze HTTP/1.1[0m" 500 -
+2025-02-28 14:39:58,990 - INFO -  * Detected change in 'C:\\Users\\TANMAY\\Desktop\\ATS_scoring\\resume_analyzer\\api\\routes.py', reloading
+2025-02-28 14:39:58,996 - INFO -  * Detected change in 'C:\\Users\\TANMAY\\Desktop\\ATS_scoring\\resume_analyzer\\api\\routes.py', reloading
+2025-02-28 14:39:58,998 - INFO -  * Detected change in 'C:\\Users\\TANMAY\\Desktop\\ATS_scoring\\resume_analyzer\\api\\routes.py', reloading
+2025-02-28 14:39:59,844 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-28 14:40:06,948 - WARNING -  * Debugger is active!
+2025-02-28 14:40:06,955 - INFO -  * Debugger PIN: 103-842-514
+2025-02-28 14:40:22,156 - INFO - Analyzing file: Kaushal_Resume 1.pdf with extension .pdf
+2025-02-28 14:40:22,156 - ERROR - Error in analyze endpoint: name 'pdf_path' is not defined
+2025-02-28 14:40:22,156 - INFO - 127.0.0.1 - - [28/Feb/2025 14:40:22] "[35m[1mPOST /analyze HTTP/1.1[0m" 500 -
+2025-02-28 14:40:41,278 - INFO -  * Detected change in 'C:\\Users\\TANMAY\\Desktop\\ATS_scoring\\resume_analyzer\\api\\routes.py', reloading
+2025-02-28 14:40:41,294 - INFO -  * Detected change in 'C:\\Users\\TANMAY\\Desktop\\ATS_scoring\\resume_analyzer\\api\\routes.py', reloading
+2025-02-28 14:40:41,294 - INFO -  * Detected change in 'C:\\Users\\TANMAY\\Desktop\\ATS_scoring\\resume_analyzer\\api\\routes.py', reloading
+2025-02-28 14:40:42,695 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-28 14:41:01,450 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.11:5000
+2025-02-28 14:41:01,451 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-28 14:41:01,466 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-28 14:41:07,858 - WARNING -  * Debugger is active!
+2025-02-28 14:41:07,863 - INFO -  * Debugger PIN: 103-842-514
+2025-02-28 14:41:24,917 - INFO - Analyzing file: Kaushal_Resume 1.pdf
+2025-02-28 14:41:25,177 - INFO - Analyzed resume: Kaushal_Resume 1.pdf, Score: 29
+2025-02-28 14:41:25,179 - INFO - 127.0.0.1 - - [28/Feb/2025 14:41:25] "POST /analyze HTTP/1.1" 200 -
+2025-02-28 14:43:12,588 - INFO -  * Detected change in 'C:\\Users\\TANMAY\\Desktop\\ATS_scoring\\resume_analyzer\\config.py', reloading
+2025-02-28 14:43:12,595 - INFO -  * Detected change in 'C:\\Users\\TANMAY\\Desktop\\ATS_scoring\\resume_analyzer\\config.py', reloading
+2025-02-28 14:43:13,608 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-28 14:44:52,904 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.11:5000
+2025-02-28 14:44:52,904 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-28 14:44:52,917 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-28 14:44:58,953 - WARNING -  * Debugger is active!
+2025-02-28 14:44:58,956 - INFO -  * Debugger PIN: 103-842-514
+2025-02-28 14:45:17,699 - INFO - Analyzing file: Kaushal_Resume 1.pdf
+2025-02-28 14:45:17,761 - ERROR - Error in analyze endpoint: sequence item 0: expected str instance, list found
+2025-02-28 14:45:17,762 - INFO - 127.0.0.1 - - [28/Feb/2025 14:45:17] "[35m[1mPOST /analyze HTTP/1.1[0m" 500 -
+2025-02-28 14:49:59,409 - INFO -  * Detected change in 'C:\\Users\\TANMAY\\Desktop\\ATS_scoring\\resume_analyzer\\services\\analyzer.py', reloading
+2025-02-28 14:49:59,409 - INFO -  * Detected change in 'C:\\Users\\TANMAY\\Desktop\\ATS_scoring\\resume_analyzer\\services\\analyzer.py', reloading
+2025-02-28 14:49:59,410 - INFO -  * Detected change in 'C:\\Users\\TANMAY\\Desktop\\ATS_scoring\\resume_analyzer\\services\\analyzer.py', reloading
+2025-02-28 14:50:00,628 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-28 14:50:07,230 - WARNING -  * Debugger is active!
+2025-02-28 14:50:07,239 - INFO -  * Debugger PIN: 103-842-514
+2025-02-28 14:50:09,769 - INFO -  * Detected change in 'C:\\Users\\TANMAY\\Desktop\\ATS_scoring\\resume_analyzer\\services\\analyzer.py', reloading
+2025-02-28 14:50:09,769 - INFO -  * Detected change in 'C:\\Users\\TANMAY\\Desktop\\ATS_scoring\\resume_analyzer\\services\\analyzer.py', reloading
+2025-02-28 14:50:09,775 - INFO -  * Detected change in 'C:\\Users\\TANMAY\\Desktop\\ATS_scoring\\resume_analyzer\\services\\analyzer.py', reloading
+2025-02-28 14:50:09,775 - INFO -  * Detected change in 'C:\\Users\\TANMAY\\Desktop\\ATS_scoring\\resume_analyzer\\services\\analyzer.py', reloading
+2025-02-28 14:50:10,332 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-28 14:50:17,320 - WARNING -  * Debugger is active!
+2025-02-28 14:50:17,326 - INFO -  * Debugger PIN: 103-842-514
+2025-02-28 14:50:19,972 - INFO -  * Detected change in 'C:\\Users\\TANMAY\\Desktop\\ATS_scoring\\resume_analyzer\\services\\analyzer.py', reloading
+2025-02-28 14:50:19,972 - INFO -  * Detected change in 'C:\\Users\\TANMAY\\Desktop\\ATS_scoring\\resume_analyzer\\services\\analyzer.py', reloading
+2025-02-28 14:50:19,978 - INFO -  * Detected change in 'C:\\Users\\TANMAY\\Desktop\\ATS_scoring\\resume_analyzer\\services\\analyzer.py', reloading
+2025-02-28 14:50:21,598 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-28 14:50:28,219 - WARNING -  * Debugger is active!
+2025-02-28 14:50:28,226 - INFO -  * Debugger PIN: 103-842-514
+2025-02-28 14:50:41,987 - INFO - Analyzing file: Kaushal_Resume 1.pdf
+2025-02-28 14:50:42,217 - INFO - Analyzed resume: Kaushal_Resume 1.pdf, Score: 25
+2025-02-28 14:50:42,224 - INFO - 127.0.0.1 - - [28/Feb/2025 14:50:42] "POST /analyze HTTP/1.1" 200 -
+2025-02-28 14:51:51,293 - INFO - Analyzing file: cyber.pdf
+2025-02-28 14:51:51,478 - ERROR - Error in analyze endpoint: 'NoneType' object is not iterable
+2025-02-28 14:51:51,478 - INFO - 127.0.0.1 - - [28/Feb/2025 14:51:51] "[35m[1mPOST /analyze HTTP/1.1[0m" 500 -
+2025-02-28 14:56:25,799 - INFO -  * Detected change in 'C:\\Users\\TANMAY\\Desktop\\ATS_scoring\\resume_analyzer\\api\\routes.py', reloading
+2025-02-28 14:56:25,801 - INFO -  * Detected change in 'C:\\Users\\TANMAY\\Desktop\\ATS_scoring\\resume_analyzer\\api\\routes.py', reloading
+2025-02-28 14:56:25,806 - INFO -  * Detected change in 'C:\\Users\\TANMAY\\Desktop\\ATS_scoring\\resume_analyzer\\api\\routes.py', reloading
+2025-02-28 14:56:25,807 - INFO -  * Detected change in 'C:\\Users\\TANMAY\\Desktop\\ATS_scoring\\resume_analyzer\\api\\routes.py', reloading
+2025-02-28 14:56:26,744 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-28 14:56:49,755 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.11:5000
+2025-02-28 14:56:49,755 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-28 14:56:49,772 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-28 14:56:56,609 - WARNING -  * Debugger is active!
+2025-02-28 14:56:56,619 - INFO -  * Debugger PIN: 103-842-514
+2025-02-28 14:57:02,323 - INFO - Analyzing file: cyber.pdf
+2025-02-28 14:57:02,552 - ERROR - Error in analyze endpoint: 'NoneType' object is not iterable
+2025-02-28 14:57:02,552 - INFO - 127.0.0.1 - - [28/Feb/2025 14:57:02] "[35m[1mPOST /analyze HTTP/1.1[0m" 500 -
+2025-02-28 14:57:30,747 - INFO -  * Detected change in 'C:\\Users\\TANMAY\\Desktop\\ATS_scoring\\resume_analyzer\\api\\routes.py', reloading
+2025-02-28 14:57:30,752 - INFO -  * Detected change in 'C:\\Users\\TANMAY\\Desktop\\ATS_scoring\\resume_analyzer\\api\\routes.py', reloading
+2025-02-28 14:57:30,753 - INFO -  * Detected change in 'C:\\Users\\TANMAY\\Desktop\\ATS_scoring\\resume_analyzer\\api\\routes.py', reloading
+2025-02-28 14:57:32,183 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-28 14:57:38,178 - WARNING -  * Debugger is active!
+2025-02-28 14:57:38,184 - INFO -  * Debugger PIN: 103-842-514
+2025-02-28 14:57:52,180 - INFO - Analyzing file: cyber.pdf
+2025-02-28 14:57:52,464 - ERROR - Error in analyze endpoint: 'NoneType' object is not iterable
+2025-02-28 14:57:52,465 - INFO - 127.0.0.1 - - [28/Feb/2025 14:57:52] "[35m[1mPOST /analyze HTTP/1.1[0m" 500 -
+2025-02-28 14:58:08,481 - INFO - Analyzing file: Kaushal_Resume 1.pdf
+2025-02-28 14:58:08,684 - INFO - Analyzed resume: Kaushal_Resume 1.pdf, Score: 25
+2025-02-28 14:58:08,684 - INFO - 127.0.0.1 - - [28/Feb/2025 14:58:08] "POST /analyze HTTP/1.1" 200 -
+2025-02-28 15:05:14,173 - INFO -  * Detected change in 'C:\\Users\\TANMAY\\Desktop\\ATS_scoring\\resume_analyzer\\api\\routes.py', reloading
+2025-02-28 15:05:14,174 - INFO -  * Detected change in 'C:\\Users\\TANMAY\\Desktop\\ATS_scoring\\resume_analyzer\\api\\routes.py', reloading
+2025-02-28 15:05:14,175 - INFO -  * Detected change in 'C:\\Users\\TANMAY\\Desktop\\ATS_scoring\\resume_analyzer\\api\\routes.py', reloading
+2025-02-28 15:05:15,597 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-28 15:05:22,944 - WARNING -  * Debugger is active!
+2025-02-28 15:05:22,949 - INFO -  * Debugger PIN: 103-842-514
+2025-02-28 15:07:40,966 - INFO -  * Detected change in 'C:\\Users\\TANMAY\\Desktop\\ATS_scoring\\resume_analyzer\\services\\analyzer.py', reloading
+2025-02-28 15:07:40,972 - INFO -  * Detected change in 'C:\\Users\\TANMAY\\Desktop\\ATS_scoring\\resume_analyzer\\services\\analyzer.py', reloading
+2025-02-28 15:07:40,972 - INFO -  * Detected change in 'C:\\Users\\TANMAY\\Desktop\\ATS_scoring\\resume_analyzer\\services\\analyzer.py', reloading
+2025-02-28 15:07:41,736 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-28 15:14:35,475 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.11:5000
+2025-02-28 15:14:35,476 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-28 15:14:35,490 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-28 15:14:42,440 - WARNING -  * Debugger is active!
+2025-02-28 15:14:42,447 - INFO -  * Debugger PIN: 103-842-514
+2025-02-28 15:14:55,018 - INFO - Analyzing file: cyber.pdf
+2025-02-28 15:14:55,272 - ERROR - Error in analyze endpoint: 'NoneType' object is not iterable
+2025-02-28 15:14:55,276 - INFO - 127.0.0.1 - - [28/Feb/2025 15:14:55] "[35m[1mPOST /analyze HTTP/1.1[0m" 500 -
+2025-02-28 15:15:23,349 - INFO - Analyzing file: Resume_two.docx
+2025-02-28 15:15:23,486 - INFO - Analyzed resume: Resume_two.docx, Score: 36
+2025-02-28 15:15:23,486 - INFO - 127.0.0.1 - - [28/Feb/2025 15:15:23] "POST /analyze HTTP/1.1" 200 -
+2025-02-28 15:21:12,217 - INFO -  * Detected change in 'C:\\Users\\TANMAY\\Desktop\\ATS_scoring\\resume_analyzer\\Grammar\\grammar_checker.py', reloading
+2025-02-28 15:21:12,217 - INFO -  * Detected change in 'C:\\Users\\TANMAY\\Desktop\\ATS_scoring\\resume_analyzer\\Grammar\\grammar_checker.py', reloading
+2025-02-28 15:21:13,411 - INFO -  * Restarting with watchdog (windowsapi)

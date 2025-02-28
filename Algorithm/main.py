@@ -275,12 +275,14 @@ class ATSFormatChecker:
         # ✅ Resume Keyword Analysis
         industry_keywords = set(self.linkedin_checker.get_all_keywords())
         keyword_analysis = self.grammar_checker.analyze_resume_keywords(text_content, list(industry_keywords))
+        print("into the keyword analysis",keyword_analysis)
         if keyword_analysis['keyword_count'] < 5:
             result["messages"].append("Not enough industry-specific keywords detected.")
             result["recommendations"].append("Add more relevant keywords related to your industry.")
 
         # ✅ Passive Voice Check
         passive_sentences = self.grammar_checker.check_passive_voice(text_content)
+        print("into the passive voice check",passive_sentences)
         if passive_sentences:
             result["messages"].append(f"Found {len(passive_sentences)} sentences using passive voice.")
             result["recommendations"].append("Use active voice for stronger impact.")
@@ -294,13 +296,18 @@ class ATSFormatChecker:
 
         # ✅ Extract resume sections
         sections = self.linkedin_checker.extract_sections(text_content)
+        print("into the extract resume sections",sections)
 
         # ✅ LinkedIn Profile Best Practices
         linkedin_suggestions = self.linkedin_checker.generate_improvement_suggestions(sections)
+        print("into the linkedin suggestions",linkedin_suggestions)
         if linkedin_suggestions:
             result["messages"].append("LinkedIn Optimization Suggestions:")
             for suggestion in linkedin_suggestions:
                 result["recommendations"].append(suggestion)
+                
+        grammar_issues = self.grammar_checker.check_grammar(text_content)
+        readability_scores = self.grammar_checker.analyze_readability(text_content)
 
 
         if text_content:
@@ -319,56 +326,48 @@ class ATSFormatChecker:
             # ✅ Add Readability Score
             result["messages"].append("Readability Scores:")
             for key, value in readability_scores.items():
-                result["messages"].append(f" - {key}: {value:.2f}")
-
-
-        if text_content:
-            # Check word count
-            word_count_ok, word_count_message = self.check_word_count(text_content)
-            result['messages'].append(word_count_message)
-            if not word_count_ok:
-                result['recommendations'].append("Adjust document length to meet requirements")
+                result["messages"].append(f"  {key}: {value:.2f}")
+                
+        word_count_ok, word_count_message = self.check_word_count(text_content)
+        result['messages'].append(word_count_message)
+        if not word_count_ok:
+            result['recommendations'].append("Adjust document length to meet requirements")
 
             # Check required sections
-            sections_ok, missing_sections = self.check_required_sections(text_content)
-            if not sections_ok:
-                result['sections_missing'] = missing_sections
-                result['messages'].append(f"Missing sections: {', '.join(missing_sections)}")
-                result['recommendations'].append("Add missing required sections")
+        sections_ok, missing_sections = self.check_required_sections(text_content)
+        if not sections_ok:
+            result['sections_missing'] = missing_sections
+            result['messages'].append(f"Missing sections: {', '.join(missing_sections)}")
+            result['recommendations'].append("Add missing required sections")
             
             # ✅ Forbidden character check
  
-            format_ok, found_chars = self.check_forbidden_characters(text_content)
-            if not format_ok:
-                result['formatting_issues'] = found_chars
-                result['messages'].append(f"Found forbidden characters: {', '.join(found_chars)}")
-                result['recommendations'].append("Remove non-ATS-friendly characters.")
+        format_ok, found_chars = self.check_forbidden_characters(text_content)
+        if not format_ok:
+            result['formatting_issues'] = found_chars
+            result['messages'].append(f"Found forbidden characters: {', '.join(found_chars)}")
+            result['recommendations'].append("Remove non-ATS-friendly characters.")
 
             # Check for formatting issues
-            format_ok, found_chars = self.check_forbidden_characters(text_content)
-            if not format_ok:
-                result['formatting_issues'] = found_chars
-                result['messages'].append(f"Found formatting issues: {', '.join(found_chars)}")
-                result['recommendations'].append("Fix formatting issues and special characters")
+        format_ok, found_chars = self.check_forbidden_characters(text_content)
+        if not format_ok:
+            result['formatting_issues'] = found_chars
+            result['messages'].append(f"Found formatting issues: {', '.join(found_chars)}")
+            result['recommendations'].append("Fix formatting issues and special characters")
+        job_description = self.job_description
+        linkedin_results = self.linkedin_checker.analyze_profile(text_content, job_description if job_description else None)
 
-        if text_content:
-            # ✅ LinkedIn Compatibility & Job Matching
-            # job_description = input("Paste Job Description (or press Enter to skip): ").strip()
-            job_description = self.job_description
-            linkedin_results = self.linkedin_checker.analyze_profile(text_content, job_description if job_description else None)
+        # ✅ LinkedIn Best Practices Check
+        if not linkedin_results.linkedin_compatibility:
+            result["messages"].append(f"Missing LinkedIn best-practice sections: {', '.join(linkedin_results.missing_sections)}")
+            result["recommendations"].append("Add missing sections for LinkedIn compatibility.")
 
-            # ✅ LinkedIn Best Practices Check
-            if not linkedin_results.linkedin_compatibility:
-                result["messages"].append(f"Missing LinkedIn best-practice sections: {', '.join(linkedin_results.missing_sections)}")
-                result["recommendations"].append("Add missing sections for LinkedIn compatibility.")
+        # ✅ Job Mat   ching Score (if job description provided)
+        if linkedin_results.job_match_score is not None:
+            result["messages"].append(f"Job Match Score: {linkedin_results.job_match_score}%")
+            if linkedin_results.job_match_score < 60:
+                result["recommendations"].append("Improve resume alignment with job description.")
 
-            # ✅ Job Mat   ching Score (if job description provided)
-            if linkedin_results.job_match_score is not None:
-                result["messages"].append(f"Job Match Score: {linkedin_results.job_match_score}%")
-                if linkedin_results.job_match_score < 60:
-                    result["recommendations"].append("Improve resume alignment with job description.")
-
-        #check for duplicate content
         is_duplicate, duplicate_sections = self.duplicate_checker.check_duplicate_content(text_content)
         if is_duplicate:
             result['messages'].append("Resume contains duplicated content from common templates.")
@@ -470,7 +469,7 @@ class ATSFormatChecker:
         #         ("RTF Files", "*.rtf")
         #     ]
         # )
-
+        print("into the check file !!!")
         if not self.file_path:
             return {
                 'score': 0,
@@ -532,7 +531,6 @@ def analyseResume(file_path, job_description):
         'result': result
     }
 
-    
     # Show message box with results
     # messagebox.showinfo("ATS Check Results", 
     #                    f"Score: {result['score']}/100\n\n" +

@@ -41,13 +41,14 @@ const Landing = () => {
                 formData.append('file', file);
                 formData.append('job_description', jobDescription);
 
-                const response = await axios.post('http://localhost:5000/analyse', formData, {
-                    headers: { 'Content-Type': 'multipart/form-data' },
+                const response = await axios.post('http://localhost:5000/analyze', formData, {
+                    headers: { 'Content-Type': 'multipart/form-data' }
                 });
 
                 if (response.status === 200) {
                     clearInterval(progressInterval); // Stop progress updates
                     setProgress(100);
+                    console.log(response);
 
                     setTimeout(() => {
                         setIsAnalyzing(false);

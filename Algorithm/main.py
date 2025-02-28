@@ -14,6 +14,7 @@ from Config.config_gui import ConfigGUI
 from LinkedIn.linkedin_checker import LinkedInProfileAnalyzer
 from Grammar.grammar_checker import GrammarChecker
 from Duplicate.duplicate_content_checker import DuplicateContentChecker
+from Grammar.new_grammar_checker import check_text_grammar_spelling
 
 class ATSFormatChecker:
 
@@ -304,14 +305,16 @@ class ATSFormatChecker:
 
         if text_content:
             # ✅ NEW: Grammar and Readability Check
-            grammar_issues = self.grammar_checker.check_grammar(text_content)
+            # grammar_issues = self.grammar_checker.check_grammar(text_content)
+            grammar_issues = check_text_grammar_spelling(text_content)
             readability_scores = self.grammar_checker.analyze_readability(text_content)
 
             if grammar_issues:
                 result["messages"].append(f"Grammar Issues Found: {len(grammar_issues)}")
                 result["recommendations"].append("Fix grammar mistakes for better ATS compliance.")
-                for issue in grammar_issues[:5]:  # Show up to 5 grammar issues
-                    result["messages"].append(f" - {issue}")
+                result['grammar_issues'] = []
+                for issue in grammar_issues:  # Show up to 5 grammar issues
+                    result['grammar_issues'].append(f"{issue}")
 
             # ✅ Add Readability Score
             result["messages"].append("Readability Scores:")
@@ -500,15 +503,17 @@ class ATSFormatChecker:
 
 def main():
     checker = ATSFormatChecker()
+    checker.file_path='Uploads/Jay Amrish Fanse_Resume_December2024.pdf'
+    checker.job_description = ''
     result = checker.check_file()
     report = checker.generate_report(result)
     
     print(report)
     
-    # Show message box with results
-    messagebox.showinfo("ATS Check Results", 
-                       f"Score: {result['score']}/100\n\n" +
-                       "See console for full report.")
+    # # Show message box with results
+    # messagebox.showinfo("ATS Check Results", 
+    #                    f"Score: {result['score']}/100\n\n" +
+    #                    "See console for full report.")
 
 if __name__ == "__main__":
     main()

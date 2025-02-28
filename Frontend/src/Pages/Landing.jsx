@@ -43,7 +43,6 @@ const Landing = () => {
 
                 const response = await axios.post('http://localhost:5000/analyse', formData, {
                     headers: { 'Content-Type': 'multipart/form-data' },
-                    timeout: 60000,
                 });
 
                 if (response.status === 200) {

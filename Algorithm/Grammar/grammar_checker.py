@@ -58,6 +58,7 @@ class GrammarChecker:
                     'message': match.message,
                     'position': (match.offset, match.offset + match.errorLength)
                 }
+                
                 issues.append(issue)
             
             logging.info(f"Found {len(issues)} grammar issues")

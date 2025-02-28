@@ -71,18 +71,13 @@
     },
     "a86230e45763ed60f5933268d5d9fb50": {
         "filename": "Chaitanya_J_DEC24.docx",
-        "last_checked": "2025-02-04T00:30:56.706314",
+        "last_checked": "2025-02-24T11:32:39.953569",
         "result": {
             "score": 90,
             "messages": [
                 "Not enough industry-specific keywords detected.",
                 "LinkedIn Optimization Suggestions:",
-                "Grammar Issues Found: 39",
-                " - {'error': '...chnical experience in SAP ABAP, ABAP on HANA developments using Advance SQL, CDS vie...', 'suggestions': ['HAND', 'GHANA', 'HAN', 'HANS', 'HANG', 'ANA', 'DANA', 'HANK', 'HANNA', 'LANA', 'NANA', 'KANA', 'JANA', 'SANA', 'SHANA', 'HAHA', 'HAWA', 'HARA', 'MANA'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (261, 265)}",
-                " - {'error': '...elopments using Advance SQL, CDS views, AMDPs and SAP FIORI.  Uses OOPS approach to d...', 'suggestions': ['Amps', 'AM DPs'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (309, 314)}",
-                " - {'error': '...g Advance SQL, CDS views, AMDPs and SAP FIORI.  Uses OOPS approach to develop applica...', 'suggestions': ['FI ORI'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (323, 328)}",
-                " - {'error': '...pplications.  Worked extensively on Web Dynpro application involving Floor Plan Manage...', 'suggestions': ['Dynamo', 'Dnipro', 'Dinero'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (402, 408)}",
-                " - {'error': '...nds-on experience in developing Classic Dynpro applications. He has good communication...', 'suggestions': ['Dynamo', 'Dnipro', 'Dinero'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (493, 499)}",
+                "Grammar Issues Found: 22",
                 "Readability Scores:",
                 " - Flesch Reading Ease: 42.17",
                 " - Gunning Fog Index: 11.23",
@@ -112,6 +107,30 @@
                 "Add missing sections for LinkedIn compatibility.",
                 "Use a single font type throughout the document.",
                 "Consider breaking long paragraphs into concise bullet points for readability."
+            ],
+            "grammar_issues": [
+                "{'type': 'Spelling', 'context': '...00030\\tchaitanya.jondhale@insansa.com\\n\\n\\n+91 9867771...', 'issue': \"Spelling mistake: 'insansa.com'\", 'suggestions': ['insane.com']}",
+                "{'type': 'Spelling', 'context': '...Chaitanya is an SAP ABAP certified consultant....', 'issue': \"Spelling mistake: 'certified'\", 'suggestions': ['terrified']}",
+                "{'type': 'Spelling', 'context': '...Skills\\nSAP Webdynpro SAP ABAP (RICEF)\\n SAP UI5\\nEnh...', 'issue': \"Spelling mistake: 'Skills'\", 'suggestions': ['Kills']}",
+                "{'type': 'Spelling', 'context': '...g to about 25 functional consultants of Coal India...', 'issue': \"Spelling mistake: 'consultants'\", 'suggestions': ['consultant']}",
+                "{'type': 'Spelling', 'context': '...nducted training for SAP certification aspirants t...', 'issue': \"Spelling mistake: 'certification'\", 'suggestions': ['mortification']}",
+                "{'type': 'Spelling', 'context': '...Working on freelance assignments (Have Been handli...', 'issue': \"Spelling mistake: 'assignments'\", 'suggestions': ['assignment']}",
+                "{'type': 'Spelling', 'context': '...Working on freelance assignments (Have Been handli...', 'issue': \"Spelling mistake: 'assignments'\", 'suggestions': ['assignment']}",
+                "{'type': 'Spelling', 'context': '...end flow, starting from Designing layout(Master-D...', 'issue': \"Spelling mistake: 'Designing'\", 'suggestions': ['Resigning']}",
+                "{'type': 'Spelling', 'context': '...Mapping of front-end with Entity/entity set of ODA...', 'issue': \"Spelling mistake: 'Mapping'\", 'suggestions': ['Tapping']}",
+                "{'type': 'Spelling', 'context': '...ick Fix functionality to automate code fix....', 'issue': \"Spelling mistake: 'automate'\", 'suggestions': ['automatic']}",
+                "{'type': 'Spelling', 'context': '...Push Down Techniques to leverage HANA database....', 'issue': \"Spelling mistake: 'leverage'\", 'suggestions': ['beverage']}",
+                "{'type': 'Spelling', 'context': '...ockpit, and global check variants for S/4 HANA rea...', 'issue': \"Spelling mistake: 'variants'\", 'suggestions': ['variant']}",
+                "{'type': 'Spelling', 'context': '...Configuring Fiori launchpad for accessing the app...', 'issue': \"Spelling mistake: 'Fiori'\", 'suggestions': ['Mori']}",
+                "{'type': 'Spelling', 'context': '...Configuring Fiori launchpad for accessing the app...', 'issue': \"Spelling mistake: 'launchpad'\", 'suggestions': ['launched']}",
+                "{'type': 'Spelling', 'context': '...ring Fiori launchpad for accessing the app via dif...', 'issue': \"Spelling mistake: 'accessing'\", 'suggestions': ['accepting']}",
+                "{'type': 'Spelling', 'context': '...nchpad for accessing the app via different groups...', 'issue': \"Spelling mistake: 'app'\", 'suggestions': ['pp']}",
+                "{'type': 'Spelling', 'context': '...V for table with various editable UI elements....', 'issue': \"Spelling mistake: 'editable'\", 'suggestions': ['suitable']}",
+                "{'type': 'Spelling', 'context': '...Created various screen elements and handled action...', 'issue': \"Spelling mistake: 'Created'\", 'suggestions': ['Treated']}",
+                "{'type': 'Spelling', 'context': '...Train the end users on the right practices to use...', 'issue': \"Spelling mistake: 'Train'\", 'suggestions': ['Brain']}",
+                "{'type': 'Spelling', 'context': '...profitability as the key metric....', 'issue': \"Spelling mistake: 'metric'\", 'suggestions': ['merit']}",
+                "{'type': 'Spelling', 'context': '...d challans & Invoices to tally payments....', 'issue': \"Spelling mistake: 'tally'\", 'suggestions': ['tall']}",
+                "{'type': 'Spelling', 'context': '...Managed sale of service: Every year to combat infl...', 'issue': \"Spelling mistake: 'Every'\", 'suggestions': ['Very']}"
             ]
         }
     },
@@ -753,19 +772,14 @@
     },
     "b1395ebea342e7d414e4d4d98b116ecc": {
         "filename": "Akshay patel ABAP 1.pdf",
-        "last_checked": "2025-02-07T17:56:11.526042",
+        "last_checked": "2025-02-24T11:30:06.609835",
         "result": {
             "score": 60,
             "messages": [
                 "Not enough industry-specific keywords detected.",
                 "Stylistic Improvements Suggested:",
                 "LinkedIn Optimization Suggestions:",
-                "Grammar Issues Found: 14",
-                " - {'error': '...ay.patel@insansa.com Skills SAP ABAP on HANA OO ABAP Languages Hindi Marathi  Englis...', 'suggestions': ['HAND', 'GHANA', 'HAN', 'HANS', 'HANG', 'ANA', 'DANA', 'HANK', 'HANNA', 'LANA', 'NANA', 'KANA', 'JANA', 'SANA', 'SHANA', 'HAHA', 'HAWA', 'HARA', 'MANA'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (106, 110)}",
-                " - {'error': '...n HANA OO ABAP Languages Hindi Marathi  Englis TECHNICAL SKILLS  \u2022 Having 2.5 years  e...', 'suggestions': ['English'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (144, 150)}",
-                " - {'error': '...lis TECHNICAL SKILLS  \u2022 Having 2.5 years  experience in SAP ABAP implementation an...', 'suggestions': [' '], 'category': 'TYPOGRAPHY', 'rule_id': 'CONSECUTIVE_SPACES', 'message': 'It seems like there are too many consecutive spaces here.', 'position': (187, 189)}",
-                " - {'error': '... SAP ABAP implementation and support. \u2022 Ures, Table Maintenance, Data Type, Domain, ...', 'suggestions': ['Uses', 'Cures', 'Ores', 'Urges', 'Ares', 'URLs', 'Lures', 'Urns', 'Pres', 'Urey', 'Uris', 'RES', 'UES', 'URE', 'URIs', 'URS', 'URSS', 'Urs', 'Utes', 'Res', 'Urea'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (242, 246)}",
-                " - {'error': '...odule pool programming. \u2022 Experience in Smartforms and Abodeforms. \u2022 Debugging techniques ...', 'suggestions': ['Smart forms'], 'category': 'TYPOS', 'rule_id': 'MORFOLOGIK_RULE_EN_US', 'message': 'Possible spelling mistake found.', 'position': (519, 529)}",
+                "Grammar Issues Found: 15",
                 "Readability Scores:",
                 " - Flesch Reading Ease: 32.90",
                 " - Gunning Fog Index: 13.44",
@@ -801,6 +815,23 @@
                 "Add missing sections for LinkedIn compatibility.",
                 "Use a single font type throughout the document.",
                 "Limit bullet points to a maximum of 15 for better readability."
+            ],
+            "grammar_issues": [
+                "{'type': 'Spelling', 'context': '...sonal Profile\\n8308643069\\nakshay.patel@insansa.com...', 'issue': \"Spelling mistake: 'akshay.patel'\", 'suggestions': ['ashy.panel']}",
+                "{'type': 'Spelling', 'context': '...8308643069\\nakshay.patel@insansa.com\\nSkills\\nSAP AB...', 'issue': \"Spelling mistake: 'insansa.com'\", 'suggestions': ['insane.com']}",
+                "{'type': 'Spelling', 'context': '...akshay.patel@insansa.com\\nSkills\\nSAP ABAP on HANA\\nO...', 'issue': \"Spelling mistake: 'Skills'\", 'suggestions': ['Kills']}",
+                "{'type': 'Spelling', 'context': '...\u2022 Ures, Table Maintenance, Data Type, Domain, Data...', 'issue': \"Spelling mistake: 'Ures'\", 'suggestions': ['Tres']}",
+                "{'type': 'Spelling', 'context': '...\u2022 Debugging techniques - Break Points \u2013 Experience...', 'issue': \"Spelling mistake: 'techniques'\", 'suggestions': ['technique']}",
+                "{'type': 'Spelling', 'context': '...y Report:\\n\u2022 Designed and implemented a comprehensi...', 'issue': \"Spelling mistake: 'implemented'\", 'suggestions': ['implements']}",
+                "{'type': 'Spelling', 'context': '...ing \\nALV Tree control to visually represent custom...', 'issue': \"Spelling mistake: 'visually'\", 'suggestions': ['usually']}",
+                "{'type': 'Spelling', 'context': '...\u2022 Enabled dynamic and intuitive exploration of cus...', 'issue': \"Spelling mistake: 'intuitive'\", 'suggestions': ['intuition']}",
+                "{'type': 'Spelling', 'context': '...for sales and management teams....', 'issue': \"Spelling mistake: 'teams'\", 'suggestions': ['tears']}",
+                "{'type': 'Spelling', 'context': '...be Form for FI Module:\\n\u2022 Created an automated Adob...', 'issue': \"Spelling mistake: 'Created'\", 'suggestions': ['Treated']}",
+                "{'type': 'Spelling', 'context': '...FI Module:\\n\u2022 Created an automated Adobe form for...', 'issue': \"Spelling mistake: 'automated'\", 'suggestions': ['automatic']}",
+                "{'type': 'Spelling', 'context': '...Financial (FI) module to streamline \\nthe process o...', 'issue': \"Spelling mistake: 'streamline'\", 'suggestions': ['streaming']}",
+                "{'type': 'Spelling', 'context': '...reamline \\nthe process of generating payment advice...', 'issue': \"Spelling mistake: 'generating'\", 'suggestions': ['generation']}",
+                "{'type': 'Spelling', 'context': '...and accuracy in payment notifications, reducing m...', 'issue': \"Spelling mistake: 'notifications'\", 'suggestions': ['modifications']}",
+                "{'type': 'Spelling', 'context': '...ange processes, ensuring seamless \\nintegration and...', 'issue': \"Spelling mistake: 'seamless'\", 'suggestions': ['fearless']}"
             ]
         }
     },

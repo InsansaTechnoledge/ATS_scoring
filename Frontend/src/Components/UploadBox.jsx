@@ -39,12 +39,12 @@ const UploadBox = ({ file, setFile, setIsAnalyzing, setActiveStep, setJobDescrip
   };
 
   return (
-    <div className="max-w-2xl mx-auto space-y-8">
-      <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+    <div className="max-w-7xl mx-auto space-y-8">
+      <div className="bg-gray-50/10 rounded-2xl shadow-xl overflow-hidden">
         <div
-          className={`relative p-8 transition-all duration-300 ${
+          className={`relative p-8 transition-all duration-300 rounded-2xl ${
             isDragging
-              ? "bg-emerald-50 border-2 border-dashed border-emerald-400"
+              ? "bg-violet-50 border-2 border-dashed border-violet-400"
               : "border border-gray-100"
           }`}
           onDragOver={(e) => {
@@ -56,17 +56,17 @@ const UploadBox = ({ file, setFile, setIsAnalyzing, setActiveStep, setJobDescrip
         >
           {!file ? (
             <div className="flex flex-col items-center">
-              <div className="w-20 h-20 bg-emerald-50 rounded-full flex items-center justify-center mb-6">
-                <Upload className="h-10 w-10 text-emerald-500 animate-bounce" />
+              <div className="w-20 h-20 bg-violet-50 rounded-full flex items-center justify-center mb-6">
+                <Upload className="h-10 w-10 text-violet-500 animate-bounce" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">
+              <h3 className="text-xl font-semibold text-gray-50 mb-2">
                 Upload your resume
               </h3>
-              <p className="text-gray-500 mb-6 text-center max-w-md">
+              <p className="text-gray-300 mb-6 text-center max-w-md">
                 Drop your file here or click the button below. Supported formats: PDF, DOC, DOCX, TXT
               </p>
               <label className="inline-block cursor-pointer">
-                <span className="px-6 py-3 text-sm font-medium rounded-xl text-white bg-emerald-500 hover:bg-emerald-600 transition-all duration-200 flex items-center gap-2 shadow-lg shadow-emerald-100">
+                <span className="px-6 py-3 text-sm font-medium rounded-xl text-white bg-violet-500 hover:bg-violet-600 transition-all duration-200 flex items-center gap-2 shadow-md shadow-violet-200">
                   Choose File
                   <ChevronRight className="h-4 w-4" />
                 </span>
@@ -80,14 +80,14 @@ const UploadBox = ({ file, setFile, setIsAnalyzing, setActiveStep, setJobDescrip
             </div>
           ) : (
             <div className="flex flex-col items-center">
-              <div className="w-16 h-16 bg-emerald-50 rounded-full flex items-center justify-center mb-4">
-                <Check className="h-8 w-8 text-emerald-500" />
+              <div className="w-16 h-16 bg-violet-50 rounded-full flex items-center justify-center mb-4">
+                <Check className="h-8 w-8 text-violet-500" />
               </div>
-              <h3 className="text-lg font-medium text-gray-800 mb-6">{file.name}</h3>
+              <h3 className="text-lg font-medium text-gray-300 mb-6">{file.name}</h3>
               <div className="flex items-center gap-4">
                 <button
                   onClick={() => setFile(null)}
-                  className="px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-800 flex items-center gap-2 transition-colors"
+                  className="px-4 py-2 text-sm font-medium text-gray-200 hover:text-gray-300 flex items-center gap-2 transition-colors"
                 >
                   <X className="h-4 w-4" />
                   Remove
@@ -95,7 +95,7 @@ const UploadBox = ({ file, setFile, setIsAnalyzing, setActiveStep, setJobDescrip
                 <button
                   onClick={handleAnalyze}
                   disabled={uploading}
-                  className="px-6 py-2 text-sm font-medium rounded-xl text-white bg-emerald-500 hover:bg-emerald-600 transition-all duration-200 flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-emerald-100"
+                  className="px-6 py-2 text-sm font-medium rounded-xl text-white bg-violet-500 hover:bg-violet-600 transition-all duration-200 flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed shadow-sm shadow-violet-100"
                 >
                   {uploading ? (
                     <>
@@ -115,17 +115,17 @@ const UploadBox = ({ file, setFile, setIsAnalyzing, setActiveStep, setJobDescrip
         </div>
       </div>
 
-      <div className="bg-white rounded-2xl shadow-xl p-6">
+      <div className="bg-gray-50/20 rounded-2xl shadow-xl p-6">
         <div className="space-y-4">
-          <h3 className="text-lg font-semibold text-gray-800">
+          <h3 className="text-lg font-semibold text-gray-200">
             Job Description
-            <span className="text-sm font-normal text-gray-500 ml-2">(Optional)</span>
+            <span className="text-sm font-normal text-gray-300 ml-2">(Optional)</span>
           </h3>
           <textarea
             value={jobDescription}
             onChange={(e) => handleJobDescriptionChange(e.target.value)}
             placeholder="Paste the job description here to compare with the resume..."
-            className="w-full h-32 p-4 text-gray-700 placeholder-gray-400 border border-gray-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 resize-none transition-all duration-200"
+            className="w-full h-32 p-4 text-gray-300 placeholder-gray-400 border border-gray-200 rounded-xl focus:ring-2 focus:ring-violet-500 focus:border-violet-500 resize-none transition-all duration-200"
           />
         </div>
       </div>

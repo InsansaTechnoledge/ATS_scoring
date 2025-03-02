@@ -362,7 +362,7 @@
     },
     "598b7f99d865bc6b910663c28a9f59fa": {
         "filename": "Jay Amrish Fanse_Resume_April2024.pdf",
-        "last_checked": "2025-02-28T12:39:58.158331",
+        "last_checked": "2025-03-02T07:54:46.842954",
         "result": {
             "score": 36,
             "component_scores": {
@@ -408,6 +408,60 @@
                 "Remove special characters that may not be ATS-friendly",
                 "Fix 18 grammar/spelling issues",
                 "Ensure contact information (email and phone) is clearly visible",
+                "Start bullet points with strong action verbs"
+            ],
+            "industry": "software"
+        }
+    },
+    "62379480ac6820e52e3a5c9c59bdf06a": {
+        "filename": "Jay Amrish Fanse_Resume_August2024.docx",
+        "last_checked": "2025-03-02T07:53:18.283766",
+        "result": {
+            "score": 30,
+            "component_scores": {
+                "sections": 30,
+                "grammar": 5,
+                "active_voice": 100,
+                "buzzwords": 100,
+                "keyword_match": 0,
+                "action_verbs": 0
+            },
+            "messages": [
+                "Grammar Issues: 19",
+                "Passive Voice Instances: 0",
+                "Word Count: 317 words",
+                "Missing Sections: profile summary, summary, work experience, experience, certificates, certifications, training",
+                "Job Description Keyword Match: 0%",
+                "Detected Industry: Software"
+            ],
+            "file_type": "application/pdf",
+            "word_count": 317,
+            "sections_present": [
+                "OTHER",
+                "EDUCATION",
+                "PROJECTS",
+                "SKILLS",
+                "ACHIEVEMENTS",
+                "CERTIFICATIONS"
+            ],
+            "sections_missing": [
+                "profile summary",
+                "summary",
+                "work experience",
+                "experience",
+                "certificates",
+                "certifications",
+                "training"
+            ],
+            "formatting_issues": [
+                "Inconsistent line spacing detected",
+                "Extremely long paragraph detected (consider breaking it up)",
+                "Possible font or spacing inconsistency detected"
+            ],
+            "recommendations": [
+                "Add missing sections: profile summary, summary, work experience, experience, certificates, certifications, training",
+                "Remove special characters that may not be ATS-friendly",
+                "Fix 19 grammar/spelling issues",
                 "Start bullet points with strong action verbs"
             ],
             "industry": "software"

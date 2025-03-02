@@ -6,6 +6,7 @@ import ResumeHistory from './Pages/History';
 import Footer from './Components/Footer';
 import Result from './Pages/result';
 import AuthPage from './Pages/AuthenticationPage';
+import HomePage from './Pages/HomePage';
 
 const PageLinks = () => {
   return (
@@ -17,9 +18,10 @@ const PageLinks = () => {
           element={
             <>
               <Navbar />
-              <div className='pt-24 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto'>
+              {/* <div className='pt-24 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto'>
                 <Landing />
-              </div>
+              </div> */}
+                <HomePage />
               <Footer />
             </>
           }

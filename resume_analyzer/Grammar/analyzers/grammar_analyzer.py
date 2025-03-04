@@ -30,43 +30,46 @@ class GrammarAnalyzer:
                 
                 # Check if line is a bullet point
                 is_bullet = self.text_utils.is_bullet_point(line)
-                
-                # Check sentence length (skip for bullet points and skills lists)
-                if not is_bullet and not section_name == 'SKILLS':
-                    if len(line.split()) > 40:
+
+                # Sentence Length Check (excluding bullet points & SKILLS section)
+                if not is_bullet and section_name != 'SKILLS':
+                    words = line.split()
+                    if len(words) > 40:
+                        problematic_text = " ".join(words[:10]) + "..."  # Show partial long sentence
                         section_issues.append({
-                            'error': line,
+                            'error': problematic_text,
                             'suggestions': ["Consider breaking this sentence into smaller ones"],
                             'category': 'LONG_SENTENCE',
                             'message': 'Sentence is too long (over 40 words)',
                             'section': section_name
                         })
                 
-                # Check for weak verbs
+                # Weak Verbs Check (only for EXPERIENCE, PROJECTS)
                 if is_bullet and section_name in ['EXPERIENCE', 'PROJECTS']:
                     for pattern, replacements in self.style_rules.get_weak_verbs().items():
-                        if re.search(pattern, line, re.IGNORECASE):
+                        match = re.search(pattern, line, re.IGNORECASE)
+                        if match:
                             section_issues.append({
-                                'error': line,
+                                'error': match.group(0),  # Show the exact weak verb
                                 'suggestions': replacements,
                                 'category': 'WEAK_VERB',
                                 'message': f"Consider using stronger action verbs: {', '.join(replacements)}",
                                 'section': section_name
                             })
                 
-                # Technical term capitalization check
+                # Technical Terms Capitalization Check
                 for term, correct in self.style_rules.get_technical_terms().items():
-                    if re.search(r'\b' + term + r'\b', line, re.IGNORECASE):
-                        if not re.search(r'\b' + correct + r'\b', line):
-                            section_issues.append({
-                                'error': line,
-                                'suggestions': [f"Use correct capitalization: {correct}"],
-                                'category': 'TECHNICAL_TERM',
-                                'message': f"Technical term '{term}' should be '{correct}'",
-                                'section': section_name
-                            })
+                    match = re.search(r'\b' + term + r'\b', line, re.IGNORECASE)
+                    if match and not re.search(r'\b' + correct + r'\b', line):
+                        section_issues.append({
+                            'error': match.group(0),  # Show the incorrect capitalization
+                            'suggestions': [f"Use correct capitalization: {correct}"],
+                            'category': 'TECHNICAL_TERM',
+                            'message': f"Technical term '{match.group(0)}' should be '{correct}'",
+                            'section': section_name
+                        })
                 
-                # Check punctuation
+                # Check Punctuation Issues
                 punctuation_issues = self.text_utils.check_punctuation(line, is_bullet)
                 section_issues.extend(punctuation_issues)
             

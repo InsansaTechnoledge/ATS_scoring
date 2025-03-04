@@ -25,6 +25,7 @@ class ResumeAnalysisResult:
         self.recommendations = []
         self.messages = []
         self.buzz_words = []
+        self.grammar_flaws = []
     
     def to_dict(self):
         """Convert analysis result to dictionary"""
@@ -43,7 +44,8 @@ class ResumeAnalysisResult:
                     "formatting_issues": self.formatting_issues,
                     "recommendations": self.recommendations,
                     "industry": self.industry,
-                    "buzz_words": self.buzz_words
+                    "buzz_words": self.buzz_words,
+                    "grammar_flaws": self.grammar_flaws
                 }
             }
         }

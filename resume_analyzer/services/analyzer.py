@@ -287,6 +287,9 @@ class ResumeAnalyzer:
         if penalty_counter["grammar_issues"] >= 1:
             result.recommendations.append(f"Fix {len(grammar_issues)} grammar/spelling issues")
 
+            result.grammar_flaws = grammar_issues
+            print("following grammar issues detected:",grammar_issues)
+
 
 
         # Passive voice analysis
@@ -399,7 +402,8 @@ class ResumeAnalyzer:
         result.industry = detect_industry(text, INDUSTRY_KEYWORDS)
         industry_keywords = INDUSTRY_KEYWORDS.get(result.industry, [])
         industry_keyword_matches = sum(1 for kw in industry_keywords if kw.lower() in text.lower())  # Ensuring case insensitivity
-
+        result.industry_keywords = industry_keyword_matches
+        print("industry keywords detected:",industry_keyword_matches)
 
         # Add industry bonus (up to 5 points)
         result.score += min(5, industry_keyword_matches)

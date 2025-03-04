@@ -1,7 +1,11 @@
 import React, { useMemo } from 'react';
 import {
     BarChart2, AlertCircle, BookOpen, FileText,
-    AlertTriangle, Check, X, Type, List, MessageSquare
+    AlertTriangle, Check, X, Type, List, MessageSquare,
+    ChevronRightSquareIcon,
+    ChevronRightCircle,
+    ChevronRightCircleIcon,
+    TicketIcon
 } from 'lucide-react';
 import { useLocation } from 'react-router-dom';
 
@@ -71,7 +75,7 @@ const Result = () => {
     }, [resultData]);
 
     const ScoreGauge = ({ score }) => (
-        <div className="relative w-60 h-60 mx-auto ">
+        <div className="relative w-40 h-40 lg:w-60 lg:h-60 mx-auto ">
             <svg className="w-full h-full" viewBox="0 0 100 100">
                 <circle
                     cx="50"
@@ -114,7 +118,7 @@ const Result = () => {
     }
 
     return (
-        <div className="space-y-8 pt-24 pb-16 px-4 sm:px-6 lg:px-64 bg-gradient-to-br from-indigo-900 to-blue-950 ">
+        <div className="space-y-8 pt-24 pb-16 px-4 sm:px-6 md:px-16 lg:px-32 xl:64 bg-gradient-to-br from-violet-950 to-blue-900 ">
             {/* File Information */}
             <div className="p-4 rounded-xl shadow-md border-white border bg-white/10">
                 <div className="flex items-center space-x-2">
@@ -132,7 +136,7 @@ const Result = () => {
 
             <h1 className='text-3xl font-bold text-center text-gray-200 '>ATS Score Insights</h1>
 
-            <div className='grid grid-cols-3 border border-white rounded-2xl'>
+            <div className='grid grid-cols-1 md:grid-cols-3 border border-white rounded-2xl bg-white/15'>
 
                 {/* Overall Score Section */}
                 <div className=" p-8 ">
@@ -144,51 +148,56 @@ const Result = () => {
                                 "Your resume needs significant improvements."}
                     </p>
                 </div>
-                <div className='col-span-2 p-8'>
+                <div className='flex flex-col md:col-span-2 p-8'>
                     <h1 className='text-3xl font-bold text-center text-gray-200'>Resume Summary</h1>
-                    <div className='flex flex-col text-gray-200 text-lg space-y-5 mt-5'>
-                        <div className='flex justify-between'>
-                            <span>Word count:</span> <span>{resultData?.word_count}</span>
+                    <div className='grid grid-cols-1 sm:grid-cols-2 gap-5 text-gray-200 text-lg mt-5 h-full'>
+                        <div className='flex flex-col rounded-2xl border-3 p-4'>
+                            <span className='text-4xl font-bold'>{resultData?.word_count}</span>
+                            <span>Word count</span>
 
                         </div>
-                        <div className='flex justify-between'>
+                        <div className='flex flex-col rounded-2xl border-3 p-4'>
 
-                            <span>Industry:</span> <span>{resultData?.industry}</span>
+                            <span className='text-4xl font-bold'>{(resultData?.industry).substring(0, 1).toUpperCase() + (resultData?.industry).substring(1, resultData?.industry.length).toLowerCase()}</span>
+                            <span>Industry</span>
                         </div>
-                        <div className='flex justify-between'>
-                            <span>Action verbs:</span><span> {resultData?.component_scores.action_verbs}</span>
+                        <div className='flex flex-col rounded-2xl border-3 p-4'>
+                            <span className='text-4xl font-bold'> {resultData?.component_scores.action_verbs}</span>
+                            <span>Action verbs</span>
                         </div>
-                        <div className='flex justify-between'>
-                            {/* <span>Buzz words:</span><span> {(resultData?.buzz_words).length()}</span> */}
+                        <div className='flex flex-col rounded-2xl border-3 p-4'>
+                            <span className='text-4xl font-bold'> {(resultData?.buzz_words).length}</span>
+                            <span>Buzz words</span>
                         </div>
 
 
                     </div>
                 </div>
             </div>
-            <div className='border border-white rounded-2xl'>
+            <div className='border border-white bg-white/15 rounded-2xl'>
                 <h1 className='text-3xl font-bold text-center text-gray-200 mt-5'>Sections summary</h1>
-                <div className='grid grid-cols-2'>
+                <div className='flex justify-between '>
                     {/* Overall Score Section */}
                     <div className=" p-8 ">
                         <h2 className="text-2xl font-bold text-center mb-6 text-gray-200">Sections Present</h2>
                         <div className='text-md text-green-800 flex flex-col space-y-2'>
                             {
                                 resultData.sections_present.map((section, idx) => (
-                                    <div key={idx} 
-                                    className='py-2 px-5 rounded-2xl text-center mx-36 bg-green-200'
+                                    <div key={idx}
+                                        className='py-2 px-5 rounded-2xl text-center bg-green-200'
                                     >{section}</div>
                                 ))
                             }
                         </div>
                     </div>
+                    <div className='w-0.5 my-12 border border-gray-300 invisible lg:visible flex'></div>
                     <div className='p-8'>
-                    <h2 className="text-2xl font-bold text-center mb-6 text-gray-200">Missing Sections</h2>
+                        <h2 className="text-2xl font-bold text-center mb-6 text-gray-200">Missing Sections</h2>
                         <div className='text-md text-red-800 flex flex-col space-y-2'>
                             {
                                 resultData.sections_missing.map((section, idx) => (
-                                    <div key={idx} 
-                                    className='py-2 px-5 rounded-2xl text-center mx-36 bg-red-200'
+                                    <div key={idx}
+                                        className='py-2 px-5 rounded-2xl text-center bg-red-200'
                                     >{section}</div>
                                 ))
                             }
@@ -197,74 +206,34 @@ const Result = () => {
                 </div>
             </div>
 
-
-
-            {/* Key Issues Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <MetricCard
-                    icon={AlertTriangle}
-                    label="Grammar Issues"
-                    value={`${grammarIssuesCount} Found`}
-                    color="red"
-                />
-                <MetricCard
-                    icon={Type}
-                    label="Font Usage"
-                    value={`${fontInfo.consistency} (${fontInfo.font})`}
-                    color={fontInfo.consistency === "Consistent" ? "green" : "red"}
-                />
-                <MetricCard
-                    icon={List}
-                    label="Bullet Points"
-                    value={`${bulletPointsCount} ${bulletPointsCount > 15 ? '(Excessive)' : ''}`}
-                    color="orange"
-                />
-            </div>
-
-            {/* Readability Scores */}
-            <div className="bg-white p-6 rounded-xl shadow-md">
-                <h3 className="text-xl font-semibold mb-4 flex items-center">
-                    <BookOpen className="h-5 w-5 text-blue-500 mr-2" />
-                    Readability Analysis
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                    {Object.entries(readabilityScores).map(([key, value]) => (
-                        <div key={key} className="bg-blue-50 p-4 rounded-lg">
-                            <p className="text-sm text-blue-700 mb-1">{key}</p>
-                            <p className="text-xl font-semibold text-blue-900">{value.toFixed(2)}</p>
+            <div className='border border-white rounded-2xl p-8 bg-white/15'>
+                <div className='flex gap-2'>
+                <AlertTriangle className='text-gray-200 justify-center my-auto'/>
+                <span className='text-3xl font-bold text-gray-100'>Formatting Issues</span>
+                </div>
+                <div className='space-y-2 mt-5'>
+                    {resultData.formatting_issues.map((issue, idx) => (
+                        <div className='flex gap-2'>
+                            <AlertCircle className='text-yellow-400' />
+                            <span key={idx}
+                                className='text-yellow-400'
+                            >{issue}</span>
                         </div>
                     ))}
                 </div>
             </div>
-
-            {/* Missing Sections */}
-            {resultData?.sections_missing?.length > 0 && (
-                <div className="bg-white p-6 rounded-xl shadow-md">
-                    <h3 className="text-xl font-semibold mb-4 flex items-center">
-                        <AlertCircle className="h-5 w-5 text-red-500 mr-2" />
-                        Missing Sections
-                    </h3>
-                    <div className="flex flex-wrap gap-2">
-                        {resultData?.sections_missing.map((section) => (
-                            <span key={section} className="px-3 py-1 bg-red-100 text-red-700 rounded-full">
-                                {section}
-                            </span>
-                        ))}
-                    </div>
+            <div className='border border-white rounded-2xl p-8 bg-white/15'>
+            <div className='flex gap-2'>
+                <ChevronRightCircle className='text-gray-200 justify-center my-auto'/>
+                <span className='text-3xl font-bold text-gray-100'>Recommendations</span>
                 </div>
-            )}
-
-            {/* Recommendations */}
-            <div className="bg-white p-6 rounded-xl shadow-md">
-                <h3 className="text-xl font-semibold mb-4 flex items-center">
-                    <MessageSquare className="h-5 w-5 text-emerald-500 mr-2" />
-                    Recommendations
-                </h3>
-                <div className="space-y-3">
-                    {resultData?.recommendations.map((recommendation, index) => (
-                        <div key={index} className="flex items-start p-3 bg-emerald-50 rounded-lg">
-                            <Check className="h-5 w-5 text-emerald-500 mr-2 mt-0.5" />
-                            <p className="text-emerald-800">{recommendation}</p>
+                <div className='space-y-2 mt-5'>
+                    {resultData.recommendations.map((issue, idx) => (
+                        <div className='flex gap-2'>
+                            <Check className='text-green-300' />
+                            <span key={idx}
+                                className='text-green-300'
+                            >{issue}</span>
                         </div>
                     ))}
                 </div>

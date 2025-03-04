@@ -144,7 +144,7 @@ const Result = () => {
                                 "Your resume needs significant improvements."}
                     </p>
                 </div>
-                <div className='col-span-2 border p-8'>
+                <div className='col-span-2 p-8'>
                     <h1 className='text-3xl font-bold text-center text-gray-200'>Resume Summary</h1>
                     <div className='flex flex-col text-gray-200 text-lg space-y-5 mt-5'>
                         <div className='flex justify-between'>
@@ -160,6 +160,36 @@ const Result = () => {
                         </div>
 
 
+                    </div>
+                </div>
+            </div>
+            <div className='border border-white rounded-2xl'>
+                <h1 className='text-3xl font-bold text-center text-gray-200 mt-5'>Sections summary</h1>
+                <div className='grid grid-cols-2'>
+                    {/* Overall Score Section */}
+                    <div className=" p-8 ">
+                        <h2 className="text-2xl font-bold text-center mb-6 text-gray-200">Sections Present</h2>
+                        <div className='text-md text-green-800 flex flex-col space-y-2'>
+                            {
+                                resultData.sections_present.map((section, idx) => (
+                                    <div key={idx} 
+                                    className='py-2 px-5 rounded-2xl text-center mx-36 bg-green-200'
+                                    >{section}</div>
+                                ))
+                            }
+                        </div>
+                    </div>
+                    <div className='p-8'>
+                    <h2 className="text-2xl font-bold text-center mb-6 text-gray-200">Missing Sections</h2>
+                        <div className='text-md text-red-800 flex flex-col space-y-2'>
+                            {
+                                resultData.sections_missing.map((section, idx) => (
+                                    <div key={idx} 
+                                    className='py-2 px-5 rounded-2xl text-center mx-36 bg-red-200'
+                                    >{section}</div>
+                                ))
+                            }
+                        </div>
                     </div>
                 </div>
             </div>

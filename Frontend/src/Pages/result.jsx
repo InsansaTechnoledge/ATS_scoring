@@ -20,6 +20,9 @@ const Result = () => {
     const location = useLocation();
 
     const resultData = location.state?.result;
+    const file = location.state?.file;
+    const fileSize = file.size >= 1000000 ? (file.size / 1000000).toFixed(2) + " MB" : (file.size / 1000).toFixed(2) + " KB";
+    console.log(file);
 
     const readabilityScores = useMemo(() => {
         const scores = {};
@@ -65,10 +68,10 @@ const Result = () => {
             consistency: inconsistencyMessage ? "Inconsistent" : "Consistent",
             font: fontMessage ? fontMessage.split(':')[1].trim() : 'Not specified'
         };
-    }, [resultData]); 
+    }, [resultData]);
 
     const ScoreGauge = ({ score }) => (
-        <div className="relative w-48 h-48 mx-auto">
+        <div className="relative w-60 h-60 mx-auto ">
             <svg className="w-full h-full" viewBox="0 0 100 100">
                 <circle
                     cx="50"
@@ -94,7 +97,7 @@ const Result = () => {
                     textAnchor="middle"
                     dominantBaseline="middle"
                     className="text-3xl font-bold"
-                    fill="#1f2937"
+                    fill="#eeeeee"
                 >
                     {score}%
                 </text>
@@ -111,27 +114,57 @@ const Result = () => {
     }
 
     return (
-        <div className="space-y-8">
+        <div className="space-y-8 pt-24 pb-16 px-4 sm:px-6 lg:px-64 bg-gradient-to-br from-indigo-900 to-blue-950 ">
             {/* File Information */}
-            <div className="bg-white p-4 rounded-xl shadow-md">
+            <div className="p-4 rounded-xl shadow-md border-white border bg-white/10">
                 <div className="flex items-center space-x-2">
-                    <FileText className="h-5 w-5 text-gray-500" />
-                    <span className="text-gray-700">
-                        {resultData.filename} - Last checked: {new Date(resultData.last_checked).toLocaleString()}
-                    </span>
+                    <FileText className="h-5 w-5 text-gray-100" />
+                    <div className='flex justify-between w-full'>
+                        <span className="text-gray-200">
+                            Uploaded resume - {file.name}
+                        </span>
+                        <span className='text-gray-200'>
+                            File size: {fileSize}
+                        </span>
+                    </div>
                 </div>
             </div>
 
-            {/* Overall Score Section */}
-            <div className="bg-white p-8 rounded-2xl shadow-lg">
-                <h2 className="text-2xl font-bold text-center mb-6">ATS Compatibility Score</h2>
-                <ScoreGauge score={resultData.score} />
-                <p className="text-center mt-4 text-gray-600">
-                    {resultData.score >= 70 ? "Great! Your resume is ATS-friendly." :
-                        resultData.score >= 40 ? "Your resume needs some improvements." :
-                            "Your resume needs significant improvements."}
-                </p>
+            <h1 className='text-3xl font-bold text-center text-gray-200 '>ATS Score Insights</h1>
+
+            <div className='grid grid-cols-3 border border-white rounded-2xl'>
+
+                {/* Overall Score Section */}
+                <div className=" p-8 ">
+                    <h2 className="text-2xl font-bold text-center mb-6 text-gray-200">ATS Compatibility Score</h2>
+                    <ScoreGauge score={resultData.score} />
+                    <p className="text-center mt-4 text-gray-200">
+                        {resultData.score >= 70 ? "Great! Your resume is ATS-friendly." :
+                            resultData.score >= 40 ? "Your resume needs some improvements." :
+                                "Your resume needs significant improvements."}
+                    </p>
+                </div>
+                <div className='col-span-2 border p-8'>
+                    <h1 className='text-3xl font-bold text-center text-gray-200'>Resume Summary</h1>
+                    <div className='flex flex-col text-gray-200 text-lg space-y-5 mt-5'>
+                        <div className='flex justify-between'>
+                            <span>Word count:</span> <span>{resultData?.word_count}</span>
+
+                        </div>
+                        <div className='flex justify-between'>
+
+                            <span>Industry:</span> <span>{resultData?.industry}</span>
+                        </div>
+                        <div className='flex justify-between'>
+                            <span>Action verbs:</span><span> {resultData?.component_scores.action_verbs}</span>
+                        </div>
+
+
+                    </div>
+                </div>
             </div>
+
+
 
             {/* Key Issues Grid */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

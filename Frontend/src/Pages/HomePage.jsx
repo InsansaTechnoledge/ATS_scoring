@@ -172,7 +172,7 @@ const HomePage = () => {
                         setIsAnalyzing(false);
                         setActiveStep('results');
                         setAnalysisData(response.data.result);
-                        navigate('/result', { state: { result: response.data.result } });
+                        navigate('/result', { state: { result: response.data.result, file: file } });
                     }, 500);
                 }
             } catch (error) {

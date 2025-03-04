@@ -4,20 +4,18 @@ import {
     AlertTriangle, Check, X, Type, List, MessageSquare,
     ChevronRightSquareIcon,
     ChevronRightCircle,
-    ChevronRightCircleIcon,
-    TicketIcon
 } from 'lucide-react';
 import { useLocation } from 'react-router-dom';
 
-const MetricCard = ({ icon: Icon, label, value, color = "emerald" }) => (
-    <div className={`bg-${color}-50 p-6 rounded-xl border border-${color}-100`}>
-        <div className="flex items-center mb-2">
-            <Icon className={`h-5 w-5 text-${color}-500 mr-2`} />
-            <h3 className="text-lg font-semibold text-gray-800">{label}</h3>
-        </div>
-        <p className={`text-2xl font-bold text-${color}-700`}>{value}</p>
-    </div>
-);
+// const MetricCard = ({ icon: Icon, label, value, color = "emerald" }) => (
+//     <div className={`bg-${color}-50 p-6 rounded-xl border border-${color}-100`}>
+//         <div className="flex items-center mb-2">
+//             <Icon className={`h-5 w-5 text-${color}-500 mr-2`} />
+//             <h3 className="text-lg font-semibold text-gray-800">{label}</h3>
+//         </div>
+//         <p className={`text-2xl font-bold text-${color}-700`}>{value}</p>
+//     </div>
+// );
 
 const Result = () => {
     // Extract readability scores from messages
@@ -27,52 +25,58 @@ const Result = () => {
     const file = location.state?.file;
     const fileSize = file.size >= 1000000 ? (file.size / 1000000).toFixed(2) + " MB" : (file.size / 1000).toFixed(2) + " KB";
     console.log(file);
+    const grammar_flaws_set = new Set();
+    resultData.grammar_flaws.map(flaw => {
+        grammar_flaws_set.add(flaw.message);
 
-    const readabilityScores = useMemo(() => {
-        const scores = {};
-        if (resultData?.result?.messages) {
-            resultData.result.messages.forEach(message => {
-                if (message.includes(':')) {
-                    const [key, value] = message.split(':').map(s => s.trim());
-                    if (!isNaN(value)) {
-                        scores[key] = parseFloat(value);
-                    }
-                }
-            });
-        }
-        return scores;
-    }, [resultData]);
+    });
+
+
+    // const readabilityScores = useMemo(() => {
+    //     const scores = {};
+    //     if (resultData?.result?.messages) {
+    //         resultData.result.messages.forEach(message => {
+    //             if (message.includes(':')) {
+    //                 const [key, value] = message.split(':').map(s => s.trim());
+    //                 if (!isNaN(value)) {
+    //                     scores[key] = parseFloat(value);
+    //                 }
+    //             }
+    //         });
+    //     }
+    //     return scores;
+    // }, [resultData]);
 
     // Extract grammar issues count
-    const grammarIssuesCount = useMemo(() => {
-        const grammarMessage = resultData?.result?.messages.find(msg =>
-            msg.includes('Grammar Issues Found:')
-        );
-        return grammarMessage ? parseInt(grammarMessage.split(':')[1]) : 0;
-    }, [resultData]);
+    // const grammarIssuesCount = useMemo(() => {
+    //     const grammarMessage = resultData?.result?.messages.find(msg =>
+    //         msg.includes('Grammar Issues Found:')
+    //     );
+    //     return grammarMessage ? parseInt(grammarMessage.split(':')[1]) : 0;
+    // }, [resultData]);
 
-    // Extract bullet points count
-    const bulletPointsCount = useMemo(() => {
-        const bulletMessage = resultData?.result?.messages.find(msg =>
-            msg.includes('bullet points detected')
-        );
-        return bulletMessage ? parseInt(bulletMessage.match(/\d+/)[0]) : 0;
-    }, [resultData]);
+    // // Extract bullet points count
+    // const bulletPointsCount = useMemo(() => {
+    //     const bulletMessage = resultData?.result?.messages.find(msg =>
+    //         msg.includes('bullet points detected')
+    //     );
+    //     return bulletMessage ? parseInt(bulletMessage.match(/\d+/)[0]) : 0;
+    // }, [resultData]);
 
-    // Extract font information
-    const fontInfo = useMemo(() => {
-        const fontMessage = resultData?.result?.messages.find(msg =>
-            msg.includes('Most used font:')
-        );
-        const inconsistencyMessage = resultData?.result?.messages.some(msg =>
-            msg.includes('Inconsistent font usage detected')
-        );
+    // // Extract font information
+    // const fontInfo = useMemo(() => {
+    //     const fontMessage = resultData?.result?.messages.find(msg =>
+    //         msg.includes('Most used font:')
+    //     );
+    //     const inconsistencyMessage = resultData?.result?.messages.some(msg =>
+    //         msg.includes('Inconsistent font usage detected')
+    //     );
 
-        return {
-            consistency: inconsistencyMessage ? "Inconsistent" : "Consistent",
-            font: fontMessage ? fontMessage.split(':')[1].trim() : 'Not specified'
-        };
-    }, [resultData]);
+    //     return {
+    //         consistency: inconsistencyMessage ? "Inconsistent" : "Consistent",
+    //         font: fontMessage ? fontMessage.split(':')[1].trim() : 'Not specified'
+    //     };
+    // }, [resultData]);
 
     const ScoreGauge = ({ score }) => (
         <div className="relative w-40 h-40 lg:w-60 lg:h-60 mx-auto ">
@@ -208,8 +212,8 @@ const Result = () => {
 
             <div className='border border-white rounded-2xl p-8 bg-white/15'>
                 <div className='flex gap-2'>
-                <AlertTriangle className='text-gray-200 justify-center my-auto'/>
-                <span className='text-3xl font-bold text-gray-100'>Formatting Issues</span>
+                    <AlertTriangle className='text-gray-200 justify-center my-auto' />
+                    <span className='text-3xl font-bold text-gray-100'>Formatting Issues</span>
                 </div>
                 <div className='space-y-2 mt-5'>
                     {resultData.formatting_issues.map((issue, idx) => (
@@ -222,10 +226,29 @@ const Result = () => {
                     ))}
                 </div>
             </div>
+
             <div className='border border-white rounded-2xl p-8 bg-white/15'>
-            <div className='flex gap-2'>
-                <ChevronRightCircle className='text-gray-200 justify-center my-auto'/>
-                <span className='text-3xl font-bold text-gray-100'>Recommendations</span>
+                <div className='flex gap-2'>
+                    <AlertTriangle className='text-gray-200 justify-center my-auto' />
+                    <span className='text-3xl font-bold text-gray-100'>Grammar Issues</span>
+                </div>
+                <div className='space-y-2 mt-5'>
+                    {Array.from(grammar_flaws_set).map((issue, idx) => (
+                        <div className='flex gap-2'>
+                            <AlertCircle className='text-yellow-400' />
+                            <span key={idx}
+                                className='text-yellow-400'
+                            >{issue}</span>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+
+            <div className='border border-white rounded-2xl p-8 bg-white/15'>
+                <div className='flex gap-2'>
+                    <ChevronRightCircle className='text-gray-200 justify-center my-auto' />
+                    <span className='text-3xl font-bold text-gray-100'>Recommendations</span>
                 </div>
                 <div className='space-y-2 mt-5'>
                     {resultData.recommendations.map((issue, idx) => (

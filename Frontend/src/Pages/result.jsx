@@ -158,6 +158,9 @@ const Result = () => {
                         <div className='flex justify-between'>
                             <span>Action verbs:</span><span> {resultData?.component_scores.action_verbs}</span>
                         </div>
+                        <div className='flex justify-between'>
+                            {/* <span>Buzz words:</span><span> {(resultData?.buzz_words).length()}</span> */}
+                        </div>
 
 
                     </div>

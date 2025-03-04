@@ -176,7 +176,7 @@ const Result = () => {
             </div>
             <div className='border border-white bg-white/15 rounded-2xl'>
                 <h1 className='text-3xl font-bold text-center text-gray-200 mt-5'>Sections summary</h1>
-                <div className='flex justify-between '>
+                <div className='flex justify-between w-8/12 sm:w-8/12 flex-col sm:flex-row mx-auto'>
                     {/* Overall Score Section */}
                     <div className=" p-8 ">
                         <h2 className="text-2xl font-bold text-center mb-6 text-gray-200">Sections Present</h2>
@@ -190,7 +190,7 @@ const Result = () => {
                             }
                         </div>
                     </div>
-                    <div className='w-0.5 my-12 border border-gray-300 invisible lg:visible flex'></div>
+                    <div className='w-0.5 sm:my-12 border border-gray-300 invisible sm:visible flex'></div>
                     <div className='p-8'>
                         <h2 className="text-2xl font-bold text-center mb-6 text-gray-200">Missing Sections</h2>
                         <div className='text-md text-red-800 flex flex-col space-y-2'>

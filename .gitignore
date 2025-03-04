@@ -8,4 +8,5 @@ Algorithm2/.venv/*
 .vscode
 resume_analyzer/myenv
 resume_analyzer/myenv/*
-resume_analyzer/.venv/*
+resume_analyzer/venv
+resume_analyzer/backups

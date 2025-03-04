@@ -20,11 +20,10 @@ COMPONENT_WEIGHTS = {
 
 # Required resume sections
 REQUIRED_SECTIONS = {
-    "SUMMARY": ["profile summary", "summary"],
-    "EXPERIENCE": ["work experience", "experience"],
-    "EDUCATION": ["education", "academic background"], 
-    "SKILLS": ["skills", "key skills"],
-    "PROJECTS": ["projects", "personal projects", "professional projects"],
-    "CERTIFICATES": ["certificates", "certifications", "training"]
-}
-
+            'SUMMARY': (['profile summary', 'summary'], 0.10),
+            'EXPERIENCE': (['work experience', 'experience'], 0.15),
+            'EDUCATION': (['education', 'academic background'], 0.10),
+            'SKILLS': (['skills', 'key skills'], 0.15),
+            'CERTIFICATES': (['certificates', 'certifications', 'training'], 0.2),
+            'PROJECTS': (['projects', 'personal projects', 'professional projects'], 0.15)
+        }

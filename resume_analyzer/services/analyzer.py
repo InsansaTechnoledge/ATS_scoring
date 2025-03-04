@@ -230,7 +230,10 @@ class ResumeAnalyzer:
         # Basic section detection
         sections = self.grammar_checker.section_analyzer.detect_resume_sections(text)
         normalized_sections = {s.lower().strip() for s in sections}
-
+  
+        # Sections present
+        result.sections_present = [sec for sec, (alt_names, _) in REQUIRED_SECTIONS.items() if any(name.lower().strip() in normalized_sections for name in alt_names)]
+        
         # Sections missing:
         result.sections_missing = [sec for sec, (alt_names, _) in REQUIRED_SECTIONS.items() if not any(name.lower().strip() in normalized_sections for name in alt_names)]
 
@@ -241,21 +244,24 @@ class ResumeAnalyzer:
 
         # Section scoring
         penalty_counter["missing_sections"] = len(result.sections_missing)
-        if penalty_counter["missing_sections"] >= 3:
-            result.score -= 5  # Deduct points only after 3 missing sections
-
+        result.score -= min(10, int(penalty_counter["missing_sections"] / 3 * 5))
+        
 
         if result.sections_missing:
             result.recommendations.append(f"Add missing sections: {', '.join(result.sections_missing)}")
         
+        #Print sections present for debugging
+        if result.sections_present:
+            print("Sections Present in Resume:", result.sections_present)  # Debugging output
+        
         # Check for non-ASCII characters
         non_ascii_chars = re.findall(r'[^\x00-\x7F]+', text)
         penalty_counter["non_ascii"] = len(non_ascii_chars)
-        if penalty_counter["non_ascii"] >= 3:  # Apply penalty only if 3+ non-ASCII characters are found
-            result.score -= 10
+        result.score -= min(10, int(penalty_counter["non_ascii"] / 3 * 10))
+        if penalty_counter["non_ascii"] >= 1:
             result.recommendations.append("Remove special characters that may not be ATS-friendly")
         
-
+        
         # Length check
 
         if result.word_count < 200:
@@ -263,38 +269,42 @@ class ResumeAnalyzer:
         elif result.word_count > 1000:
             penalty_counter["word_count_high"] += 1
 
-        if penalty_counter["word_count_low"] >= 1:  # Deduct points only if resume is too short
-            result.score -= 10
-            result.recommendations.append("Resume is too short. Aim for at least 300-600 words")
 
-        if penalty_counter["word_count_high"] >= 1:  # Deduct points only if resume is too long
-            result.score -= 5
+        result.score -= min(10, int(penalty_counter["word_count_low"] / 3 * 10))
+        result.score -= min(5, int(penalty_counter["word_count_high"] / 3 * 5))
+
+        if penalty_counter["word_count_low"] >= 1:
+            result.recommendations.append("Resume is too short. Aim for at least 300-600 words")
+        if penalty_counter["word_count_high"] >= 1:
             result.recommendations.append("Resume may be too long. Consider condensing to 1-2 pages")
+    
         
         # Grammar and spelling check
         grammar_issues = self.grammar_checker.check_grammar(text)
         penalty_counter["grammar_issues"] = len(grammar_issues)
-        if penalty_counter["grammar_issues"] >= 5:
-            result.score -= 5
+        result.score -= min(10, int(penalty_counter["grammar_issues"] / 3 * 5))
+
+        if penalty_counter["grammar_issues"] >= 1:
             result.recommendations.append(f"Fix {len(grammar_issues)} grammar/spelling issues")
+
 
 
         # Passive voice analysis
         passive_issues = analyze_passive_voice(text)
         penalty_counter["passive_voice"] = len(passive_issues)
-
-        if penalty_counter["passive_voice"] >= 5:
-            result.score -= 5
+        result.score -= min(10, int(penalty_counter["passive_voice"] / 3 * 5))
+        if penalty_counter["passive_voice"] >= 1:
             result.recommendations.append("Use more active voice instead of passive constructions")
-        
+    
         
         # Buzzwords analysis
         buzzword_count = sum(1 for word in BUZZWORDS if word.lower() in text.lower())
         penalty_counter["buzzwords"] = buzzword_count
-        
-        if penalty_counter["buzzwords"] >= 3:
-            result.score -= 5
-            result.recommendations.append("Replace generic buzzwords with specific achievements")
+        result.score -= min(10, int(penalty_counter["buzzwords"] / 3 * 5))
+        if penalty_counter["buzzwords"] >= 1:
+            result.recommendations.append(f"Fix {len(buzzword_count)} Buzzword issues,Replace with more generic achievements")
+
+
 
         # Job description keyword matching
         jd_keywords = extract_keywords(self.job_description or "")
@@ -343,10 +353,12 @@ class ResumeAnalyzer:
             contact_penalty_count += 1
         if not has_phone:
             contact_penalty_count += 1
+        
 
-        if contact_penalty_count >= 2:  # Deduct points only if BOTH email and phone are missing
-            result.score -= 10
+        result.score -= (contact_penalty_count / 2) * 10  # Proportional penalty
+        if contact_penalty_count > 0:
             result.recommendations.append("Ensure contact information (email and phone) is clearly visible")
+
 
 
         # Action Verb Analysis (Threshold-Based Deduction)
@@ -366,9 +378,10 @@ class ResumeAnalyzer:
         if not has_numbers:
             quantifiable_penalty_count += 1
 
-        if quantifiable_penalty_count >= 1:  # Deduct points only if NO numbers are found
-            result.score -= 10
+        result.score -= (quantifiable_penalty_count / 1) * 10  # Proportional penalty
+        if quantifiable_penalty_count > 0:
             result.recommendations.append("Include quantifiable achievements (%, $, metrics)")
+
 
         # Industry-Specific Bonus
         result.industry = detect_industry(text, INDUSTRY_KEYWORDS)
@@ -430,6 +443,7 @@ class ResumeAnalyzer:
         "comparison": results,
         "best_match": results[0] if results else None,
         "job_description": self.job_description
+
         }
 
 

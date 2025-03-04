@@ -298,12 +298,24 @@ class ResumeAnalyzer:
     
         
         # Buzzwords analysis
-        buzzword_count = sum(1 for word in BUZZWORDS if word.lower() in text.lower())
+        detected_buzzwords = [word for word in BUZZWORDS if word.lower() in text.lower()]
+        buzzword_count = len(detected_buzzwords)
+
         penalty_counter["buzzwords"] = buzzword_count
         result.score -= min(10, int(penalty_counter["buzzwords"] / 3 * 5))
-        if penalty_counter["buzzwords"] >= 1:
-            result.recommendations.append(f"Fix {len(buzzword_count)} Buzzword issues,Replace with more generic achievements")
 
+        if buzzword_count > 0:
+            result.recommendations.append(f"Fix {buzzword_count} Buzzword issues, replace with more specific achievements.")
+
+        # Print detected buzzwords for debugging
+        if detected_buzzwords:
+            print("Buzzwords Detected in Resume:", detected_buzzwords)  # Debugging output
+        else:
+            print("No buzzwords detected in your Resume")
+        
+        result.buzz_words = detected_buzzwords
+        print("Debugging: Buzzword List ->", detected_buzzwords)
+        print("Debugging: Buzzwords stored in result ->", result.__dict__)  # Print all attributes
 
 
         # Job description keyword matching

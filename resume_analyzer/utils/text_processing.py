@@ -63,10 +63,18 @@ def detect_industry(text, industry_keywords):
     
     industry_scores = {}
     for industry, keywords in industry_keywords.items():
-        matches = sum(1 for kw in keywords if kw in text_lower)
-        industry_scores[industry] = matches
+            score = 0
+            for kw in keywords:
         
-    if not industry_scores:
+                pattern = r'\b' + re.escape(kw.lower()) + r'\b'
+
+                matches = sum(1 for kw in keywords if kw in text_lower)
+                len(re.findall(pattern, text_lower))
+            score += matches
+    
+            industry_scores[industry] = score
+        
+    if not industry_scores or all(score == 0 for score in industry_scores.values()):
         return None
         
     # Return the industry with the highest score

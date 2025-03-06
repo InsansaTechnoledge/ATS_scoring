@@ -4,25 +4,16 @@ import os
 import re
 import fitz  # PyMuPDF
 import logging
+import textract
+import pytesseract
+from pdf2image import convert_from_path
 from models.resume import ResumeAnalysisResult
 from utils.cache import cache_manager
 from utils.text_processing import extract_keywords, analyze_passive_voice, detect_formatting_issues, detect_industry
 from utils.constants import BUZZWORDS, INDUSTRY_KEYWORDS, ACTION_VERBS
 from config import REQUIRED_SECTIONS
 from services.file_service import load_results, save_results
-import itertools
-
-import tempfile
-import hashlib
-import logging
-import os
-import docx
-import textract
-import chardet
-from odf import text, teletype
-from odf.opendocument import load
 from Grammar.core.checker import GrammarChecker
-
 
 logger = logging.getLogger(__name__)
 
@@ -34,63 +25,45 @@ class ResumeAnalyzer:
     def extract_text_from_file(self, file):
         """Extract text content from various file types"""
         try:
-            # Read file content for caching purposes
             file_content = file.read()
-            file.seek(0)  # Reset file pointer after reading
-            
-            # Generate hash for caching
+            file.seek(0)
             file_hash = hashlib.md5(file_content).hexdigest()
-            
-            # Check cache for this file
             cached_data = cache_manager.get(file_hash)
             if cached_data:
                 return cached_data['text']
             
-            # Determine file type by extension
             filename = file.filename.lower()
-            
-            # Create a temporary file
             with tempfile.NamedTemporaryFile(delete=False) as tmp_file:
                 tmp_file.write(file_content)
                 tmp_file_path = tmp_file.name
             
             try:
-                # Extract text based on file type
                 if filename.endswith('.pdf'):
                     text, metadata = self._extract_from_pdf(tmp_file_path)
                 elif filename.endswith('.docx'):
                     text, metadata = self._extract_from_docx(tmp_file_path)
                 elif filename.endswith('.txt'):
                     text, metadata = self._extract_from_txt(tmp_file_path)
-                elif filename.endswith('.odt'):
-                    text, metadata = self._extract_from_odt(tmp_file_path)
-                elif filename.endswith(('.rtf', '.doc')):
-                    text, metadata = self._extract_from_rtf_doc(tmp_file_path)
                 else:
-                    # Try to extract text with textract as fallback
                     text, metadata = self._extract_with_textract(tmp_file_path, filename)
                 
-                # Cache the result
-                cache_manager.set(file_hash, {
-                    'text': text,
-                    'metadata': metadata
-                })
-                
+                cache_manager.set(file_hash, {'text': text, 'metadata': metadata})
                 return text
             finally:
-                # Clean up temporary file
                 if os.path.exists(tmp_file_path):
                     os.unlink(tmp_file_path)
-        
         except Exception as e:
             logger.error(f"Error extracting text from {file.filename}: {str(e)}")
             return None
 
     def _extract_from_pdf(self, file_path):
-        """Extract text from PDF using PyMuPDF"""
+        """Extract text from PDF using PyMuPDF and fallback to OCR if needed"""
         try:
             doc = fitz.open(file_path)
-            text = "\n".join([page.get_text() for page in doc])
+            text = "\n".join([page.get_text("text") for page in doc])
+            
+            if not text.strip():  # If no text is extracted, try OCR
+                text = self._extract_text_from_scanned_pdf(file_path)
             
             metadata = {
                 "page_count": len(doc),
@@ -104,111 +77,18 @@ class ResumeAnalyzer:
             return text, metadata
         except Exception as e:
             logger.error(f"Error extracting text from PDF: {str(e)}")
-            raise
+            return "", {}
 
-    def _extract_from_docx(self, file_path):
-        """Extract text from DOCX files"""
+    def _extract_text_from_scanned_pdf(self, file_path):
+        """Use OCR to extract text from scanned PDFs"""
         try:
-            doc = docx.Document(file_path)
-            text = "\n".join([para.text for para in doc.paragraphs])
-            
-            metadata = {
-                "page_count": len(doc.sections),
-                "author": doc.core_properties.author if hasattr(doc, 'core_properties') and doc.core_properties.author else "",
-                "title": doc.core_properties.title if hasattr(doc, 'core_properties') and doc.core_properties.title else "",
-                "creation_date": str(doc.core_properties.created) if hasattr(doc, 'core_properties') and doc.core_properties.created else "",
-                "file_type": "docx"
-            }
-            
-            return text, metadata
+            images = convert_from_path(file_path)
+            text = "\n".join([pytesseract.image_to_string(img) for img in images])
+            return text
         except Exception as e:
-            logger.error(f"Error extracting text from DOCX: {str(e)}")
-            raise
+            logger.error(f"OCR failed on scanned PDF: {str(e)}")
+            return ""
 
-    def _extract_from_txt(self, file_path):
-        """Extract text from plain text files"""
-        try:
-            # Detect encoding
-            with open(file_path, 'rb') as f:
-                raw_data = f.read()
-                result = chardet.detect(raw_data)
-                encoding = result['encoding'] or 'utf-8'
-            
-            # Read with detected encoding
-            with open(file_path, 'r', encoding=encoding, errors='replace') as f:
-                text = f.read()
-            
-            metadata = {
-                "page_count": 1,
-                "author": "",
-                "title": "",
-                "creation_date": "",
-                "file_type": "txt",
-                "encoding": encoding
-            }
-            
-            return text, metadata
-        except Exception as e:
-            logger.error(f"Error extracting text from TXT: {str(e)}")
-            raise
-
-    def _extract_from_odt(self, file_path):
-        """Extract text from ODT files"""
-        try:
-            doc = load(file_path)
-            text_elements = doc.getElementsByType(text.P)
-            text = "\n".join([teletype.extractText(element) for element in text_elements])
-            
-            metadata = {
-                "page_count": 1,  # Approximation, ODT doesn't expose page count easily
-                "author": doc.meta.getElementsByType(text.Creator)[0].data if doc.meta.getElementsByType(text.Creator) else "",
-                "title": doc.meta.getElementsByType(text.Title)[0].data if doc.meta.getElementsByType(text.Title) else "",
-                "creation_date": doc.meta.getElementsByType(text.CreationDate)[0].data if doc.meta.getElementsByType(text.CreationDate) else "",
-                "file_type": "odt"
-            }
-            
-            return text, metadata
-        except Exception as e:
-            logger.error(f"Error extracting text from ODT: {str(e)}")
-            raise
-
-    def _extract_from_rtf_doc(self, file_path):
-        """Extract text from RTF or DOC files using textract"""
-        try:
-            text = textract.process(file_path).decode('utf-8')
-            
-            metadata = { 
-                "page_count": 1,  # Approximation
-                "author": "",
-                "title": "",
-                "creation_date": "",
-                "file_type": "rtf/doc"
-            }
-            
-            return text, metadata
-        except Exception as e:
-            logger.error(f"Error extracting text from RTF/DOC: {str(e)}")
-            raise
-
-    def _extract_with_textract(self, file_path, filename):
-        """Fallback extraction using textract library"""
-        try:
-            # Textract can handle many file types
-            text = textract.process(file_path).decode('utf-8')
-            
-            metadata = {
-                "page_count": 1,  # Default approximation
-                "author": "",
-                "title": "",
-                "creation_date": "",
-                "file_type": filename.split('.')[-1] if '.' in filename else "unknown"
-            }
-            
-            return text, metadata
-        except Exception as e:
-            logger.error(f"Error using textract fallback: {str(e)}")
-            # If textract fails, return empty text
-            return "", {"file_type": "unknown"}
 
     def analyze_resume(self, text, filename):
         """Analyze resume text and generate scoring and recommendations"""

@@ -200,41 +200,41 @@ class ResumeAnalyzer:
         print("Debugging: Buzzword List ->", detected_buzzwords)
         print("Debugging: Buzzwords stored in result ->", result.__dict__)  # Print all attributes
 
+        #jd match
+        if self.job_description:
+            jd_keywords = set(map(str.lower, extract_keywords(self.job_description)))
+            resume_keywords = set(map(str.lower, extract_keywords(text)))
 
-        # Job description keyword matching
-        jd_keywords = extract_keywords(self.job_description or "")
-        resume_keywords = extract_keywords(text)
-
-        print("Extracted JD Keywords:", jd_keywords)
-        print("Extracted Resume Keywords:", resume_keywords)
-
-        # Convert to lowercase for better matching
-        jd_keywords = set(map(str.lower, jd_keywords))
-        resume_keywords = set(map(str.lower, resume_keywords))
-
-        if jd_keywords:
             matching_keywords = resume_keywords & jd_keywords
             missing_keywords = list(jd_keywords - resume_keywords)
 
-            
-            keyword_match_score = min(100, int((len(matching_keywords) / len(jd_keywords)) * 100))
-            result.detailed_scores["keyword_match"] = keyword_match_score
+            # Calculate JD match score (out of 100, affecting only JD match component)
+            keyword_match_score = int((len(matching_keywords) / len(jd_keywords)) * 100) if jd_keywords else 0
+            result.detailed_scores["keyword_match"] = keyword_match_score  # Store separately
 
             if missing_keywords:
                 top_missing = sorted(missing_keywords)[:5]  # Sort alphabetically for consistency
-                
-                if top_missing:  # Only proceed if there are missing keywords
-                    print("Missing words from Resume as per JD:", top_missing)  # Debuggingprint("Missing words from Resume as per JD:", top_missing)  # Debugging
+                print("Missing words from Resume as per JD:", top_missing)  # Debugging
 
                 if not hasattr(result, "recommendations") or result.recommendations is None:
                     result.recommendations = []
 
-                # Add recommendation
-                result.recommendations.append(f"Add these keywords from the job description: {', '.join(top_missing)}")
+                # Add recommendation for missing keywords
+                result.recommendations.append(f"Consider adding these keywords from the job description: {', '.join(top_missing)}")
 
-                # Apply penalty for missing keywords
-                penalty = len(top_missing) * 2
-                result.score = max(0, result.score - penalty)
+                # Deduct points based on missing keywords (Max penalty = 15)
+                penalty = min(len(missing_keywords) * 2, 15)
+                result.detailed_scores["missing_keywords_penalty"] = penalty  # Store separately for transparency
+                result.score = max(0, result.score - penalty)  # Ensure score doesn't go negative
+
+                # Handle case where no JD keywords match
+                if jd_keywords and not matching_keywords:
+                    result.recommendations.append("No keywords from the job description match the resume. Consider optimizing your resume.")
+
+            else:
+                # If no job description is provided, JD match should not run
+                print("⚠️ No job description provided. Skipping JD keyword matching.")
+                result.detailed_scores["keyword_match"] = None 
 
 
         # Contact Information Check

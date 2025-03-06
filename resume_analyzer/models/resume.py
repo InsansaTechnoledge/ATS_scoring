@@ -43,7 +43,8 @@ class ResumeAnalysisResult:
                     "sections_missing": self.sections_missing,
                     "formatting_issues": self.formatting_issues,
                     "recommendations": self.recommendations,
-                    "industry": self.industry,
+                    "industry": self.industry if self.industry else "Unknown",  # Ensure industry is shown
+                    "industry_keywords_count": self.industry_keywords,  # Show industry keyword matches
                     "buzz_words": self.buzz_words,
                     "grammar_flaws": self.grammar_flaws
                 }
@@ -63,6 +64,7 @@ class ResumeAnalysisResult:
             f"Passive Voice Instances: {self.passive_voice_count}",
             f"Word Count: {self.word_count} words",
             f"Missing Sections: {', '.join(self.sections_missing) if self.sections_missing else 'None'}",
-            f"Job Description Keyword Match: {self.detailed_scores.get('keyword_match', 0)}%",
-            f"Detected Industry: {self.industry.capitalize() if self.industry else 'General'}"
+            f"Job Description Keyword Match: {self.detailed_scores.get('keyword_match_score', 0)}%",
+            f"Detected Industry: {self.industry.capitalize() if self.industry else 'Unknown'}",
+            f"Industry Keywords Matched: {self.industry_keywords}"
         ]

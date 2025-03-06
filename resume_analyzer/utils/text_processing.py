@@ -3,18 +3,20 @@ from collections import Counter
 from utils.constants import COMMON_WORDS, PASSIVE_PHRASES
 
 def extract_keywords(text: str):
+
     """Extract meaningful keywords from text, filtering out common words"""
     if not text:
         return set()
-        
-    # Extract all words
+    
+    # Extract words of at least 3 characters (avoiding short filler words)
     words = re.findall(r'\b[a-zA-Z]{3,}\b', text.lower())
-    
-    # Filter out common words and count occurrences
-    word_counts = Counter(word for word in words if word not in COMMON_WORDS)
-    
-    # Return most common keywords (words that appear more than once)
-    return set(word for word, count in word_counts.items() if count > 1)
+
+    # Remove common words (stopwords)
+    filtered_words = [word for word in words if word not in COMMON_WORDS]
+
+    # Use a set to ensure uniqueness
+    return set(filtered_words)
+
 
 def analyze_passive_voice(text):
     """Identify passive voice constructions in text"""

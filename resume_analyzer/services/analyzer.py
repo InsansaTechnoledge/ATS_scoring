@@ -14,6 +14,7 @@ from utils.constants import BUZZWORDS, INDUSTRY_KEYWORDS, ACTION_VERBS
 from config import REQUIRED_SECTIONS
 from services.file_service import load_results, save_results
 from Grammar.core.checker import GrammarChecker
+from docx import Document
 
 logger = logging.getLogger(__name__)
 
@@ -88,6 +89,20 @@ class ResumeAnalyzer:
         except Exception as e:
             logger.error(f"OCR failed on scanned PDF: {str(e)}")
             return ""
+        
+    
+
+    def _extract_from_docx(self, file_path):
+        """Extract text from a DOCX file"""
+        try:
+            doc = Document(file_path)
+            text = "\n".join([para.text for para in doc.paragraphs])
+            metadata = {"file_type": "docx"}
+            return text, metadata
+        except Exception as e:
+            logger.error(f"Error extracting text from DOCX: {str(e)}")
+            return "", {}
+
 
 
     def analyze_resume(self, text, filename):
@@ -278,15 +293,19 @@ class ResumeAnalyzer:
             result.recommendations.append("Include quantifiable achievements (%, $, metrics)")
 
 
-        # Industry-Specific Bonus
+        #detect industry type
         result.industry = detect_industry(text, INDUSTRY_KEYWORDS)
-        industry_keywords = INDUSTRY_KEYWORDS.get(result.industry, [])
-        industry_keyword_matches = sum(1 for kw in industry_keywords if kw.lower() in text.lower())  # Ensuring case insensitivity
-        result.industry_keywords = industry_keyword_matches
-        print("industry keywords detected:",industry_keyword_matches)
 
-        # Add industry bonus (up to 5 points)
-        result.score += min(5, industry_keyword_matches)
+        if result.industry:  # Ensure industry is detected before matching keywords
+            industry_keywords = INDUSTRY_KEYWORDS.get(result.industry, [])
+            industry_keyword_matches = sum(1 for kw in industry_keywords if kw.lower() in text.lower())  # Case-insensitive match
+            result.industry_keywords = industry_keyword_matches
+        else:
+            result.industry_keywords = 0  # No industry detected
+
+        print("Detected industry:", result.industry)
+        print("Industry keywords detected:", result.industry_keywords)
+
 
         # Detect formatting issues
         result.formatting_issues = detect_formatting_issues(text)

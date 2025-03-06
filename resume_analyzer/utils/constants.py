@@ -6,12 +6,21 @@ BUZZWORDS = [
 ]
 
 # Industry-specific keywords for bonus scoring
+
 INDUSTRY_KEYWORDS = {
-    "software": ["python", "java", "javascript", "react", "nodejs", "sql", "cloud", "aws", "azure", "devops"],
-    "finance": ["accounting", "financial", "budget", "investment", "asset", "portfolio", "banking", "trading"],
-    "marketing": ["campaign", "digital marketing", "seo", "content", "social media", "analytics", "branding"],
-    "healthcare": ["clinical", "patient", "medical", "healthcare", "hospital", "physician", "treatment"]
+    "technology": ["software", "developer", "programming", "python", "java", "c++", "cloud", "data", "ai", "machine learning", "cybersecurity", "iot", "blockchain"],
+    "business_finance": ["finance", "accounting", "investment", "banking", "marketing", "sales", "supply chain", "hr", "management", "strategy"],
+    "healthcare": ["doctor", "nurse", "medical", "clinical", "biotech", "pharmaceutical", "health", "telemedicine"],
+    "engineering": ["mechanical", "civil", "electrical", "manufacturing", "cad", "solidworks"],
+    "media_creative": ["design", "graphic", "video editing", "cinematography", "content writing", "copywriting"],
+    "education": ["teacher", "training", "curriculum", "e-learning"],
+    "law_government": ["law", "legal", "policy", "public administration"],
+    "hospitality_retail": ["hotel", "event planning", "customer service", "retail", "merchandising"]
 }
+
+    
+    
+
 
 # Common action verbs for bullet points
 ACTION_VERBS = [

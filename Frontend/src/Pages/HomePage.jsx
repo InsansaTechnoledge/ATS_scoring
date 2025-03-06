@@ -9,6 +9,9 @@ import {
 import UploadBox from '../Components/UploadBox';
 import axios from 'axios';
 import ProgressModal from '../Components/ProgressModal';
+import ats1 from '../assets/ats1.png'
+import ats2 from '../assets/ats2.png'
+import Tilt from 'react-parallax-tilt'
 
 const HomePage = () => {
     const [activeFeature, setActiveFeature] = useState(0);
@@ -285,7 +288,7 @@ const HomePage = () => {
                                     variants={itemVariants}
                                     className="flex flex-col gap-4 sm:flex-row mt-8"
                                 >
-                                    <Link href="/">
+                                    <a href="/#upload-resume-home">
                                         <motion.button
                                             whileHover={{
                                                 scale: 1.05,
@@ -298,7 +301,7 @@ const HomePage = () => {
                                             <Rocket className="h-5 w-5 transition-transform group-hover:translate-x-1" />
                                             <div className="absolute inset-0 bg-white/20 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
                                         </motion.button>
-                                    </Link>
+                                    </a>
 
                                     <Link href="/">
                                         <motion.button
@@ -345,9 +348,21 @@ const HomePage = () => {
                                 {/* Removed the glow effect box shadow div */}
 
                                 {/* Image Tilt */}
-                                <div className="relative perspective">
+                                <Tilt
+                                tiltMaxAngleX={15}
+                                tiltMaxAngleY={15}
+                                perspective={1000}
+                                scale={1.05}
+                                transitionSpeed={400}
+                                glareEnable={true}
+                                glareMaxOpacity={0.2}
+                            >
+                                    <div className="relative perspective">
+                                        <img src={ats1}/>
+                                        <img src={ats2}/>
+                                    </div>
 
-                                </div>
+                                </Tilt>
                             </div>
                         </motion.div>
                     </div>
@@ -514,7 +529,8 @@ const HomePage = () => {
                     </svg>
                 </div>
 
-                <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 relative z-10">
+                <div id='upload-resume-home' className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 relative z-10">
+                    
                     {/* <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -568,6 +584,7 @@ const HomePage = () => {
                         </div>
                     </motion.div> */}
                     <motion.div
+                        
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
